@@ -245,10 +245,10 @@ function end(){
     const isBest=score>best;if(isBest){best=score;store.set('sandomi_jump_best',best);}
     $('finalScore').textContent=score;$('stH').textContent=`⬆ ${heightM()} მ`;$('stS').textContent=`🍰 ${sweets} ტკბილეული`;
     $('newBest').textContent=isBest&&score>0?'🏆 ახალი რეკორდი!':'';
-    const code='SANDOMI-'+Math.random().toString(36).slice(2,6).toUpperCase();let html;
-    if(score>=1500)html=`<b>🥇 ოქროს დონე</b><p>გილოცავ! კვირის გათამაშებაში <b>3 ბილეთით</b> მონაწილეობ: სანდომის ტკბილეულის ყუთი ან დიდი დათუნია 🧸</p><span class="code">${code}</span><div class="note">დემო ბილეთი, ნიმუშისთვის</div>`;
-    else if(score>=800)html=`<b>🥈 ვერცხლის დონე</b><p>კვირის გათამაშებაში <b>1 ბილეთით</b> მონაწილეობ! 1500 ქულაზე 3 ბილეთს მიიღებ.</p><span class="code">${code}</span><div class="note">დემო ბილეთი, ნიმუშისთვის</div>`;
-    else if(score>=350)html=`<b>🥉 ბრინჯაოს დონე</b><p>კიდევ ცოტა! 800 ქულაზე კვირის პრიზის გათამაშებაში მოხვდები.</p>`;
+    let html;
+    if(score>=1500)html=`<b>🥇 ოქროს დონე</b><p>ბრავო! ნამდვილი ტკბილი ჩემპიონი ხარ 🧸</p>`;
+    else if(score>=800)html=`<b>🥈 ვერცხლის დონე</b><p>შესანიშნავია! 1500 ქულაზე ოქროს დონეს მიაღწევ.</p>`;
+    else if(score>=350)html=`<b>🥉 ბრინჯაოს დონე</b><p>კარგია! 800 ქულაზე ვერცხლის დონეს მიაღწევ.</p>`;
     else html=`<b>კარგი დასაწყისია!</b><p>მიაღწიე 350 ქულას ბრინჯაოს დონისთვის.</p>`;
     $('tier').innerHTML=html;showBest();$('over').classList.remove('hidden');
   },900);
