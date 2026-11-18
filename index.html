@@ -598,6 +598,34 @@ a.video.playing{padding:0}
 .gframe iframe{width:100%;height:100%;border:0}
 .gopen{position:absolute;right:10px;bottom:10px;background:#fff;color:var(--wine);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px;text-decoration:none}
 @media(max-width:600px){.gframe{aspect-ratio:4/5}}
+
+/* product modal */
+.p[data-ix]{cursor:pointer}
+.p[data-ix]:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.pm{position:fixed;inset:0;z-index:120;background:rgba(40,4,12,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .25s}
+.pm.open{opacity:1;pointer-events:auto}
+html.pm-lock{overflow:hidden}
+.pm-box{position:relative;background:#fff;border-radius:28px;width:min(920px,100%);max-height:min(88vh,720px);overflow:auto;box-shadow:0 40px 80px rgba(0,0,0,.35);transform:translateY(16px) scale(.98);transition:transform .3s}
+.pm.open .pm-box{transform:none}
+.pm-x{position:absolute;right:14px;top:14px;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:var(--cream-2);color:var(--wine);font-size:18px;cursor:pointer}
+.pm-in{display:grid;grid-template-columns:1.1fr 1fr}
+.pm-img{position:relative;background:#fff;display:grid;place-items:center;padding:30px;min-height:340px;border-right:1px solid rgba(138,11,36,.08)}
+.pm-img img{width:100%;height:auto;max-height:440px;object-fit:contain}
+.pm-noimg{color:var(--muted);font-weight:700}
+.pm-body{padding:34px 30px 28px;display:flex;flex-direction:column;gap:12px}
+.pm-body h3{margin:0;font-size:clamp(22px,2.6vw,28px);line-height:1.2;color:var(--ink);padding-right:40px}
+.pm-meta{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;color:var(--muted);font-size:15px}
+.pm-meta .ic{color:var(--red)}
+.pm-price{font-size:32px;font-weight:900;color:var(--red);white-space:nowrap}
+.pm-order{align-self:flex-start;justify-content:center;text-align:center}
+.pm-sim{margin-top:10px;border-top:1px solid rgba(138,11,36,.08);padding-top:14px}
+.pm-sim b{display:block;font-size:14px;color:var(--wine);margin-bottom:10px}
+.pm-sim>div{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.pm-sim button{border:1px solid rgba(138,11,36,.1);background:#fff;border-radius:12px;padding:6px;cursor:pointer;font:inherit;font-size:11px;color:var(--ink);text-align:left}
+.pm-sim button:hover{border-color:var(--red)}
+.pm-sim img{width:100%;aspect-ratio:4/3;object-fit:contain;display:block;margin-bottom:4px}
+.pm-sim span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.25}
+@media(max-width:720px){.pm{padding:0;align-items:flex-end}.pm-box{border-radius:24px 24px 0 0;max-height:92vh}.pm-in{grid-template-columns:1fr}.pm-img{min-height:0;padding:22px 22px 8px;border-right:0}.pm-img img{max-height:260px}.pm-body{padding:12px 20px calc(24px + env(safe-area-inset-bottom))}.pm-order{align-self:stretch}}
 </style>
 </head>
 <body>
@@ -854,7 +882,7 @@ a.video.playing{padding:0}
         </div>
       </div>
       <div><h5>პროდუქცია</h5><ul><li><a href="#catalog-wafer">ვაფლები</a></li><li><a href="#catalog-choco">ჩაროზი</a></li><li><a href="#catalog-trad">ნუგბარი</a></li><li><a href="#catalog-snack">სნექები</a></li></ul></div>
-      <div><h5>კომპანია</h5><ul><li><a href="#story">ჩვენ შესახებ</a></li><li><a href="#export">ექსპორტი</a></li><li><a href="#game">თამაში</a></li><li><a href="#">სიახლეები</a></li></ul></div>
+      <div><h5>კომპანია</h5><ul><li><a href="#story">ჩვენ შესახებ</a></li><li><a href="#export">ექსპორტი</a></li><li><a href="#game">თამაში</a></li><li><a href="#gallery">გალერეა</a></li></ul></div>
       <div><h5>კონტაქტი</h5><ul><li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>სოფ. ფონიჭალა, ცოტნე დადიანის 1-ლი შესახვევი</li><li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+995322838888">032 283 88 88</a></li><li><svg class="ic" aria-hidden="true"><use href="#i-cart"/></svg>გაყიდვები: <a href="tel:+995599040916">599 04 09 16</a></li><li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:sandomi.tbilisi@gmail.com">sandomi.tbilisi@gmail.com</a></li><li><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg>Export: <a href="mailto:sandomiproducts@gmail.com">sandomiproducts@gmail.com</a></li><li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>ორშ–პარ 09:00–18:00</li></ul></div>
     </div>
     <div class="map rv">
@@ -922,9 +950,9 @@ CAT.sort((a,b)=>(!!b.i)-(!!a.i));
 const L=()=>{const l=(document.documentElement.lang||'ka').slice(0,2);return LBL[l]?l:'ka';};
 function shelfTxt(sh,l){if(!sh)return '';const m=sh.match(/(\d+)\s*(Days|Year|month)/);if(!m)return '';const u={Days:'days',Year:'year',month:'month'}[m[2]];return LBL[l].shelf+': '+m[1]+' '+LBL[l][u];}
 function renderCat(){const l=L(),T=LBL[l];
- grid.innerHTML=CAT.map(p=>{const col=CATCOL[p.c]||CATCOL.biscuit;const name=l==='en'?p.e:l==='ru'?p.r:p.k;const bulk=p.u==='kg';
+ grid.innerHTML=CAT.map((p,ix)=>{const col=CATCOL[p.c]||CATCOL.biscuit;const name=l==='en'?p.e:l==='ru'?p.r:p.k;const bulk=p.u==='kg';
  const tags=(p.l?'lent ':'')+(bulk?'bulk ':'')+p.c;
- return `<article class="p in" data-cat="${tags}" data-n="${(p.k+' '+p.e+' '+p.r+' '+p.code).toLowerCase()}">
+ return `<article class="p in" data-ix="${ix}" tabindex="0" data-cat="${tags}" data-n="${(p.k+' '+p.e+' '+p.r+' '+p.code).toLowerCase()}">
   <div class="img ${p.i?'pimg':'noimg'}" style="--g1:${col[0]};--g2:${col[1]}">${p.i?`<img src="${p.i}" alt="${name}" loading="lazy">`:`<div class="ph-p"><span>${col[2]}</span><small>${T.soon}</small></div>`}
   <div class="badges">${p.l?`<span class="badge">${T.lent}</span>`:''}${bulk?`<span class="badge bulkb">${T.bulk}</span>`:''}</div></div>
   <div class="body"><span class="pcat">${CATN[l][p.c]||''}</span><h3>${name}</h3>
@@ -943,7 +971,7 @@ document.getElementById('chips').addEventListener('click',e=>{const c=e.target.c
   document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===c));pf=c.dataset.f;plimit=12;applyP();});
 document.getElementById('pq').addEventListener('input',e=>{pq=e.target.value.trim().toLowerCase();plimit=12;applyP();});
 renderCat();
-window.renderCat=renderCat;
+window.renderCat=renderCat;window.__CAT=CAT;window.__LBL=LBL;window.__CATN=CATN;window.__shelf=shelfTxt;window.__L=L;
 // order request modal
 const toast=t=>{const el=document.getElementById('toast');el.textContent=window.__trText?window.__trText(t):t;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),2200);};
 const modal=document.getElementById('modal'),mp=document.getElementById('mProducts');
@@ -1141,6 +1169,31 @@ document.addEventListener('click',e=>{const a=e.target.closest('a.video,a.vc');i
 const map=document.querySelector('.map');if(!map)return;const box=document.createElement('div');box.className='gframe';box.hidden=true;map.appendChild(box);
 document.addEventListener('click',e=>{const a=e.target.closest('.map a[href*="google.com/maps"]');if(!a)return;e.preventDefault();
  const q=new URL(a.href).searchParams.get('query');box.innerHTML='<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q='+encodeURIComponent(q)+'&z=15&output=embed" title="Google Maps"></iframe><a class="gopen" href="'+a.href+'" target="_blank" rel="noopener">Google Maps ↗</a>';box.hidden=false;box.scrollIntoView({behavior:'smooth',block:'center'});});
+})();
+</script>
+<script>
+(()=>{const CAT=window.__CAT;if(!CAT)return;
+const ic=n=>`<svg class="ic" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const M=document.createElement('div');M.className='pm';M.id='pm';M.setAttribute('aria-hidden','true');
+M.innerHTML='<div class="pm-box" role="dialog" aria-modal="true"><button class="pm-x" aria-label="Close">✕</button><div class="pm-in"></div></div>';document.body.appendChild(M);
+const inn=M.querySelector('.pm-in');let last=null;
+function nm(p,l){return l==='en'?p.e:l==='ru'?p.r:p.k;}
+function open(ix){const p=CAT[ix];if(!p)return;const l=window.__L(),T=window.__LBL[l],N=window.__CATN[l]||{};const name=nm(p,l);
+ const bulk=p.u==='kg';const sim=CAT.map((q,i)=>[q,i]).filter(([q,i])=>i!==ix&&q.c===p.c&&q.i).slice(0,4);
+ const SIM={ka:'მსგავსი პროდუქცია',en:'Similar products',ru:'Похожая продукция'}[l];
+ inn.innerHTML=`<div class="pm-img">${p.i?`<img src="${p.i}" alt="${name}">`:`<div class="pm-noimg">${T.soon}</div>`}
+  <div class="badges">${p.l?`<span class="badge">${T.lent}</span>`:''}${bulk?`<span class="badge bulkb">${T.bulk}</span>`:''}</div></div>
+  <div class="pm-body"><span class="pcat">${N[p.c]||''}</span><h3>${name}</h3>
+  <ul class="pm-meta">${p.w?`<li>${ic('weight')}${p.w} ${T[p.u]}</li>`:''}${p.sh?`<li>${ic('clock')}${window.__shelf(p.sh,l)}</li>`:''}${p.code?`<li>${ic('tag')}${T.code}: ${p.code}</li>`:''}</ul>
+  ${p.p?`<div class="pm-price">${p.p} ₾</div>`:''}
+  <button class="btn btn-red pm-order" data-order="${name}${p.w?' '+p.w+' '+T[p.u]:''}">${T.order}</button>
+  ${sim.length?`<div class="pm-sim"><b>${SIM}</b><div>${sim.map(([q,i])=>`<button data-pm="${i}" title="${nm(q,l)}"><img src="${q.i}" alt=""><span>${nm(q,l)}</span></button>`).join('')}</div></div>`:''}</div>`;
+ M.classList.add('open');M.setAttribute('aria-hidden','false');document.documentElement.classList.add('pm-lock');M.querySelector('.pm-box').scrollTop=0;M.querySelector('.pm-x').focus({preventScroll:true});}
+function close(){M.classList.remove('open');M.setAttribute('aria-hidden','true');document.documentElement.classList.remove('pm-lock');if(last)last.focus({preventScroll:true});}
+document.getElementById('grid').addEventListener('click',e=>{if(e.target.closest('[data-order],.pmore'))return;const c=e.target.closest('.p[data-ix]');if(!c)return;last=c;open(+c.dataset.ix);});
+document.getElementById('grid').addEventListener('keydown',e=>{if(e.key!=='Enter')return;const c=e.target.closest('.p[data-ix]');if(c){last=c;open(+c.dataset.ix);}});
+M.addEventListener('click',e=>{if(e.target===M||e.target.closest('.pm-x'))return close();const s=e.target.closest('[data-pm]');if(s)open(+s.dataset.pm);if(e.target.closest('.pm-order'))close();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&M.classList.contains('open'))close();});
 })();
 </script>
 </body>
