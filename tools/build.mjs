@@ -8,6 +8,7 @@
  * attributes whose Georgian text is found in data/i18n.json are replaced.
  * Strings created by JavaScript are translated in assets/js/i18n.js.
  */
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseHTML } from 'linkedom';
@@ -91,6 +92,34 @@ function addHeadTags(document, lang) {
   tag('meta', { property: 'og:image', content: config.baseUrl + 'assets/img/og.jpg' });
 }
 
+/** Short content hash of the CSS and JS files, used to bust browser caches after each change. */
+const ASSET_DIRS = ['assets/css', 'assets/js'];
+const assetFiles = ASSET_DIRS.flatMap((d) => fs.readdirSync(path.join(ROOT, d)).map((f) => `${d}/${f}`));
+const version = crypto
+  .createHash('sha1')
+  .update(assetFiles.map((f) => fs.readFileSync(path.join(ROOT, f))).join(''))
+  .digest('hex')
+  .slice(0, 8);
+
+/**
+ * Adds ?v=<hash> to the stylesheet and the scripts, so visitors get the new version right after a change.
+ * The import map versions the JS modules that main.js imports (keys resolve against the page URL).
+ */
+function versionAssets(document, prefix) {
+  const css = document.querySelector('link[href$="assets/css/main.css"]');
+  css.setAttribute('href', `${css.getAttribute('href')}?v=${version}`);
+
+  const modules = assetFiles.filter((f) => f.endsWith('.js'));
+  const imports = Object.fromEntries(modules.map((f) => [prefix + f, `${prefix}${f}?v=${version}`]));
+  const map = document.createElement('script');
+  map.setAttribute('type', 'importmap');
+  map.textContent = JSON.stringify({ imports });
+
+  const main = document.querySelector('script[src$="assets/js/main.js"]');
+  main.before(map);
+  main.setAttribute('src', `${main.getAttribute('src')}?v=${version}`);
+}
+
 function build(lang) {
   const { document } = parseHTML(source);
   const { dir, code, region } = LANGS[lang];
@@ -107,6 +136,7 @@ function build(lang) {
   translateDocument(document, lang);
   addHeadTags(document, lang);
   rebase(document, prefix);
+  versionAssets(document, prefix);
 
   const out = path.join(ROOT, dir, 'index.html');
   fs.mkdirSync(path.dirname(out), { recursive: true });
