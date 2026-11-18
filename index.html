@@ -639,6 +639,19 @@ html.pm-lock{overflow:hidden}
 .plogos .pl-t{height:68px!important;aspect-ratio:auto!important;padding:10px 8px!important;overflow:hidden;border:0!important}
 .plogos .pl-t img{max-height:48px!important;width:auto!important;max-width:100%!important;height:auto!important}
 @media(max-width:700px){.plogos{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* smoother hero transitions */
+@property --ca{syntax:'<color>';inherits:true;initial-value:#a8132f}
+@property --cb{syntax:'<color>';inherits:true;initial-value:#3d0510}
+.cine-bg{transition:--ca 1.6s ease-in-out,--cb 1.6s ease-in-out!important}
+.cs{transition:opacity 1.3s cubic-bezier(.45,0,.25,1)!important;animation:csfl 7s ease-in-out infinite}
+@keyframes csfl{50%{transform:translateY(-10px)}}
+.cs img{transition:transform 1.6s cubic-bezier(.22,.8,.24,1)!important;will-change:transform,opacity}
+.cs.on img{animation:none!important}
+.cs.out img{transform:scale(1.06) rotate(-1deg) translateY(-18px)!important}
+.cs .cap{transition:opacity .9s ease .35s,transform 1.1s cubic-bezier(.22,.8,.24,1) .35s!important}
+.cs.out .cap{transition:opacity .5s ease,transform .6s ease!important;opacity:0}
+@media (prefers-reduced-motion:reduce){.cs,.cs img{animation:none!important;transition:opacity .6s!important}}
 </style>
 </head>
 <body>
@@ -1134,7 +1147,7 @@ const l=(document.documentElement.lang||'ka').slice(0,2);if(l!=='ka')tr(l);
 // cinematic hero
 const slides=[...document.querySelectorAll('.cs')],bg=document.getElementById('cineBg'),dots=document.getElementById('cineDots');let cur=0,timer=null,paused=false;
 slides.forEach((_,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','სლაიდი '+(i+1));b.onclick=()=>show(i,true);dots.appendChild(b);});
-function show(i,user){slides[cur].classList.remove('on');dots.children[cur].classList.remove('on');cur=(i+slides.length)%slides.length;const s=slides[cur];s.classList.add('on');
+function show(i,user){const prev=slides[cur];if(prev!==slides[(i+slides.length)%slides.length]){prev.classList.add('out');clearTimeout(prev.__t);prev.__t=setTimeout(()=>prev.classList.remove('out'),1500);}prev.classList.remove('on');dots.children[cur].classList.remove('on');cur=(i+slides.length)%slides.length;const s=slides[cur];s.classList.add('on');
   const d=dots.children[cur];d.classList.remove('on');void d.offsetWidth;d.classList.add('on');bg.style.setProperty('--ca',s.dataset.a);bg.style.setProperty('--cb',s.dataset.b);
   clearTimeout(timer);if(!paused)timer=setTimeout(()=>show(cur+1),5000);}
 document.getElementById('cinePause').onclick=e=>{paused=!paused;e.target.textContent=paused?'▶':'❚❚';dots.classList.toggle('paused',paused);if(paused)clearTimeout(timer);else timer=setTimeout(()=>show(cur+1),2500);};
