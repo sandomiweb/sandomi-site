@@ -59,14 +59,14 @@ function translateDocument(document, lang) {
 
 /** Prefix relative URLs with "../" on the /en/ and /ru/ pages. */
 function rebase(document, prefix) {
-  const isRelative = (u) => u && !/^(#|[a-z]+:|\/\/|\/|\{\{)/i.test(u);
+  const isRelative = (u) => u && !/^(#|[a-z]+:|\/\/|\/)/i.test(u);
   for (const [sel, attr] of [
     ['[src]', 'src'],
     ['link[href], a[href], use[href]', 'href'],
   ]) {
     for (const el of document.querySelectorAll(sel)) {
       const value = el.getAttribute(attr);
-      if (isRelative(value)) el.setAttribute(attr, prefix + value);
+      if (isRelative(value)) el.setAttribute(attr, value === './' ? prefix || './' : prefix + value);
     }
   }
   for (const el of document.querySelectorAll('[style*="url("]')) {
@@ -106,9 +106,6 @@ function build(lang) {
 
   translateDocument(document, lang);
   addHeadTags(document, lang);
-  for (const a of document.querySelectorAll('a[href*="{{root}}"]')) {
-    a.setAttribute('href', a.getAttribute('href').replace('{{root}}', prefix || './'));
-  }
   rebase(document, prefix);
 
   const out = path.join(ROOT, dir, 'index.html');
