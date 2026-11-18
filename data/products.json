@@ -1677,7 +1677,7 @@
     "shelfLife": "",
     "price": "12.00",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n111.webp"
   },
   {
     "code": "4860103231666",
@@ -1692,7 +1692,7 @@
     "shelfLife": "",
     "price": "5.20",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n112.webp"
   },
   {
     "code": "4860103233349",
@@ -1707,7 +1707,7 @@
     "shelfLife": "",
     "price": "6.30",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n113.webp"
   },
   {
     "code": "4860103233950",
@@ -1737,7 +1737,7 @@
     "shelfLife": "",
     "price": "6.00",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n115.webp"
   },
   {
     "code": "4860103231673",
@@ -1767,7 +1767,7 @@
     "shelfLife": "",
     "price": "6.00",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n117.webp"
   },
   {
     "code": "4860103234025",
@@ -1782,7 +1782,7 @@
     "shelfLife": "",
     "price": "6.30",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n118.webp"
   },
   {
     "code": "4860103231192",
@@ -1797,7 +1797,7 @@
     "shelfLife": "",
     "price": "11.00",
     "lenten": false,
-    "image": ""
+    "image": "assets/img/products/n119.webp"
   },
   {
     "code": "4860103231994",
@@ -1812,7 +1812,7 @@
     "shelfLife": "",
     "price": "4.50",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n120.webp"
   },
   {
     "code": "4860103233615",
@@ -1827,6 +1827,6 @@
     "shelfLife": "",
     "price": "6.50",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n121.webp"
   }
 ]
