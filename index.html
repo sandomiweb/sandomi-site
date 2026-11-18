@@ -630,6 +630,7 @@ html.pm-lock{overflow:hidden}
 .pm-sim span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.25}
 @media(max-width:720px){.pm{padding:0;align-items:flex-end}.pm-box{border-radius:24px 24px 0 0;max-height:92vh}.pm-in{grid-template-columns:1fr}.pm-img{min-height:0;padding:22px 22px 8px;border-right:0}.pm-img img{max-height:260px}.pm-body{padding:12px 20px calc(24px + env(safe-area-inset-bottom))}.pm-order{align-self:stretch}}
 .story-art.ph-art .big{background:#fff!important}.story-art.ph-art .big img{object-fit:cover!important;object-position:50% 40%}
+.vc .vt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3;font-size:13.5px}
 </style>
 </head>
 <body>
@@ -800,7 +801,7 @@ html.pm-lock{overflow:hidden}
       <figure class="qp rv"><img src="img/g/f0.jpg" alt="" loading="lazy"><figcaption>ავტომატიზირებული ხაზები</figcaption></figure>
       <figure class="qp rv"><img src="img/g/f1.jpg" alt="" loading="lazy"><figcaption>მზა პროდუქცია</figcaption></figure>
     </div>
-    <div class="vids rv"><a class="vc" href="https://youtu.be/aur2e7gQNFc" target="_blank" rel="noopener"><span class="vp" style="background-image:url(img/g/f3.jpg)"><span class="pl">▶</span></span><b>ვიდეო 2</b></a><a class="vc" href="https://youtu.be/-oqDTQuPgsM" target="_blank" rel="noopener"><span class="vp" style="background-image:url(img/g/25.jpg)"><span class="pl">▶</span></span><b>ვიდეო 3</b></a><a class="vc" href="https://youtu.be/foww5nHStuQ" target="_blank" rel="noopener"><span class="vp" style="background-image:url(img/g/10.jpg)"><span class="pl">▶</span></span><b>ვიდეო 4</b></a><a class="vc" href="https://youtu.be/eswbgdUlVVw" target="_blank" rel="noopener"><span class="vp" style="background-image:url(img/g/04.jpg)"><span class="pl">▶</span></span><b>ვიდეო 5</b></a></div>
+    <div class="vids rv"><a class="vc" href="https://youtu.be/aur2e7gQNFc" target="_blank" rel="noopener"><span class="vp" style="background-image:url(img/g/f3.jpg)"><span class="pl">▶</span></span><b class="vt">სანდომი</b></a><a class="vc" href="https://youtu.be/-oqDTQuPgsM" target="_blank" rel="noopener"><span class="vp" style="background-image:url(img/g/25.jpg)"><span class="pl">▶</span></span><b class="vt">სანდომი</b></a><a class="vc" href="https://youtu.be/foww5nHStuQ" target="_blank" rel="noopener"><span class="vp" style="background-image:url(img/g/10.jpg)"><span class="pl">▶</span></span><b class="vt">სანდომი</b></a><a class="vc" href="https://youtu.be/eswbgdUlVVw" target="_blank" rel="noopener"><span class="vp" style="background-image:url(img/g/04.jpg)"><span class="pl">▶</span></span><b class="vt">სანდომი</b></a></div>
   </div>
 </section>
 
@@ -1208,6 +1209,15 @@ document.getElementById('grid').addEventListener('click',e=>{if(e.target.closest
 document.getElementById('grid').addEventListener('keydown',e=>{if(e.key!=='Enter')return;const c=e.target.closest('.p[data-ix]');if(c){last=c;open(+c.dataset.ix);}});
 M.addEventListener('click',e=>{if(e.target===M||e.target.closest('.pm-x'))return close();const s=e.target.closest('[data-pm]');if(s)open(+s.dataset.pm);if(e.target.closest('.pm-order'))close();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&M.classList.contains('open'))close();});
+})();
+</script>
+<script>
+(()=>{if(/claude|anthropic/.test(location.hostname)||location.protocol==='file:')return;
+const yid=u=>{const m=u.match(/youtu\.be\/([\w-]{11})|v=([\w-]{11})/);return m&&(m[1]||m[2]);};
+document.querySelectorAll('a.vc,a.video').forEach(a=>{const id=yid(a.href);if(!id)return;
+ if(a.classList.contains('vc')){const vp=a.querySelector('.vp');if(vp)vp.style.backgroundImage=`url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;}
+ fetch('https://noembed.com/embed?url='+encodeURIComponent('https://www.youtube.com/watch?v='+id)).then(r=>r.json()).then(j=>{if(!j||!j.title)return;
+  const t=a.classList.contains('vc')?a.querySelector('.vt'):a.querySelector('small');if(t){t.textContent=j.title;t.title=j.title;}}).catch(()=>{});});
 })();
 </script>
 </body>
