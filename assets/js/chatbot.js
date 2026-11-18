@@ -110,7 +110,7 @@ export async function initChatbot() {
   chat = $('#cb');
   body = $('#cbBody');
   tip = $('#cbTip');
-  script = (await (await fetch(root + 'data/chatbot.json')).json())[lang];
+  script = (await (await fetch(root + 'data/chatbot.json', { cache: 'no-cache' })).json())[lang];
 
   $('.cb-h b', chat).textContent = script.ui.title;
   $('.cb-h small', chat).textContent = script.ui.status;

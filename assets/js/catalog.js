@@ -119,7 +119,7 @@ export function setFilter(filter) {
 }
 
 export async function initCatalog() {
-  const res = await fetch(root + 'data/products.json');
+  const res = await fetch(root + 'data/products.json', { cache: 'no-cache' });
   products = await res.json();
   products.sort((a, b) => Boolean(b.image) - Boolean(a.image)); // products with photos first
 
