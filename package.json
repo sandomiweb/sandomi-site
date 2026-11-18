@@ -1,0 +1,16 @@
+{
+  "name": "sandomi-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sandomi confectionery website — static site, no framework",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "format": "prettier --write \"src/**/*.html\" \"assets/**/*.{css,js}\" \"tools/**/*.mjs\" \"data/**/*.json\"",
+    "serve": "npx --yes serve ."
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.0",
+    "prettier": "^3.0.0"
+  }
+}

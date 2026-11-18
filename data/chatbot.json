@@ -1,0 +1,566 @@
+{
+  "ka": {
+    "ui": {
+      "title": "თედი · სანდომის დათუნია",
+      "status": "● ონლაინ · ვპასუხობ მყისიერად",
+      "greeting": "გამარჯობა! 👋 რით დაგეხმაროთ?"
+    },
+    "nodes": {
+      "start": {
+        "text": ["გამარჯობა! 👋 მე თედი ვარ, სანდომის დათუნია.", "რით დაგეხმაროთ?"],
+        "options": [
+          {
+            "label": "🍫 პროდუქცია",
+            "action": "products"
+          },
+          {
+            "label": "🤝 შეკვეთა / პარტნიორობა",
+            "action": "partner"
+          },
+          {
+            "label": "🛒 სად ვიყიდო",
+            "action": "buy"
+          },
+          {
+            "label": "🌍 ექსპორტი",
+            "action": "export"
+          },
+          {
+            "label": "🇬🇪 ჩვენ შესახებ",
+            "action": "about"
+          },
+          {
+            "label": "🎮 თამაში",
+            "action": "game"
+          },
+          {
+            "label": "📞 კონტაქტი",
+            "action": "contact"
+          }
+        ]
+      },
+      "products": {
+        "text": [
+          "ვაწარმოებთ 100+ დასახელებას: ვაფლები, ჩაროზი, ტყლაპის ნუგბარი, მრგვლები, ორცხობილა, თხილეული და სნექები.",
+          "ჩვენი პროდუქცია 9000+ მაღაზიაშია და 2 დღეში აღწევს თაროზე, ამიტომ ყოველთვის ახალია. 🚚"
+        ],
+        "options": [
+          {
+            "label": "📖 კატალოგის ნახვა",
+            "action": "@catalog",
+            "main": true
+          },
+          {
+            "label": "📄 PDF კატალოგი",
+            "action": "@pdf"
+          },
+          {
+            "label": "🌿 სამარხვო პროდუქცია",
+            "action": "lent"
+          },
+          {
+            "label": "⬅️ მენიუ",
+            "action": "start"
+          }
+        ]
+      },
+      "lent": {
+        "text": [
+          "სამარხვოა ჩვენი შოკოლადის ვაფლები Premium და Classic. 🌿",
+          "ასევე გვაქვს ტყლაპის ნუგბარი შაქრის დამატების გარეშე."
+        ],
+        "options": [
+          {
+            "label": "📖 კატალოგი",
+            "action": "@catalog",
+            "main": true
+          },
+          {
+            "label": "⬅️ მენიუ",
+            "action": "start"
+          }
+        ]
+      },
+      "partner": {
+        "text": [
+          "მაღაზიებს, ქსელებს და დისტრიბუტორებს პროდუქციას პირდაპირ მწარმოებლისგან ვაწვდით.",
+          "შეავსეთ მოკლე მოთხოვნა და ჩვენი მენეჯერი დაგიკავშირდებათ."
+        ],
+        "options": [
+          {
+            "label": "📝 შეკვეთის მოთხოვნა",
+            "action": "@order",
+            "main": true
+          },
+          {
+            "label": "⬅️ მენიუ",
+            "action": "start"
+          }
+        ]
+      },
+      "buy": {
+        "text": [
+          "ჩვენი პროდუქცია იყიდება ქსელებში:",
+          "Carrefour · Nikora · Libre · Goodwill · Fresco · Jibe · Kalata · Smart · Europroduct · Galagoni · Ambari · Nazilbe · SOCAR 🛒",
+          "9000-ზე მეტ მაღაზიაში მთელ საქართველოში."
+        ],
+        "options": [
+          {
+            "label": "⬅️ მენიუ",
+            "action": "start"
+          }
+        ]
+      },
+      "export": {
+        "text": [
+          "ჩვენი პროდუქცია უკვე გადის აშშ-სა და პალესტინაში. 🌍 ISO 22000 · HACCP · FDA. მინიმალური შეკვეთა: 1 პალეტი, შერეული პროდუქციით. Private label შეთანხმებით.",
+          "We export to the USA and Palestine. Minimum order: 1 mixed pallet. Write to sandomiproducts@gmail.com"
+        ],
+        "options": [
+          {
+            "label": "✉️ Export inquiry",
+            "action": "@order-export",
+            "main": true
+          },
+          {
+            "label": "⬅️ მენიუ",
+            "action": "start"
+          }
+        ]
+      },
+      "about": {
+        "text": [
+          "2001 წელს ოზურგეთში დავიწყეთ. 2011-ში მაკვანეთში საკონდიტრო გავხსენით, 2013-ში თბილისში გადმოვედით, დღეს ორი საწარმო გვაქვს, თბილისსა და ოზურგეთში, ევროპული დანადგარებით და საკუთარი ლაბორატორიით.",
+          "დღეს 450 თანამშრომელი გვყავს, პროდუქცია 9000+ მაღაზიაშია და საზღვარგარეთაც გადის. 🇬🇪 სანდომი — გემრიელია, იმიტომ რომ ქართულია!"
+        ],
+        "options": [
+          {
+            "label": "📖 ჩვენი ისტორია",
+            "action": "@go:story",
+            "main": true
+          },
+          {
+            "label": "🏭 წარმოება",
+            "action": "@go:quality"
+          },
+          {
+            "label": "⬅️ მენიუ",
+            "action": "start"
+          }
+        ]
+      },
+      "game": {
+        "text": [
+          "ითამაშე „ტკბილი ნახტომი“! 🧸",
+          "დამეხმარე მე, თედის, ნამცხვრებზე ახტომაში, შეაგროვე სანდომის პროდუქცია და დაამყარე რეკორდი."
+        ],
+        "options": [
+          {
+            "label": "🎮 ითამაშე",
+            "action": "@game",
+            "main": true
+          },
+          {
+            "label": "⬅️ მენიუ",
+            "action": "start"
+          }
+        ]
+      },
+      "contact": {
+        "text": [
+          "📍 სოფ. ფონიჭალა, ცოტნე დადიანის 1-ლი შესახვევი",
+          "📞 032 283 88 88 · გაყიდვები: 599 04 09 16",
+          "✉️ sandomi.tbilisi@gmail.com · Export: sandomiproducts@gmail.com",
+          "🕘 ორშ–პარ, 09:00–18:00"
+        ],
+        "options": [
+          {
+            "label": "📇 კონტაქტის ნახვა",
+            "action": "@go:contact",
+            "main": true
+          },
+          {
+            "label": "⬅️ მენიუ",
+            "action": "start"
+          }
+        ]
+      }
+    }
+  },
+  "en": {
+    "ui": {
+      "title": "Teddy · the Sandomi bear",
+      "status": "● Online · instant replies",
+      "greeting": "Hi! 👋 How can I help you?"
+    },
+    "nodes": {
+      "start": {
+        "text": ["Hi! 👋 I am Teddy, the Sandomi bear.", "How can I help you?"],
+        "options": [
+          {
+            "label": "🍫 Products",
+            "action": "products"
+          },
+          {
+            "label": "🤝 Order / Partnership",
+            "action": "partner"
+          },
+          {
+            "label": "🛒 Where to buy",
+            "action": "buy"
+          },
+          {
+            "label": "🌍 Export",
+            "action": "export"
+          },
+          {
+            "label": "🇬🇪 About us",
+            "action": "about"
+          },
+          {
+            "label": "🎮 Game",
+            "action": "game"
+          },
+          {
+            "label": "📞 Contact",
+            "action": "contact"
+          }
+        ]
+      },
+      "products": {
+        "text": [
+          "We produce 100+ items: wafers, charozi (chocolate-covered dried apricots with walnuts), tklapi fruit leather, chocolate balls, biscuits, nuts and snacks.",
+          "Our products are in 9,000+ stores and reach the shelf within 2 days, so they are always fresh. 🚚"
+        ],
+        "options": [
+          {
+            "label": "📖 View catalog",
+            "action": "@catalog",
+            "main": true
+          },
+          {
+            "label": "📄 PDF catalog",
+            "action": "@pdf"
+          },
+          {
+            "label": "🌿 Lenten products",
+            "action": "lent"
+          },
+          {
+            "label": "⬅️ Menu",
+            "action": "start"
+          }
+        ]
+      },
+      "lent": {
+        "text": [
+          "Our Premium and Classic chocolate wafers are Lenten (vegan-friendly). 🌿",
+          "We also have tklapi fruit leather with no added sugar."
+        ],
+        "options": [
+          {
+            "label": "📖 Catalog",
+            "action": "@catalog",
+            "main": true
+          },
+          {
+            "label": "⬅️ Menu",
+            "action": "start"
+          }
+        ]
+      },
+      "partner": {
+        "text": [
+          "We supply stores, chains and distributors directly from the manufacturer.",
+          "Fill in a short request and our manager will contact you."
+        ],
+        "options": [
+          {
+            "label": "📝 Order request",
+            "action": "@order",
+            "main": true
+          },
+          {
+            "label": "⬅️ Menu",
+            "action": "start"
+          }
+        ]
+      },
+      "buy": {
+        "text": [
+          "Our products are sold in these chains:",
+          "Carrefour · Nikora · Libre · Goodwill · Fresco · Jibe · Kalata · Smart · Europroduct · Galagoni · Ambari · Nazilbe · SOCAR 🛒",
+          "In over 9,000 stores across Georgia."
+        ],
+        "options": [
+          {
+            "label": "⬅️ Menu",
+            "action": "start"
+          }
+        ]
+      },
+      "export": {
+        "text": [
+          "We already export to the USA and Palestine. 🌍 ISO 22000 · HACCP · FDA registered.",
+          "Minimum order: 1 mixed pallet. Private label on request. Write to sandomiproducts@gmail.com"
+        ],
+        "options": [
+          {
+            "label": "✉️ Export inquiry",
+            "action": "@order-export",
+            "main": true
+          },
+          {
+            "label": "⬅️ Menu",
+            "action": "start"
+          }
+        ]
+      },
+      "about": {
+        "text": [
+          "We started in Ozurgeti in 2001. In 2011 we opened our confectionery in Makvaneti, moved to Tbilisi in 2013, and today we run two plants, in Tbilisi and Ozurgeti, with European equipment and our own laboratory.",
+          "Today we have 450 employees, our products are in 9,000+ stores and exported abroad. 🇬🇪 Sandomi: delicious because it is Georgian!"
+        ],
+        "options": [
+          {
+            "label": "📖 Our story",
+            "action": "@go:story",
+            "main": true
+          },
+          {
+            "label": "🏭 Production",
+            "action": "@go:quality"
+          },
+          {
+            "label": "⬅️ Menu",
+            "action": "start"
+          }
+        ]
+      },
+      "game": {
+        "text": [
+          "Play “Sweet Jump”! 🧸",
+          "Help me, Teddy, jump across the cakes, collect Sandomi products and set a record."
+        ],
+        "options": [
+          {
+            "label": "🎮 Play",
+            "action": "@game",
+            "main": true
+          },
+          {
+            "label": "⬅️ Menu",
+            "action": "start"
+          }
+        ]
+      },
+      "contact": {
+        "text": [
+          "📍 Ponichala, 1st lane of Tsotne Dadiani St., Tbilisi",
+          "📞 +995 32 283 88 88 · Sales: +995 599 04 09 16",
+          "✉️ sandomi.tbilisi@gmail.com · Export: sandomiproducts@gmail.com",
+          "🕘 Mon–Fri, 09:00–18:00"
+        ],
+        "options": [
+          {
+            "label": "📇 Contact details",
+            "action": "@go:contact",
+            "main": true
+          },
+          {
+            "label": "⬅️ Menu",
+            "action": "start"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "ui": {
+      "title": "Тедди · медвежонок «Сандоми»",
+      "status": "● Онлайн · отвечаю сразу",
+      "greeting": "Привет! 👋 Чем могу помочь?"
+    },
+    "nodes": {
+      "start": {
+        "text": ["Привет! 👋 Я Тедди, медвежонок «Сандоми».", "Чем могу помочь?"],
+        "options": [
+          {
+            "label": "🍫 Продукция",
+            "action": "products"
+          },
+          {
+            "label": "🤝 Заказ / Партнёрство",
+            "action": "partner"
+          },
+          {
+            "label": "🛒 Где купить",
+            "action": "buy"
+          },
+          {
+            "label": "🌍 Экспорт",
+            "action": "export"
+          },
+          {
+            "label": "🇬🇪 О нас",
+            "action": "about"
+          },
+          {
+            "label": "🎮 Игра",
+            "action": "game"
+          },
+          {
+            "label": "📞 Контакты",
+            "action": "contact"
+          }
+        ]
+      },
+      "products": {
+        "text": [
+          "Мы производим более 100 наименований: вафли, чарози (курага с грецким орехом в шоколаде), пастилу тклапи, шоколадные шарики, печенье, орехи и снеки.",
+          "Наша продукция есть в 9000+ магазинах и попадает на полку за 2 дня, поэтому всегда свежая. 🚚"
+        ],
+        "options": [
+          {
+            "label": "📖 Каталог",
+            "action": "@catalog",
+            "main": true
+          },
+          {
+            "label": "📄 PDF-каталог",
+            "action": "@pdf"
+          },
+          {
+            "label": "🌿 Постная продукция",
+            "action": "lent"
+          },
+          {
+            "label": "⬅️ Меню",
+            "action": "start"
+          }
+        ]
+      },
+      "lent": {
+        "text": [
+          "Наши шоколадные вафли Premium и Classic постные. 🌿",
+          "Также есть пастила тклапи без добавленного сахара."
+        ],
+        "options": [
+          {
+            "label": "📖 Каталог",
+            "action": "@catalog",
+            "main": true
+          },
+          {
+            "label": "⬅️ Меню",
+            "action": "start"
+          }
+        ]
+      },
+      "partner": {
+        "text": [
+          "Мы поставляем продукцию магазинам, сетям и дистрибьюторам напрямую от производителя.",
+          "Оставьте короткую заявку, и наш менеджер свяжется с вами."
+        ],
+        "options": [
+          {
+            "label": "📝 Заявка на заказ",
+            "action": "@order",
+            "main": true
+          },
+          {
+            "label": "⬅️ Меню",
+            "action": "start"
+          }
+        ]
+      },
+      "buy": {
+        "text": [
+          "Наша продукция продаётся в сетях:",
+          "Carrefour · Nikora · Libre · Goodwill · Fresco · Jibe · Kalata · Smart · Europroduct · Galagoni · Ambari · Nazilbe · SOCAR 🛒",
+          "Более 9000 магазинов по всей Грузии."
+        ],
+        "options": [
+          {
+            "label": "⬅️ Меню",
+            "action": "start"
+          }
+        ]
+      },
+      "export": {
+        "text": [
+          "Мы уже экспортируем в США и Палестину. 🌍 ISO 22000 · HACCP · регистрация FDA.",
+          "Минимальный заказ: 1 сборная палета. Private label по договорённости. Пишите на sandomiproducts@gmail.com"
+        ],
+        "options": [
+          {
+            "label": "✉️ Экспортный запрос",
+            "action": "@order-export",
+            "main": true
+          },
+          {
+            "label": "⬅️ Меню",
+            "action": "start"
+          }
+        ]
+      },
+      "about": {
+        "text": [
+          "Мы начали в Озургети в 2001 году. В 2011 открыли кондитерское производство в Макванети, в 2013 переехали в Тбилиси, а сегодня у нас два предприятия, в Тбилиси и Озургети, с европейским оборудованием и собственной лабораторией.",
+          "Сегодня у нас 450 сотрудников, продукция в 9000+ магазинах и на экспорте. 🇬🇪 «Сандоми» вкусно, потому что по-грузински!"
+        ],
+        "options": [
+          {
+            "label": "📖 Наша история",
+            "action": "@go:story",
+            "main": true
+          },
+          {
+            "label": "🏭 Производство",
+            "action": "@go:quality"
+          },
+          {
+            "label": "⬅️ Меню",
+            "action": "start"
+          }
+        ]
+      },
+      "game": {
+        "text": [
+          "Сыграй в «Сладкий прыжок»! 🧸",
+          "Помоги мне, Тедди, прыгать по пирожным, собирай продукцию «Сандоми» и поставь рекорд."
+        ],
+        "options": [
+          {
+            "label": "🎮 Играть",
+            "action": "@game",
+            "main": true
+          },
+          {
+            "label": "⬅️ Меню",
+            "action": "start"
+          }
+        ]
+      },
+      "contact": {
+        "text": [
+          "📍 Тбилиси, Понихала, 1-й переулок ул. Цотне Дадиани",
+          "📞 +995 32 283 88 88 · Продажи: +995 599 04 09 16",
+          "✉️ sandomi.tbilisi@gmail.com · Экспорт: sandomiproducts@gmail.com",
+          "🕘 Пн–Пт, 09:00–18:00"
+        ],
+        "options": [
+          {
+            "label": "📇 Контакты",
+            "action": "@go:contact",
+            "main": true
+          },
+          {
+            "label": "⬅️ Меню",
+            "action": "start"
+          }
+        ]
+      }
+    }
+  }
+}

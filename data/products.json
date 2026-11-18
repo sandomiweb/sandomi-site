@@ -1,0 +1,1832 @@
+[
+  {
+    "code": "4860103232373",
+    "name": {
+      "ka": "ვაფლი კაკაოს კრემით Premium",
+      "en": "Wafer with cocoa cream Premium",
+      "ru": "Вафли с какао-кремом Premium"
+    },
+    "category": "wafer",
+    "weight": "216",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "3.20",
+    "lenten": true,
+    "image": "assets/img/products/000.webp"
+  },
+  {
+    "code": "4860103233530",
+    "name": {
+      "ka": "ვაფლი თხილის კრემით Classic",
+      "en": "Wafer with hazelnut cream Classic",
+      "ru": "Вафли с ореховым кремом Classic"
+    },
+    "category": "wafer",
+    "weight": "200",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "2.20",
+    "lenten": true,
+    "image": "assets/img/products/001.webp"
+  },
+  {
+    "code": "4860103232434",
+    "name": {
+      "ka": "შოკოლადის ვაფლი Classic",
+      "en": "Chocolate wafer Classic",
+      "ru": "Шоколадные вафли Classic"
+    },
+    "category": "wafer",
+    "weight": "200",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "2.30",
+    "lenten": true,
+    "image": "assets/img/products/002.webp"
+  },
+  {
+    "code": "4860103232359",
+    "name": {
+      "ka": "შოკოლადის ვაფლი Premium",
+      "en": "Chocolate wafer Premium",
+      "ru": "Шоколадные вафли Premium"
+    },
+    "category": "wafer",
+    "weight": "216",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "3.30",
+    "lenten": true,
+    "image": "assets/img/products/003.webp"
+  },
+  {
+    "code": "4860103232441",
+    "name": {
+      "ka": "ვაფლი კაკაოს კრემით Classic",
+      "en": "Wafer with cocoa cream Classic",
+      "ru": "Вафли с какао-кремом Classic"
+    },
+    "category": "wafer",
+    "weight": "200",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "2.00",
+    "lenten": true,
+    "image": "assets/img/products/004.webp"
+  },
+  {
+    "code": "4860103233547",
+    "name": {
+      "ka": "ვაფლი ირისით Classic",
+      "en": "Wafer with toffee cream Classic",
+      "ru": "Вафли с ирисом Classic"
+    },
+    "category": "wafer",
+    "weight": "200",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "2.20",
+    "lenten": false,
+    "image": "assets/img/products/005.webp"
+  },
+  {
+    "code": "4860103232380",
+    "name": {
+      "ka": "შავი ვაფლი „ტოპი“ რძიანი კრემით",
+      "en": "Black wafer “Top” with milk cream",
+      "ru": "Тёмные вафли «Топ» с молочным кремом"
+    },
+    "category": "wafer",
+    "weight": "180",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "3.30",
+    "lenten": true,
+    "image": "assets/img/products/006.webp"
+  },
+  {
+    "code": "4860103232540",
+    "name": {
+      "ka": "ვაფლი ლიმონის არომატით",
+      "en": "Wafer with lemon flavour",
+      "ru": "Вафли со вкусом лимона"
+    },
+    "category": "wafer",
+    "weight": "200",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "2.75",
+    "lenten": true,
+    "image": "assets/img/products/007.webp"
+  },
+  {
+    "code": "4860103230492",
+    "name": {
+      "ka": "მინი ვაფლი „თედი“ შოკოლადში",
+      "en": "Mini wafer “Teddy” in chocolate",
+      "ru": "Мини-вафля «Тедди» в шоколаде"
+    },
+    "category": "wafer",
+    "weight": "30",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "0.80",
+    "lenten": true,
+    "image": "assets/img/products/008.webp"
+  },
+  {
+    "code": "4860103232397",
+    "name": {
+      "ka": "ვაფლი „ტოპი“ რძიანი კრემით",
+      "en": "Wafer “Top” with milk cream",
+      "ru": "Вафли «Топ» с молочным кремом"
+    },
+    "category": "wafer",
+    "weight": "180",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "3.10",
+    "lenten": false,
+    "image": "assets/img/products/009.webp"
+  },
+  {
+    "code": "4860103232533",
+    "name": {
+      "ka": "ვაფლი ნაღების არომატით",
+      "en": "Wafer with cream flavour",
+      "ru": "Вафли со вкусом сливок"
+    },
+    "category": "wafer",
+    "weight": "200",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "3.30",
+    "lenten": false,
+    "image": "assets/img/products/010.webp"
+  },
+  {
+    "code": "4860103230485",
+    "name": {
+      "ka": "მინი ვაფლი „ვაფლინი“ შოკოლადში",
+      "en": "Mini wafer “Wafflin” in chocolate",
+      "ru": "Мини-вафля «Вафлин» в шоколаде"
+    },
+    "category": "wafer",
+    "weight": "30",
+    "unit": "g",
+    "shelfLife": "210 Days",
+    "price": "0.80",
+    "lenten": true,
+    "image": "assets/img/products/011.webp"
+  },
+  {
+    "code": "4860103232076",
+    "name": {
+      "ka": "გრილიაჟი შოკოლადის მინანქრით",
+      "en": "Grillage in chocolate glaze",
+      "ru": "Грильяж в шоколадной глазури"
+    },
+    "category": "choco",
+    "weight": "210",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "4.30",
+    "lenten": true,
+    "image": "assets/img/products/012.webp"
+  },
+  {
+    "code": "4860103233868",
+    "name": {
+      "ka": "თაფლაკვერი ალუბლის ჯემით",
+      "en": "Honey cake with cherry jam",
+      "ru": "Пряник с вишнёвым джемом"
+    },
+    "category": "trad",
+    "weight": "300",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "4.00",
+    "lenten": true,
+    "image": "assets/img/products/013.webp"
+  },
+  {
+    "code": "4860103230782",
+    "name": {
+      "ka": "თაფლაკვერი დარიჩინით",
+      "en": "Honey cake with cinnamon",
+      "ru": "Пряник с корицей"
+    },
+    "category": "trad",
+    "weight": "500",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "4.80",
+    "lenten": true,
+    "image": "assets/img/products/014.webp"
+  },
+  {
+    "code": "4860103232427",
+    "name": {
+      "ka": "ვაფლის როლები შოკოლადის მინანქრით (კონტეინერი)",
+      "en": "Wafer rolls in chocolate glaze (container)",
+      "ru": "Вафельные трубочки в шоколадной глазури (контейнер)"
+    },
+    "category": "wafer",
+    "weight": "165",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "5.00",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103233875",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „კაკალი“",
+      "en": "Shortbread “Walnut”",
+      "ru": "Песочное печенье «Орешек»"
+    },
+    "category": "biscuit",
+    "weight": "160",
+    "unit": "g",
+    "shelfLife": "120 Days",
+    "price": "5.30",
+    "lenten": false,
+    "image": "assets/img/products/016.webp"
+  },
+  {
+    "code": "4860103233851",
+    "name": {
+      "ka": "თაფლაკვერი დარიჩინით კლასიკური",
+      "en": "Honey cake with cinnamon Classic",
+      "ru": "Пряник с корицей классический"
+    },
+    "category": "trad",
+    "weight": "300",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "3.90",
+    "lenten": true,
+    "image": "assets/img/products/017.webp"
+  },
+  {
+    "code": "4860103230348",
+    "name": {
+      "ka": "თაფლაკვერი ალუბლის ჯემით",
+      "en": "Honey cake with cherry jam",
+      "ru": "Пряник с вишнёвым джемом"
+    },
+    "category": "trad",
+    "weight": "500",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "5.00",
+    "lenten": true,
+    "image": "assets/img/products/018.webp"
+  },
+  {
+    "code": "4860103232571",
+    "name": {
+      "ka": "სნექი მიქსი: კრეკერი და ბრეცელი",
+      "en": "Snacky Mix: crackers & pretzels",
+      "ru": "Снеки микс: крекеры и брецели"
+    },
+    "category": "snack",
+    "weight": "100",
+    "unit": "g",
+    "shelfLife": "1 Year",
+    "price": "1.20",
+    "lenten": false,
+    "image": "assets/img/products/019.webp"
+  },
+  {
+    "code": "4860103232564",
+    "name": {
+      "ka": "მარილიანი ბრეცელი „სნექი“",
+      "en": "Salty pretzels “Snacky”",
+      "ru": "Солёные брецели «Снеки»"
+    },
+    "category": "snack",
+    "weight": "100",
+    "unit": "g",
+    "shelfLife": "1 Year",
+    "price": "1.20",
+    "lenten": false,
+    "image": "assets/img/products/020.webp"
+  },
+  {
+    "code": "4860103232588",
+    "name": {
+      "ka": "მარილიანი კრეკერი „სნექი“",
+      "en": "Salty crackers “Snacky”",
+      "ru": "Солёные крекеры «Снеки»"
+    },
+    "category": "snack",
+    "weight": "100",
+    "unit": "g",
+    "shelfLife": "1 Year",
+    "price": "1.20",
+    "lenten": false,
+    "image": "assets/img/products/021.webp"
+  },
+  {
+    "code": "4860103232557",
+    "name": {
+      "ka": "მარილიანი ჩხირი „პოპსი“",
+      "en": "Salty sticks “Pop’s”",
+      "ru": "Солёная соломка «Попс»"
+    },
+    "category": "snack",
+    "weight": "80",
+    "unit": "g",
+    "shelfLife": "1 Year",
+    "price": "1.30",
+    "lenten": false,
+    "image": "assets/img/products/022.webp"
+  },
+  {
+    "code": "4860103233721",
+    "name": {
+      "ka": "მიწისთხილი მოხალული თაფლით",
+      "en": "Honey-roasted peanuts",
+      "ru": "Арахис жареный с мёдом"
+    },
+    "category": "nuts",
+    "weight": "120",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "2.90",
+    "lenten": false,
+    "image": "assets/img/products/023.webp"
+  },
+  {
+    "code": "4860103230966",
+    "name": {
+      "ka": "ბლითი (შეფუთული)",
+      "en": "Bagels (packed)",
+      "ru": "Бублики (в упаковке)"
+    },
+    "category": "trad",
+    "weight": "250",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "2.70",
+    "lenten": true,
+    "image": "assets/img/products/024.webp"
+  },
+  {
+    "code": "4860103233738",
+    "name": {
+      "ka": "მიწისთხილი თაფლით და სეზამით",
+      "en": "Honey-roasted peanuts with sesame",
+      "ru": "Арахис с мёдом и кунжутом"
+    },
+    "category": "nuts",
+    "weight": "120",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "3.05",
+    "lenten": false,
+    "image": "assets/img/products/025.webp"
+  },
+  {
+    "code": "4860103233981",
+    "name": {
+      "ka": "მოხალული თხილეულის მიქსი",
+      "en": "Roasted nut mix",
+      "ru": "Ореховый микс жареный"
+    },
+    "category": "nuts",
+    "weight": "120",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "11.10",
+    "lenten": false,
+    "image": "assets/img/products/026.webp"
+  },
+  {
+    "code": "4860103232625",
+    "name": {
+      "ka": "მარილიანი კრეკერი „შარკი“",
+      "en": "Salty crackers “Shark”",
+      "ru": "Солёные крекеры «Шарк»"
+    },
+    "category": "snack",
+    "weight": "100",
+    "unit": "g",
+    "shelfLife": "1 Year",
+    "price": "1.00",
+    "lenten": false,
+    "image": "assets/img/products/027.webp"
+  },
+  {
+    "code": "4860103233332",
+    "name": {
+      "ka": "ფხვიერი ორცხობილა შვრიის",
+      "en": "Oat cookies",
+      "ru": "Овсяное печенье"
+    },
+    "category": "biscuit",
+    "weight": "250",
+    "unit": "g",
+    "shelfLife": "6 month",
+    "price": "3.10",
+    "lenten": true,
+    "image": "assets/img/products/028.webp"
+  },
+  {
+    "code": "4860103231987",
+    "name": {
+      "ka": "საიუბილეო ორცხობილა „სანდომი“",
+      "en": "Anniversary biscuit “Sandomi”",
+      "ru": "Юбилейное печенье «Сандоми»"
+    },
+    "category": "biscuit",
+    "weight": "260",
+    "unit": "g",
+    "shelfLife": "1 Year",
+    "price": "2.30",
+    "lenten": false,
+    "image": "assets/img/products/029.webp"
+  },
+  {
+    "code": "4860103232595",
+    "name": {
+      "ka": "კრეკერი „ანბანი“",
+      "en": "Crackers “Alphabet”",
+      "ru": "Крекеры «Алфавит»"
+    },
+    "category": "snack",
+    "weight": "200",
+    "unit": "g",
+    "shelfLife": "1 Year",
+    "price": "3.00",
+    "lenten": false,
+    "image": "assets/img/products/030.webp"
+  },
+  {
+    "code": "4860103233325",
+    "name": {
+      "ka": "ბალიშა ალუბლის ჯემით",
+      "en": "Balisha cookies with cherry jam",
+      "ru": "Печенье «Балиша» с вишнёвым джемом"
+    },
+    "category": "jam",
+    "weight": "250",
+    "unit": "g",
+    "shelfLife": "6 month",
+    "price": "3.30",
+    "lenten": true,
+    "image": "assets/img/products/031.webp"
+  },
+  {
+    "code": "",
+    "name": {
+      "ka": "კანფეტი „დათუნია“ შოკოლადის მინანქრით",
+      "en": "Chocolate sweets “Datunia”",
+      "ru": "Конфеты «Медвежонок» в шоколадной глазури"
+    },
+    "category": "choco",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "25.00",
+    "lenten": true,
+    "image": "assets/img/products/032.webp"
+  },
+  {
+    "code": "4860103233813",
+    "name": {
+      "ka": "ლუქუმის რულეტი ასორტი",
+      "en": "Turkish delight rolls assorted",
+      "ru": "Лукум рулет ассорти"
+    },
+    "category": "lukum",
+    "weight": "300",
+    "unit": "g",
+    "shelfLife": "6 month",
+    "price": "6.00",
+    "lenten": false,
+    "image": "assets/img/products/033.webp"
+  },
+  {
+    "code": "4860103233790",
+    "name": {
+      "ka": "ლუქუმი მიწისთხილით და ქოქოსით",
+      "en": "Turkish delight with peanut & coconut",
+      "ru": "Лукум с арахисом и кокосом"
+    },
+    "category": "lukum",
+    "weight": "300",
+    "unit": "g",
+    "shelfLife": "6 month",
+    "price": "6.00",
+    "lenten": false,
+    "image": "assets/img/products/034.webp"
+  },
+  {
+    "code": "4860103233820",
+    "name": {
+      "ka": "ლუქუმის ასორტი",
+      "en": "Turkish delight assorted",
+      "ru": "Лукум ассорти"
+    },
+    "category": "lukum",
+    "weight": "300",
+    "unit": "g",
+    "shelfLife": "6 month",
+    "price": "5.80",
+    "lenten": false,
+    "image": "assets/img/products/035.webp"
+  },
+  {
+    "code": "4860103233783",
+    "name": {
+      "ka": "ლუქუმი კლასიკური",
+      "en": "Turkish delight classic",
+      "ru": "Лукум классический"
+    },
+    "category": "lukum",
+    "weight": "300",
+    "unit": "g",
+    "shelfLife": "6 month",
+    "price": "5.50",
+    "lenten": false,
+    "image": "assets/img/products/036.webp"
+  },
+  {
+    "code": "4860103233844",
+    "name": {
+      "ka": "ჩაროზი: გარგრის ჩირი ნიგვზით შოკოლადში",
+      "en": "Charozi: dried apricots with walnuts in chocolate",
+      "ru": "Чарози: курага с грецким орехом в шоколаде"
+    },
+    "category": "trad",
+    "weight": "130",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "9.00",
+    "lenten": false,
+    "image": "assets/img/products/037.webp"
+  },
+  {
+    "code": "4860103233585",
+    "name": {
+      "ka": "ტყლაპის ასორტი",
+      "en": "Fruit leather assorted",
+      "ru": "Пастила тклапи ассорти"
+    },
+    "category": "trad",
+    "weight": "100",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "6.50",
+    "lenten": false,
+    "image": "assets/img/products/038.webp"
+  },
+  {
+    "code": "4860103233578",
+    "name": {
+      "ka": "ქლიავის ტყლაპი",
+      "en": "Plum fruit leather",
+      "ru": "Сливовая пастила"
+    },
+    "category": "trad",
+    "weight": "100",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "7.00",
+    "lenten": false,
+    "image": "assets/img/products/039.webp"
+  },
+  {
+    "code": "4860103233837",
+    "name": {
+      "ka": "ფინიკი თხილით შოკოლადის მინანქარში",
+      "en": "Dates with nuts in chocolate",
+      "ru": "Финики с орехом в шоколаде"
+    },
+    "category": "trad",
+    "weight": "130",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "8.00",
+    "lenten": false,
+    "image": "assets/img/products/040.webp"
+  },
+  {
+    "code": "4860103233578",
+    "name": {
+      "ka": "ტყემლის ტყლაპი",
+      "en": "Tkemali fruit leather",
+      "ru": "Пастила из ткемали"
+    },
+    "category": "trad",
+    "weight": "100",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "9.80",
+    "lenten": false,
+    "image": "assets/img/products/041.webp"
+  },
+  {
+    "code": "4860103233561",
+    "name": {
+      "ka": "ვაშლის ტყლაპი",
+      "en": "Apple fruit leather",
+      "ru": "Яблочная пастила"
+    },
+    "category": "trad",
+    "weight": "100",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "5.70",
+    "lenten": false,
+    "image": "assets/img/products/042.webp"
+  },
+  {
+    "code": "4860103231567",
+    "name": {
+      "ka": "ხრაშუნა ყურები",
+      "en": "Crispy “Kurebi” (ears)",
+      "ru": "Хрустящие «Ушки»"
+    },
+    "category": "biscuit",
+    "weight": "300",
+    "unit": "g",
+    "shelfLife": "180 Days",
+    "price": "5.30",
+    "lenten": true,
+    "image": "assets/img/products/043.webp"
+  },
+  {
+    "code": "4860103231734",
+    "name": {
+      "ka": "შვრიის ნამცხვარი „თბილისი“",
+      "en": "Oat cookies “Tbilisi”",
+      "ru": "Овсяное печенье «Тбилиси»"
+    },
+    "category": "biscuit",
+    "weight": "360",
+    "unit": "g",
+    "shelfLife": "120 Days",
+    "price": "5.20",
+    "lenten": false,
+    "image": "assets/img/products/044.webp"
+  },
+  {
+    "code": "4090",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „გული“",
+      "en": "Shortbread “Heart”",
+      "ru": "Песочное печенье «Сердце»"
+    },
+    "category": "biscuit",
+    "weight": "2.2",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "8.80",
+    "lenten": true,
+    "image": "assets/img/products/045.webp"
+  },
+  {
+    "code": "1115019",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „ზიგზაგი“",
+      "en": "Shortbread “Zigzag”",
+      "ru": "Песочное печенье «Зигзаг»"
+    },
+    "category": "biscuit",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "8.80",
+    "lenten": true,
+    "image": "assets/img/products/046.webp"
+  },
+  {
+    "code": "6018",
+    "name": {
+      "ka": "სენდვიჩი მარმელადით",
+      "en": "Sandwich cookies with marmalade",
+      "ru": "Печенье-сэндвич с мармеладом"
+    },
+    "category": "jam",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "10.00",
+    "lenten": true,
+    "image": "assets/img/products/047.webp"
+  },
+  {
+    "code": "1115076",
+    "name": {
+      "ka": "შვრიის ნამცხვარი „თბილისი“",
+      "en": "Oat cookies “Tbilisi”",
+      "ru": "Овсяное печенье «Тбилиси»"
+    },
+    "category": "biscuit",
+    "weight": "2.0",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "11.00",
+    "lenten": true,
+    "image": "assets/img/products/048.webp"
+  },
+  {
+    "code": "4066",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „ნახევარმთვარე“",
+      "en": "Shortbread “Half-moon”",
+      "ru": "Песочное печенье «Полумесяц»"
+    },
+    "category": "biscuit",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "8.80",
+    "lenten": true,
+    "image": "assets/img/products/049.webp"
+  },
+  {
+    "code": "6038",
+    "name": {
+      "ka": "ტრიუფელი ქოქოსით",
+      "en": "Truffle cookies with coconut",
+      "ru": "Печенье «Трюфель» с кокосом"
+    },
+    "category": "jam",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "10.00",
+    "lenten": true,
+    "image": "assets/img/products/050.webp"
+  },
+  {
+    "code": "1115453",
+    "name": {
+      "ka": "კაკაოს ვაფლის როლები",
+      "en": "Cocoa wafer rolls",
+      "ru": "Вафельные трубочки с какао"
+    },
+    "category": "wafer",
+    "weight": "1.5",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "12.50",
+    "lenten": true,
+    "image": "assets/img/products/051.webp"
+  },
+  {
+    "code": "4047",
+    "name": {
+      "ka": "ორცხობილა „სანდომი“ დიდი",
+      "en": "Biscuit “Sandomi” large",
+      "ru": "Печенье «Сандоми» большое"
+    },
+    "category": "biscuit",
+    "weight": "3.3",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "6.00",
+    "lenten": true,
+    "image": "assets/img/products/052.webp"
+  },
+  {
+    "code": "1115338",
+    "name": {
+      "ka": "ორცხობილა „საქართველოს ქალაქები“",
+      "en": "Biscuit “Cities of Georgia”",
+      "ru": "Печенье «Города Грузии»"
+    },
+    "category": "biscuit",
+    "weight": "1.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "5.50",
+    "lenten": false,
+    "image": "assets/img/products/053.webp"
+  },
+  {
+    "code": "6011",
+    "name": {
+      "ka": "ვაფლის როლები „მიშუტკა“ შოკოლადის შიგთავსით",
+      "en": "Wafer rolls “Mishutka” with chocolate filling",
+      "ru": "Вафельные трубочки «Мишутка» с шоколадной начинкой"
+    },
+    "category": "wafer",
+    "weight": "2.1",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "11.00",
+    "lenten": true,
+    "image": "assets/img/products/054.webp"
+  },
+  {
+    "code": "4125",
+    "name": {
+      "ka": "საიუბილეო ორცხობილა „სანდომი“",
+      "en": "Anniversary biscuit “Sandomi”",
+      "ru": "Юбилейное печенье «Сандоми»"
+    },
+    "category": "biscuit",
+    "weight": "4.8",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "7.00",
+    "lenten": false,
+    "image": "assets/img/products/055.webp"
+  },
+  {
+    "code": "4096",
+    "name": {
+      "ka": "ორცხობილა „სანდომი“ მრგვალი",
+      "en": "Biscuit “Sandomi” round",
+      "ru": "Печенье «Сандоми» круглое"
+    },
+    "category": "biscuit",
+    "weight": "4",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "5.50",
+    "lenten": true,
+    "image": "assets/img/products/056.webp"
+  },
+  {
+    "code": "4017",
+    "name": {
+      "ka": "ხრაშუნა ყურები",
+      "en": "Crispy “Kurebi” (ears)",
+      "ru": "Хрустящие «Ушки»"
+    },
+    "category": "biscuit",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "11.00",
+    "lenten": true,
+    "image": "assets/img/products/057.webp"
+  },
+  {
+    "code": "4050",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „მარიო“",
+      "en": "Shortbread “Mario”",
+      "ru": "Песочное печенье «Марио»"
+    },
+    "category": "biscuit",
+    "weight": "2.2",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "8.80",
+    "lenten": true,
+    "image": "assets/img/products/058.webp"
+  },
+  {
+    "code": "4063",
+    "name": {
+      "ka": "შვრიის ნამცხვარი ქიშმიშით",
+      "en": "Oat cookies with raisins",
+      "ru": "Овсяное печенье с изюмом"
+    },
+    "category": "biscuit",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "11.00",
+    "lenten": true,
+    "image": "assets/img/products/059.webp"
+  },
+  {
+    "code": "1115411",
+    "name": {
+      "ka": "ხრაშუნა გულები დარიჩინით და მიწისთხილით",
+      "en": "Crispy hearts with cinnamon & peanuts",
+      "ru": "Хрустящие сердечки с корицей и арахисом"
+    },
+    "category": "biscuit",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "11.00",
+    "lenten": true,
+    "image": "assets/img/products/060.webp"
+  },
+  {
+    "code": "4066",
+    "name": {
+      "ka": "ხაჭოს ნამცხვარი",
+      "en": "Cottage cheese cookies",
+      "ru": "Творожное печенье"
+    },
+    "category": "biscuit",
+    "weight": "1.5",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "14.00",
+    "lenten": false,
+    "image": "assets/img/products/061.webp"
+  },
+  {
+    "code": "7017",
+    "name": {
+      "ka": "ბალიშა დეკორით",
+      "en": "Balisha cookies with jam, decorated",
+      "ru": "Печенье «Балиша» с джемом, декор"
+    },
+    "category": "jam",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "10.00",
+    "lenten": true,
+    "image": "assets/img/products/062.webp"
+  },
+  {
+    "code": "1115239",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „ბანანი“ ფორთოხლის ჯემით",
+      "en": "Shortbread “Banana” with orange jam",
+      "ru": "Песочное печенье «Банан» с апельсиновым джемом"
+    },
+    "category": "jam",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "10.50",
+    "lenten": true,
+    "image": "assets/img/products/063.webp"
+  },
+  {
+    "code": "6004",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „რაფაელო“",
+      "en": "Shortbread “Raffaello”",
+      "ru": "Песочное печенье «Рафаэлло»"
+    },
+    "category": "biscuit",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "10.00",
+    "lenten": false,
+    "image": "assets/img/products/064.webp"
+  },
+  {
+    "code": "1115081",
+    "name": {
+      "ka": "ტვისტი მარწყვის ჯემით",
+      "en": "“Twist” cookies with strawberry jam",
+      "ru": "Печенье «Твист» с клубничным джемом"
+    },
+    "category": "jam",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "9.40",
+    "lenten": true,
+    "image": "assets/img/products/066.webp"
+  },
+  {
+    "code": "4002",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „რგოლი“",
+      "en": "Shortbread “Ring”",
+      "ru": "Песочное печенье «Колечко»"
+    },
+    "category": "biscuit",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "8.80",
+    "lenten": false,
+    "image": "assets/img/products/067.webp"
+  },
+  {
+    "code": "4082",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „ნავი“ ქოქოსით",
+      "en": "Shortbread “Boat” with coconut",
+      "ru": "Песочное печенье «Лодочка» с кокосом"
+    },
+    "category": "biscuit",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "10.80",
+    "lenten": true,
+    "image": "assets/img/products/068.webp"
+  },
+  {
+    "code": "4001",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „მრგვალი“",
+      "en": "Shortbread “Round”",
+      "ru": "Песочное печенье «Круглое»"
+    },
+    "category": "biscuit",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "8.80",
+    "lenten": false,
+    "image": "assets/img/products/069.webp"
+  },
+  {
+    "code": "1115428",
+    "name": {
+      "ka": "ტყუპები ალუბლის და ფორთოხლის ჯემით",
+      "en": "“Twins” with cherry & orange jam",
+      "ru": "«Близнецы» с вишнёвым и апельсиновым джемом"
+    },
+    "category": "jam",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "14.00",
+    "lenten": false,
+    "image": "assets/img/products/070.webp"
+  },
+  {
+    "code": "1115234",
+    "name": {
+      "ka": "ორცხობილა „ლა ლუნა“ მოცვის ჯემით",
+      "en": "Cookies “La Luna” with blueberry jam",
+      "ru": "Печенье «Ла Луна» с черничным джемом"
+    },
+    "category": "jam",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "12.50",
+    "lenten": true,
+    "image": "assets/img/products/071.webp"
+  },
+  {
+    "code": "4053",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „ნავი“",
+      "en": "Shortbread “Boat”",
+      "ru": "Песочное печенье «Лодочка»"
+    },
+    "category": "biscuit",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "10.80",
+    "lenten": false,
+    "image": "assets/img/products/072.webp"
+  },
+  {
+    "code": "1115427",
+    "name": {
+      "ka": "ფხვიერი ორცხობილა „დუეტი“ ალუბლის და ფორთოხლის ჯემით",
+      "en": "Cookies “Duet” with cherry & orange jam",
+      "ru": "Печенье «Дуэт» с вишнёвым и апельсиновым джемом"
+    },
+    "category": "jam",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "",
+    "price": "13.00",
+    "lenten": false,
+    "image": "assets/img/products/073.webp"
+  },
+  {
+    "code": "4121",
+    "name": {
+      "ka": "მარილიანი ბრეცელი „სნექი“",
+      "en": "Salty pretzels “Snacky”",
+      "ru": "Солёные брецели «Снеки»"
+    },
+    "category": "snack",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "6.50",
+    "lenten": true,
+    "image": "assets/img/products/074.webp"
+  },
+  {
+    "code": "4124",
+    "name": {
+      "ka": "მარილიანი კრეკერი „შარკი“",
+      "en": "Salty crackers “Shark”",
+      "ru": "Солёные крекеры «Шарк»"
+    },
+    "category": "snack",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "6.50",
+    "lenten": false,
+    "image": "assets/img/products/075.webp"
+  },
+  {
+    "code": "1115422",
+    "name": {
+      "ka": "ფენოვანი ჩხირი ლორის არომატით",
+      "en": "Layered sticks with ham flavour",
+      "ru": "Слоёная соломка со вкусом ветчины"
+    },
+    "category": "snack",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "",
+    "price": "18.00",
+    "lenten": false,
+    "image": "assets/img/products/076.webp"
+  },
+  {
+    "code": "1115074",
+    "name": {
+      "ka": "მარილიანი ჩხირი „პოპსი“",
+      "en": "Salty sticks “Pop’s”",
+      "ru": "Солёная соломка «Попс»"
+    },
+    "category": "snack",
+    "weight": "2.3",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "6.50",
+    "lenten": true,
+    "image": "assets/img/products/077.webp"
+  },
+  {
+    "code": "4044",
+    "name": {
+      "ka": "კრეკერი „ანბანი“",
+      "en": "Crackers “Alphabet”",
+      "ru": "Крекеры «Алфавит»"
+    },
+    "category": "snack",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "6.50",
+    "lenten": false,
+    "image": "assets/img/products/078.webp"
+  },
+  {
+    "code": "1115424",
+    "name": {
+      "ka": "ფენოვანი ჩხირი პაპრიკით",
+      "en": "Layered sticks with paprika",
+      "ru": "Слоёная соломка с паприкой"
+    },
+    "category": "snack",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "",
+    "price": "18.00",
+    "lenten": true,
+    "image": "assets/img/products/079.webp"
+  },
+  {
+    "code": "1115131",
+    "name": {
+      "ka": "ლუქუმის ასორტი",
+      "en": "Turkish delight assorted",
+      "ru": "Лукум ассорти"
+    },
+    "category": "lukum",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "10.50",
+    "lenten": false,
+    "image": "assets/img/products/080.webp"
+  },
+  {
+    "code": "1115325",
+    "name": {
+      "ka": "ლუქუმი ნიგვზით",
+      "en": "Turkish delight with walnuts",
+      "ru": "Лукум с грецким орехом"
+    },
+    "category": "lukum",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "15.00",
+    "lenten": false,
+    "image": "assets/img/products/081.webp"
+  },
+  {
+    "code": "1115323",
+    "name": {
+      "ka": "ლუქუმი „სამეფო“",
+      "en": "Turkish delight “Royal”",
+      "ru": "Лукум «Царский»"
+    },
+    "category": "lukum",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "12.00",
+    "lenten": false,
+    "image": "assets/img/products/082.webp"
+  },
+  {
+    "code": "1119105",
+    "name": {
+      "ka": "ლუქუმი მიწისთხილით და ქოქოსით",
+      "en": "Turkish delight with peanut & coconut",
+      "ru": "Лукум с арахисом и кокосом"
+    },
+    "category": "lukum",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "11.00",
+    "lenten": false,
+    "image": "assets/img/products/083.webp"
+  },
+  {
+    "code": "1115032",
+    "name": {
+      "ka": "ლუქუმი კლასიკური",
+      "en": "Turkish delight classic",
+      "ru": "Лукум классический"
+    },
+    "category": "lukum",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "10.00",
+    "lenten": false,
+    "image": "assets/img/products/084.webp"
+  },
+  {
+    "code": "1115462",
+    "name": {
+      "ka": "ლუქუმი მარწყვის არომატით",
+      "en": "Turkish delight strawberry",
+      "ru": "Лукум клубничный"
+    },
+    "category": "lukum",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "10.50",
+    "lenten": false,
+    "image": "assets/img/products/085.webp"
+  },
+  {
+    "code": "1115132",
+    "name": {
+      "ka": "ლუქუმის რულეტი ასორტი",
+      "en": "Turkish delight rolls assorted",
+      "ru": "Лукум рулет ассорти"
+    },
+    "category": "lukum",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "10.50",
+    "lenten": false,
+    "image": "assets/img/products/086.webp"
+  },
+  {
+    "code": "1115455",
+    "name": {
+      "ka": "ლუქუმი ბროწეულის არომატით და მიწისთხილით",
+      "en": "Turkish delight pomegranate & peanut",
+      "ru": "Лукум гранатовый с арахисом"
+    },
+    "category": "lukum",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "11.00",
+    "lenten": false,
+    "image": "assets/img/products/087.webp"
+  },
+  {
+    "code": "1115454",
+    "name": {
+      "ka": "ლუქუმი ფორთოხლით და ნიგვზით",
+      "en": "Turkish delight orange & walnut",
+      "ru": "Лукум с апельсином и грецким орехом"
+    },
+    "category": "lukum",
+    "weight": "3",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "14.00",
+    "lenten": false,
+    "image": "assets/img/products/088.webp"
+  },
+  {
+    "code": "1115005",
+    "name": {
+      "ka": "შავი ვაფლი",
+      "en": "Black wafer",
+      "ru": "Тёмные вафли"
+    },
+    "category": "wafer",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "12.10",
+    "lenten": true,
+    "image": "assets/img/products/089.webp"
+  },
+  {
+    "code": "111500",
+    "name": {
+      "ka": "ვაფლი „თბილისური“",
+      "en": "Wafer “Tbilisuri”",
+      "ru": "Вафли «Тбилисские»"
+    },
+    "category": "wafer",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "11.00",
+    "lenten": false,
+    "image": "assets/img/products/090.webp"
+  },
+  {
+    "code": "1115040",
+    "name": {
+      "ka": "ვაფლი შოკოლადის მინანქრით",
+      "en": "Wafer in chocolate glaze",
+      "ru": "Вафли в шоколадной глазури"
+    },
+    "category": "wafer",
+    "weight": "1.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "20.00",
+    "lenten": true,
+    "image": "assets/img/products/091.webp"
+  },
+  {
+    "code": "1115002",
+    "name": {
+      "ka": "ვაფლი „თბილისური“ კაკაოს კრემით",
+      "en": "Wafer “Tbilisuri” with cocoa cream",
+      "ru": "Вафли «Тбилисские» с какао-кремом"
+    },
+    "category": "wafer",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "11.60",
+    "lenten": false,
+    "image": "assets/img/products/092.webp"
+  },
+  {
+    "code": "1115276",
+    "name": {
+      "ka": "ვაფლი კარამელით",
+      "en": "Wafer with caramel",
+      "ru": "Вафли с карамелью"
+    },
+    "category": "wafer",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "12.10",
+    "lenten": false,
+    "image": "assets/img/products/093.webp"
+  },
+  {
+    "code": "1115315",
+    "name": {
+      "ka": "ვაფლი ქოქოსის კრემით",
+      "en": "Wafer with coconut cream",
+      "ru": "Вафли с кокосовым кремом"
+    },
+    "category": "wafer",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "12.10",
+    "lenten": false,
+    "image": "assets/img/products/094.webp"
+  },
+  {
+    "code": "1115013",
+    "name": {
+      "ka": "ბისკვიტი შოკოლადში",
+      "en": "Sponge cake in chocolate",
+      "ru": "Бисквит в шоколаде"
+    },
+    "category": "choco",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "15.00",
+    "lenten": true,
+    "image": "assets/img/products/095.webp"
+  },
+  {
+    "code": "1115065",
+    "name": {
+      "ka": "შოკოლადის მინანქრის ღილები",
+      "en": "Chocolate buttons",
+      "ru": "Шоколадные пуговки"
+    },
+    "category": "choco",
+    "weight": "2.5",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "20.00",
+    "lenten": true,
+    "image": "assets/img/products/096.webp"
+  },
+  {
+    "code": "1115258",
+    "name": {
+      "ka": "მიწისთხილი შოკოლადის მინანქრით",
+      "en": "Peanuts in chocolate",
+      "ru": "Арахис в шоколаде"
+    },
+    "category": "choco",
+    "weight": "1.7",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "24.00",
+    "lenten": true,
+    "image": "assets/img/products/097.webp"
+  },
+  {
+    "code": "1115016",
+    "name": {
+      "ka": "ჩხირი შოკოლადის მინანქრით",
+      "en": "Biscuit sticks in chocolate",
+      "ru": "Палочки в шоколаде"
+    },
+    "category": "choco",
+    "weight": "3.5",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "15.00",
+    "lenten": true,
+    "image": "assets/img/products/098.webp"
+  },
+  {
+    "code": "1115011",
+    "name": {
+      "ka": "გრილიაჟი",
+      "en": "Grillage",
+      "ru": "Грильяж"
+    },
+    "category": "choco",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "17.00",
+    "lenten": true,
+    "image": "assets/img/products/099.webp"
+  },
+  {
+    "code": "1115398",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი თხილით შოკოლადში",
+      "en": "Shortbread with nuts in chocolate",
+      "ru": "Песочное печенье с орехами в шоколаде"
+    },
+    "category": "choco",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "17.00",
+    "lenten": false,
+    "image": "assets/img/products/100.webp"
+  },
+  {
+    "code": "7045",
+    "name": {
+      "ka": "ორცხობილა „სანდომი“ მრგვალი შოკოლადში",
+      "en": "Biscuit “Sandomi” round in chocolate",
+      "ru": "Печенье «Сандоми» круглое в шоколаде"
+    },
+    "category": "choco",
+    "weight": "3.3",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "16.00",
+    "lenten": false,
+    "image": "assets/img/products/101.webp"
+  },
+  {
+    "code": "1115060",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი ირისით შოკოლადში",
+      "en": "Shortbread with toffee in chocolate",
+      "ru": "Песочное печенье с ирисом в шоколаде"
+    },
+    "category": "choco",
+    "weight": "3.3",
+    "unit": "kg",
+    "shelfLife": "120 Days",
+    "price": "18.00",
+    "lenten": false,
+    "image": "assets/img/products/102.webp"
+  },
+  {
+    "code": "4026",
+    "name": {
+      "ka": "ზეფირი შოკოლადში",
+      "en": "Zephyr in chocolate",
+      "ru": "Зефир в шоколаде"
+    },
+    "category": "choco",
+    "weight": "1.8",
+    "unit": "kg",
+    "shelfLife": "90 Days",
+    "price": "20.00",
+    "lenten": false,
+    "image": "assets/img/products/103.webp"
+  },
+  {
+    "code": "1115062",
+    "name": {
+      "ka": "მოხალული არაქისი თაფლით და სეზამით",
+      "en": "Roasted peanuts with honey & sesame",
+      "ru": "Арахис жареный с мёдом и кунжутом"
+    },
+    "category": "nuts",
+    "weight": "1.8",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "13.00",
+    "lenten": true,
+    "image": "assets/img/products/104.webp"
+  },
+  {
+    "code": "1115066",
+    "name": {
+      "ka": "მარილიანი არაქისი",
+      "en": "Salted peanuts",
+      "ru": "Солёный арахис"
+    },
+    "category": "nuts",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "15.00",
+    "lenten": true,
+    "image": "assets/img/products/105.webp"
+  },
+  {
+    "code": "1115470",
+    "name": {
+      "ka": "მარილიანი მიწისთხილი კანიანი",
+      "en": "Salted peanuts in shell",
+      "ru": "Солёный арахис в скорлупе"
+    },
+    "category": "nuts",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "14.00",
+    "lenten": true,
+    "image": "assets/img/products/106.webp"
+  },
+  {
+    "code": "1115061",
+    "name": {
+      "ka": "მოხალული არაქისი თაფლით",
+      "en": "Roasted peanuts with honey",
+      "ru": "Арахис жареный с мёдом"
+    },
+    "category": "nuts",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "12.00",
+    "lenten": true,
+    "image": "assets/img/products/107.webp"
+  },
+  {
+    "code": "1115474",
+    "name": {
+      "ka": "მოხალული არაქისი ლორის არომატით",
+      "en": "Roasted peanuts with ham flavour",
+      "ru": "Арахис жареный со вкусом ветчины"
+    },
+    "category": "nuts",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "18.00",
+    "lenten": false,
+    "image": "assets/img/products/108.webp"
+  },
+  {
+    "code": "1115475",
+    "name": {
+      "ka": "მოხალული არაქისი პაპრიკით",
+      "en": "Roasted peanuts with paprika",
+      "ru": "Арахис жареный с паприкой"
+    },
+    "category": "nuts",
+    "weight": "2",
+    "unit": "kg",
+    "shelfLife": "180 Days",
+    "price": "17.00",
+    "lenten": true,
+    "image": "assets/img/products/109.webp"
+  },
+  {
+    "code": "4860103232274",
+    "name": {
+      "ka": "ბალიშა ალუბლის ჯემით",
+      "en": "Balisha cookies with cherry jam",
+      "ru": "Печенье «Балиша» с вишнёвым джемом"
+    },
+    "category": "jam",
+    "weight": "350",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "5.50",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103231260",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „ბანანი“ ფორთოხლის ჯემით",
+      "en": "Shortbread “Banana” with orange jam",
+      "ru": "Песочное печенье «Банан» с апельсиновым джемом"
+    },
+    "category": "jam",
+    "weight": "480",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "6.30",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103231215",
+    "name": {
+      "ka": "ბისკვიტი შოკოლადის მინანქრით",
+      "en": "Sponge cake in chocolate glaze",
+      "ru": "Бисквит в шоколадной глазури"
+    },
+    "category": "choco",
+    "weight": "650",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "12.00",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103231666",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „ნავი“ ქოქოსით",
+      "en": "Shortbread “Boat” with coconut",
+      "ru": "Песочное печенье «Лодочка» с кокосом"
+    },
+    "category": "biscuit",
+    "weight": "350",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "5.20",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103233349",
+    "name": {
+      "ka": "ვაფლის როლები „მიშუტკა“",
+      "en": "Wafer rolls “Mishutka”",
+      "ru": "Вафельные трубочки «Мишутка»"
+    },
+    "category": "wafer",
+    "weight": "350",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "6.30",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103233950",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი „კაკალი“",
+      "en": "Shortbread “Walnut”",
+      "ru": "Песочное печенье «Орешек»"
+    },
+    "category": "biscuit",
+    "weight": "450",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "6.00",
+    "lenten": false,
+    "image": ""
+  },
+  {
+    "code": "4860103233387",
+    "name": {
+      "ka": "სენდვიჩი მარმელადით მრგვალი",
+      "en": "Round sandwich cookies with marmalade",
+      "ru": "Круглое печенье-сэндвич с мармеладом"
+    },
+    "category": "jam",
+    "weight": "430",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "6.00",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103231673",
+    "name": {
+      "ka": "ტვისტი მარწყვის ჯემით",
+      "en": "“Twist” cookies with strawberry jam",
+      "ru": "Печенье «Твист» с клубничным джемом"
+    },
+    "category": "jam",
+    "weight": "360",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "5.30",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103234018",
+    "name": {
+      "ka": "მოხალული არაქისი თაფლით",
+      "en": "Roasted peanuts with honey",
+      "ru": "Арахис жареный с мёдом"
+    },
+    "category": "nuts",
+    "weight": "",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "6.00",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103234025",
+    "name": {
+      "ka": "მოხალული არაქისი თაფლით და სეზამით",
+      "en": "Roasted peanuts with honey & sesame",
+      "ru": "Арахис жареный с мёдом и кунжутом"
+    },
+    "category": "nuts",
+    "weight": "",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "6.30",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103231192",
+    "name": {
+      "ka": "ფხვიერი ნამცხვარი ირისით და შოკოლადის მინანქრით",
+      "en": "Shortbread with toffee in chocolate glaze",
+      "ru": "Песочное печенье с ирисом в шоколадной глазури"
+    },
+    "category": "choco",
+    "weight": "530",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "11.00",
+    "lenten": false,
+    "image": ""
+  },
+  {
+    "code": "4860103231994",
+    "name": {
+      "ka": "ხრაშუნა „ხვეულა“",
+      "en": "Crispy “Khveula” spirals",
+      "ru": "Хрустящие «Хвеула»"
+    },
+    "category": "biscuit",
+    "weight": "200",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "4.50",
+    "lenten": true,
+    "image": ""
+  },
+  {
+    "code": "4860103233615",
+    "name": {
+      "ka": "კაკაოს ვაფლის როლები",
+      "en": "Cocoa wafer rolls",
+      "ru": "Вафельные трубочки с какао"
+    },
+    "category": "wafer",
+    "weight": "350",
+    "unit": "g",
+    "shelfLife": "",
+    "price": "6.50",
+    "lenten": true,
+    "image": ""
+  }
+]
