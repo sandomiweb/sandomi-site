@@ -110,7 +110,9 @@ function versionAssets(document, prefix) {
   css.setAttribute('href', `${css.getAttribute('href')}?v=${version}`);
 
   const modules = assetFiles.filter((f) => f.endsWith('.js'));
-  const imports = Object.fromEntries(modules.map((f) => [prefix + f, `${prefix}${f}?v=${version}`]));
+  // Keys must look like URLs ("./" or "../"), otherwise browsers treat them as bare package names.
+  const base = prefix || './';
+  const imports = Object.fromEntries(modules.map((f) => [base + f, `${base}${f}?v=${version}`]));
   const map = document.createElement('script');
   map.setAttribute('type', 'importmap');
   map.textContent = JSON.stringify({ imports });

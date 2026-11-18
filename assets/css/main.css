@@ -3677,3 +3677,19 @@ footer .muted {
     margin: 12px 0 18px;
   }
 }
+
+/* ---------- Hero: tighter top spacing and roomier headline ---------- */
+.cine h1 {
+  line-height: 1.14;
+}
+@media (max-width: 860px) {
+  section.cine {
+    padding-top: 0;
+  }
+  .cine-in {
+    padding-top: 22px;
+  }
+  .cine-eye {
+    margin-bottom: 10px;
+  }
+}
