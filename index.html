@@ -981,7 +981,7 @@ window.renderCat=renderCat;window.__CAT=CAT;window.__LBL=LBL;window.__CATN=CATN;
 // order request modal
 const toast=t=>{const el=document.getElementById('toast');el.textContent=window.__trText?window.__trText(t):t;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),2200);};
 const modal=document.getElementById('modal'),mp=document.getElementById('mProducts');
-function openOrder(prod,type){if(prod){mp.value=(mp.value&&!mp.value.includes(prod)?mp.value+'\n':'')+(mp.value.includes(prod)?'':prod+' — ')}
+function openOrder(prod,type){if(prod){const has=mp.value.split('\n').some(l=>l.split('—')[0].trim()===prod.trim());if(!has){const v=mp.value.replace(/\n+$/,'');mp.value=(v?v+'\n':'')+prod+' — ';}}
   if(type==='export'){document.querySelector('#seg input[value="ექსპორტი"]').checked=true;}
   modal.classList.add('open');modal.setAttribute('aria-hidden','false');}
 function closeOrder(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');}
@@ -1182,8 +1182,8 @@ document.addEventListener('click',e=>{const a=e.target.closest('a.video,a.vc');i
  else{const vp=a.querySelector('.vp');vp.innerHTML='';vp.appendChild(ifr(id));a.classList.add('playing');}});
 // maps
 const map=document.querySelector('.map');if(!map)return;const box=document.createElement('div');box.className='gframe';box.hidden=true;map.appendChild(box);
-document.addEventListener('click',e=>{const a=e.target.closest('.map a[href*="google.com/maps"]');if(!a)return;e.preventDefault();
- const q=new URL(a.href).searchParams.get('query');box.innerHTML='<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q='+encodeURIComponent(q)+'&z=15&output=embed" title="Google Maps"></iframe><a class="gopen" href="'+a.href+'" target="_blank" rel="noopener">Google Maps ↗</a>';box.hidden=false;box.scrollIntoView({behavior:'smooth',block:'center'});});
+document.addEventListener('click',e=>{const a=e.target.closest('.map a[href*="google.com/maps"]');if(!a||a.classList.contains('gopen'))return;e.preventDefault();
+ const url=new URL(a.getAttribute('href'),document.baseURI);const q=url.searchParams.get('query');box.innerHTML='<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q='+encodeURIComponent(q)+'&z=15&output=embed" title="Google Maps"></iframe><a class="gopen" href="'+url.href+'" target="_blank" rel="noopener">Google Maps ↗</a>';box.hidden=false;box.scrollIntoView({behavior:'smooth',block:'center'});});
 })();
 </script>
 <script>
