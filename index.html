@@ -589,6 +589,15 @@ footer .ic{color:var(--gold);margin-right:.5em}
 .p .row{flex-wrap:wrap;gap:8px}
 .p .price{white-space:nowrap}
 .p .add{white-space:nowrap;flex:1 1 auto;text-align:center}
+
+.yt{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:inherit}
+a.video.playing,.vc.playing .vp{position:relative;overflow:hidden}
+a.video.playing{padding:0}
+.vc.playing .vp::before{display:none}
+.gframe{position:relative;margin:14px auto 0;max-width:820px;border-radius:20px;overflow:hidden;aspect-ratio:16/9;background:#2a0710}
+.gframe iframe{width:100%;height:100%;border:0}
+.gopen{position:absolute;right:10px;bottom:10px;background:#fff;color:var(--wine);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px;text-decoration:none}
+@media(max-width:600px){.gframe{aspect-ratio:4/5}}
 </style>
 </head>
 <body>
@@ -1120,6 +1129,19 @@ addEventListener('hashchange',route);route();})();
 </script>
 <script>
 document.querySelectorAll('.gar').forEach(b=>b.addEventListener('click',()=>{const g=[...document.querySelectorAll('.ggrid')].find(x=>!x.hidden);if(g)g.scrollBy({left:b.dataset.d*g.clientWidth*.8,behavior:'smooth'});}));
+</script>
+<script>
+(()=>{const EMBED=!/claude|anthropic/.test(location.hostname)&&location.protocol!=='file:';if(!EMBED)return;
+const yid=u=>{const m=u.match(/youtu\.be\/([\w-]{11})|v=([\w-]{11})/);return m&&(m[1]||m[2]);};
+const ifr=(id)=>{const i=document.createElement('iframe');i.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&playsinline=1&modestbranding=1';i.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';i.allowFullscreen=true;i.title='Sandomi video';i.className='yt';return i;};
+document.addEventListener('click',e=>{const a=e.target.closest('a.video,a.vc');if(!a)return;const id=yid(a.href);if(!id)return;e.preventDefault();
+ if(a.classList.contains('video')){a.innerHTML='';a.style.background='#000';a.appendChild(ifr(id));a.classList.add('playing');}
+ else{const vp=a.querySelector('.vp');vp.innerHTML='';vp.appendChild(ifr(id));a.classList.add('playing');}});
+// maps
+const map=document.querySelector('.map');if(!map)return;const box=document.createElement('div');box.className='gframe';box.hidden=true;map.appendChild(box);
+document.addEventListener('click',e=>{const a=e.target.closest('.map a[href*="google.com/maps"]');if(!a)return;e.preventDefault();
+ const q=new URL(a.href).searchParams.get('query');box.innerHTML='<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q='+encodeURIComponent(q)+'&z=15&output=embed" title="Google Maps"></iframe><a class="gopen" href="'+a.href+'" target="_blank" rel="noopener">Google Maps ↗</a>';box.hidden=false;box.scrollIntoView({behavior:'smooth',block:'center'});});
+})();
 </script>
 </body>
 </html>
