@@ -17,12 +17,15 @@ import path from 'node:path';
 import { parseHTML } from 'linkedom';
 import { cardHtml, cardTags, sortProducts } from '../assets/js/card.js';
 import { STRINGS } from '../assets/js/strings.js';
+import { renderContent } from './content.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), 'utf8'));
 const dict = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/i18n.json'), 'utf8'));
 const source = fs.readFileSync(path.join(ROOT, 'src/index.html'), 'utf8');
 const seo = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/seo.json'), 'utf8'));
+// Banners, stats, history, videos, gallery, news and contact — edited in the admin panel.
+const content = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/content.json'), 'utf8'));
 // `hidden: true` (set in the admin panel) keeps a product off the site without deleting it.
 const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/products.json'), 'utf8')).filter((p) => !p.hidden);
 
@@ -262,6 +265,7 @@ function build(lang, page) {
   document.documentElement.dataset.root = prefix;
   document.body.classList.add(`r-${region}`);
   document.getElementById('regCode').textContent = code;
+  renderContent(document, content, lang);
 
   // International visitors see export right after the "Made in Georgia" block.
   if (lang !== 'ka') document.getElementById('georgian').after(document.getElementById('export'));
@@ -296,6 +300,21 @@ const urls = slugs
     return `  <url>\n    <loc>${config.baseUrl + pagePath(l, slug)}</loc>\n    <lastmod>${today}</lastmod>\n${alts}\n  </url>`;
   })
   .join('\n');
+// Lets the admin panel tell when a saved change is live: a hash of every data file this build used.
+const buildInfo = Object.fromEntries(
+  fs
+    .readdirSync(path.join(ROOT, 'data'))
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => [
+      `data/${f}`,
+      crypto
+        .createHash('sha1')
+        .update(fs.readFileSync(path.join(ROOT, 'data', f)))
+        .digest('hex'),
+    ]),
+);
+fs.writeFileSync(path.join(ROOT, 'build-info.json'), JSON.stringify(buildInfo, null, 2) + '\n');
+
 fs.writeFileSync(
   path.join(ROOT, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>\n`,

@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "sandomi-build"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- '*.html' sitemap.xml robots.txt
+          git add -A -- '*.html' sitemap.xml robots.txt build-info.json
           if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
           git commit -m "Build site"
           for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

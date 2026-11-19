@@ -1,0 +1,642 @@
+{
+  "season": [
+    {
+      "id": "newyear",
+      "on": true,
+      "from": "",
+      "to": "",
+      "theme": "winter",
+      "eyebrow": {
+        "ka": "სეზონის შეთავაზება",
+        "en": "Seasonal offer",
+        "ru": "Сезонное предложение"
+      },
+      "title": {
+        "ka": "საახალწლო სიტკბო",
+        "en": "New Year sweets",
+        "ru": "Новогодние сладости"
+      },
+      "text": {
+        "ka": "ჩაროზი, ვაფლები და თხილეული საახალწლო სუფრისა და საჩუქრებისთვის. დამზადებულია საქართველოში.",
+        "en": "Charozi, wafers and nuts for the New Year table and gifts. Made in Georgia.",
+        "ru": "Чарози, вафли и орехи для новогоднего стола и подарков. Сделано в Грузии."
+      },
+      "button": {
+        "ka": "პროდუქციის ნახვა →",
+        "en": "View products →",
+        "ru": "Смотреть продукцию →"
+      },
+      "filter": "choco",
+      "images": ["assets/img/hero/charozi.webp", "assets/img/hero/wafer.webp", "assets/img/hero/nuts.webp"],
+      "bear": true
+    }
+  ],
+  "stats": [
+    {
+      "value": {
+        "ka": "25",
+        "en": "25",
+        "ru": "25"
+      },
+      "label": {
+        "ka": "წელი ბაზარზე",
+        "en": "years on the market",
+        "ru": "лет на рынке"
+      }
+    },
+    {
+      "value": {
+        "ka": "9000+",
+        "en": "9000+",
+        "ru": "9000+"
+      },
+      "label": {
+        "ka": "მაღაზია",
+        "en": "stores",
+        "ru": "магазинов"
+      }
+    },
+    {
+      "value": {
+        "ka": "450",
+        "en": "450",
+        "ru": "450"
+      },
+      "label": {
+        "ka": "თანამშრომელი",
+        "en": "employees",
+        "ru": "сотрудников"
+      }
+    },
+    {
+      "value": {
+        "ka": "2 დღე",
+        "en": "2 days",
+        "ru": "2 дня"
+      },
+      "label": {
+        "ka": "საწარმოდან თარომდე",
+        "en": "from plant to shelf",
+        "ru": "от производства до полки"
+      }
+    }
+  ],
+  "story": {
+    "lead": {
+      "ka": "ოჯახური საცხობიდან სრულად ავტომატიზირებულ საკონდიტრო წარმოებამდე. სიყვარულით შექმნილი ქართული ტკბილეულის ისტორია.",
+      "en": "From a family bakery to fully automated confectionery production. A story of Georgian sweets made with love.",
+      "ru": "От семейной пекарни до полностью автоматизированного кондитерского производства. История грузинских сладостей, созданных с любовью."
+    },
+    "timeline": [
+      {
+        "year": "2001",
+        "title": {
+          "ka": "დასაწყისი ოზურგეთში",
+          "en": "Beginning in Ozurgeti",
+          "ru": "Начало в Озургети"
+        },
+        "text": {
+          "ka": "„ვასაძის პური“ პურითა და საცხობი ნაწარმით იწყებს.",
+          "en": "“Vasadze’s Bread” starts with bread and bakery products.",
+          "ru": "«Хлеб Васадзе» начинает с хлеба и выпечки."
+        },
+        "star": false
+      },
+      {
+        "year": "2011",
+        "title": {
+          "ka": "იბადება „სანდომი“",
+          "en": "Sandomi is born",
+          "ru": "Рождение «Сандоми»"
+        },
+        "text": {
+          "ka": "სოფელ მაკვანეთში საკონდიტრო წარმოება და ახალი ბრენდი იხსნება.",
+          "en": "Confectionery production and a new brand open in Makvaneti village.",
+          "ru": "В селе Макванети открываются кондитерское производство и новый бренд."
+        },
+        "star": false
+      },
+      {
+        "year": "2013",
+        "title": {
+          "ka": "მეორე საწარმოს გახსნა თბილისში",
+          "en": "Second plant opens in Tbilisi",
+          "ru": "Открытие второго производства в Тбилиси"
+        },
+        "text": {
+          "ka": "გაიხსნა უფრო დიდი და მასშტაბური საკონდიტრო წარმოება თბილისშიც.",
+          "en": "A larger, large-scale confectionery plant opened in Tbilisi as well.",
+          "ru": "Открылось более крупное и масштабное кондитерское производство и в Тбилиси."
+        },
+        "star": false
+      },
+      {
+        "year": "2016",
+        "title": {
+          "ka": "ორი საწარმო: თბილისი და ოზურგეთი",
+          "en": "Two plants: Tbilisi and Ozurgeti",
+          "ru": "Два предприятия: Тбилиси и Озургети"
+        },
+        "text": {
+          "ka": "წარმოების გაფართოება, პროდუქცია 9000+ მაღაზიაში მთელ საქართველოში.",
+          "en": "Production expands; products in 9,000+ stores across Georgia.",
+          "ru": "Расширение производства; продукция в 9000+ магазинах по всей Грузии."
+        },
+        "star": false
+      },
+      {
+        "year": "2018",
+        "title": {
+          "ka": "ISO 22000 და HACCP",
+          "en": "ISO 22000 and HACCP",
+          "ru": "ISO 22000 и HACCP"
+        },
+        "text": {
+          "ka": "საერთაშორისო ხარისხისა და უსაფრთხოების სტანდარტები.",
+          "en": "International quality and safety standards.",
+          "ru": "Международные стандарты качества и безопасности."
+        },
+        "star": false
+      },
+      {
+        "year": "2019",
+        "title": {
+          "ka": "Golden Brand",
+          "en": "Golden Brand",
+          "ru": "Golden Brand"
+        },
+        "text": {
+          "ka": "პურფუნთუშეულის წარმოების პერმანენტული ლიდერი.",
+          "en": "Consistent leader in bakery production.",
+          "ru": "Неизменный лидер хлебопекарного производства."
+        },
+        "star": false
+      },
+      {
+        "year": "2020",
+        "title": {
+          "ka": "ევროპული ტექნოლოგია",
+          "en": "European technology",
+          "ru": "Европейские технологии"
+        },
+        "text": {
+          "ka": "საწარმოს სრული აღჭურვა და ავტომატიზაცია.",
+          "en": "Plant fully equipped and automated.",
+          "ru": "Полное оснащение и автоматизация предприятия."
+        },
+        "star": false
+      },
+      {
+        "year": "2025",
+        "title": {
+          "ka": "მსოფლიო ბაზარზე",
+          "en": "On the world market",
+          "ru": "На мировом рынке"
+        },
+        "text": {
+          "ka": "Gulfood დუბაი, შანხაი, Caspian Agro; ექსპორტი აშშ-სა და პალესტინაში.",
+          "en": "Gulfood Dubai, Shanghai, Caspian Agro; exports to the USA and Palestine.",
+          "ru": "Gulfood Дубай, Шанхай, Caspian Agro; экспорт в США и Палестину."
+        },
+        "star": false
+      },
+      {
+        "year": "2026",
+        "title": {
+          "ka": "25 წელი · SIAL Paris",
+          "en": "25 years · SIAL Paris",
+          "ru": "25 лет · SIAL Paris"
+        },
+        "text": {
+          "ka": "იუბილე და მონაწილეობა საერთაშორისო გამოფენა SIAL Paris 2026-ში.",
+          "en": "Anniversary and participation in SIAL Paris 2026.",
+          "ru": "Юбилей и участие в выставке SIAL Paris 2026."
+        },
+        "star": true
+      }
+    ]
+  },
+  "videos": {
+    "main": {
+      "url": "https://youtu.be/-ZhQn45VgUU",
+      "title": {
+        "ka": "წარმოების ვიდეო",
+        "en": "Production video",
+        "ru": "Видео производства"
+      }
+    },
+    "list": [
+      {
+        "url": "https://youtu.be/aur2e7gQNFc",
+        "title": {
+          "ka": "სანდომი",
+          "en": "Sandomi",
+          "ru": "Сандоми"
+        },
+        "cover": "assets/img/photos/f3.webp"
+      },
+      {
+        "url": "https://youtu.be/-oqDTQuPgsM",
+        "title": {
+          "ka": "სანდომი",
+          "en": "Sandomi",
+          "ru": "Сандоми"
+        },
+        "cover": "assets/img/photos/25.webp"
+      },
+      {
+        "url": "https://youtu.be/foww5nHStuQ",
+        "title": {
+          "ka": "სანდომი",
+          "en": "Sandomi",
+          "ru": "Сандоми"
+        },
+        "cover": "assets/img/photos/10.webp"
+      },
+      {
+        "url": "https://youtu.be/eswbgdUlVVw",
+        "title": {
+          "ka": "სანდომი",
+          "en": "Sandomi",
+          "ru": "Сандоми"
+        },
+        "cover": "assets/img/photos/04.webp"
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "id": "exp",
+      "icon": "globe",
+      "title": {
+        "ka": "საერთაშორისო გამოფენები",
+        "en": "International exhibitions",
+        "ru": "Международные выставки"
+      },
+      "photos": [
+        {
+          "src": "assets/img/events/e00.webp",
+          "alt": {
+            "ka": "სანდომი საერთაშორისო გამოფენაზე",
+            "en": "Sandomi at an international trade fair",
+            "ru": "«Сандоми» на международной выставке"
+          }
+        },
+        {
+          "src": "assets/img/events/e01.webp",
+          "alt": {
+            "ka": "სანდომი საერთაშორისო გამოფენაზე",
+            "en": "Sandomi at an international trade fair",
+            "ru": "«Сандоми» на международной выставке"
+          }
+        },
+        {
+          "src": "assets/img/events/e02.webp",
+          "alt": {
+            "ka": "სანდომი საერთაშორისო გამოფენაზე",
+            "en": "Sandomi at an international trade fair",
+            "ru": "«Сандоми» на международной выставке"
+          }
+        },
+        {
+          "src": "assets/img/events/e03.webp",
+          "alt": {
+            "ka": "სანდომი საერთაშორისო გამოფენაზე",
+            "en": "Sandomi at an international trade fair",
+            "ru": "«Сандоми» на международной выставке"
+          }
+        },
+        {
+          "src": "assets/img/events/e04.webp",
+          "alt": {
+            "ka": "სანდომი საერთაშორისო გამოფენაზე",
+            "en": "Sandomi at an international trade fair",
+            "ru": "«Сандоми» на международной выставке"
+          }
+        },
+        {
+          "src": "assets/img/events/e05.webp",
+          "alt": {
+            "ka": "სანდომი საერთაშორისო გამოფენაზე",
+            "en": "Sandomi at an international trade fair",
+            "ru": "«Сандоми» на международной выставке"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tv",
+      "icon": "tv",
+      "title": {
+        "ka": "სატელევიზიო პროექტები",
+        "en": "TV projects",
+        "ru": "Телепроекты"
+      },
+      "photos": [
+        {
+          "src": "assets/img/events/t00.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t01.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t02.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t03.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t04.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t05.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t06.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t07.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t08.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t09.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t10.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t11.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        },
+        {
+          "src": "assets/img/events/t12.webp",
+          "alt": {
+            "ka": "სანდომი სატელევიზიო პროექტში",
+            "en": "Sandomi in a TV project",
+            "ru": "«Сандоми» в телепроекте"
+          }
+        }
+      ]
+    },
+    {
+      "id": "life",
+      "icon": "heart",
+      "title": {
+        "ka": "ჩვენი ცხოვრება",
+        "en": "Our life",
+        "ru": "Наша жизнь"
+      },
+      "photos": [
+        {
+          "src": "assets/img/events/a00.webp",
+          "alt": {
+            "ka": "სანდომის გუნდი და საწარმო",
+            "en": "The Sandomi team and plant",
+            "ru": "Команда и предприятие «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/events/a01.webp",
+          "alt": {
+            "ka": "სანდომის გუნდი და საწარმო",
+            "en": "The Sandomi team and plant",
+            "ru": "Команда и предприятие «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/photos/01.webp",
+          "alt": {
+            "ka": "სანდომის გუნდი და საწარმო",
+            "en": "The Sandomi team and plant",
+            "ru": "Команда и предприятие «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/photos/03.webp",
+          "alt": {
+            "ka": "სანდომის გუნდი და საწარმო",
+            "en": "The Sandomi team and plant",
+            "ru": "Команда и предприятие «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/photos/04.webp",
+          "alt": {
+            "ka": "სანდომის გუნდი და საწარმო",
+            "en": "The Sandomi team and plant",
+            "ru": "Команда и предприятие «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/photos/05.webp",
+          "alt": {
+            "ka": "სანდომის გუნდი და საწარმო",
+            "en": "The Sandomi team and plant",
+            "ru": "Команда и предприятие «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/photos/06.webp",
+          "alt": {
+            "ka": "სანდომის გუნდი და საწარმო",
+            "en": "The Sandomi team and plant",
+            "ru": "Команда и предприятие «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/photos/08.webp",
+          "alt": {
+            "ka": "სანდომის გუნდი და საწარმო",
+            "en": "The Sandomi team and plant",
+            "ru": "Команда и предприятие «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/photos/09.webp",
+          "alt": {
+            "ka": "სანდომის გუნდი და საწარმო",
+            "en": "The Sandomi team and plant",
+            "ru": "Команда и предприятие «Сандоми»"
+          }
+        }
+      ]
+    },
+    {
+      "id": "camp",
+      "icon": "camera",
+      "title": {
+        "ka": "კამპანიები",
+        "en": "Campaigns",
+        "ru": "Кампании"
+      },
+      "photos": [
+        {
+          "src": "assets/img/campaigns/00.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/campaigns/01.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/campaigns/02.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/campaigns/03.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/campaigns/04.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/campaigns/05.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/campaigns/06.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/campaigns/07.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/campaigns/08.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/campaigns/09.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        },
+        {
+          "src": "assets/img/campaigns/10.webp",
+          "alt": {
+            "ka": "სანდომის სარეკლამო კამპანია",
+            "en": "Sandomi advertising campaign",
+            "ru": "Рекламная кампания «Сандоми»"
+          }
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "address": {
+      "ka": "სოფ. ფონიჭალა, ცოტნე დადიანის 1-ლი შესახვევი",
+      "en": "Ponichala, 1st lane of Tsotne Dadiani St., Tbilisi",
+      "ru": "Тбилиси, Понихала, 1-й переулок ул. Цотне Дадиани"
+    },
+    "phone": "032 283 88 88",
+    "sales": "599 04 09 16",
+    "email": "sandomi.tbilisi@gmail.com",
+    "exportEmail": "sandomiproducts@gmail.com",
+    "hours": {
+      "ka": "ორშ–პარ 09:00–18:00",
+      "en": "Mon–Fri 09:00–18:00",
+      "ru": "Пн–Пт 09:00–18:00"
+    }
+  },
+  "news": []
+}

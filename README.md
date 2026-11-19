@@ -74,28 +74,39 @@ The tests open the site on a phone-sized screen and check the main flows: langua
 ## Admin panel
 
 `admin/` is a small panel for the marketing team (`/admin/` on the site). It has
-no server of its own: it reads and writes `data/*.json` and product photos in
-this repository through the GitHub API, so it keeps working whichever host
-serves the site.
+no server of its own: it reads and writes files in this repository through the
+GitHub API, so it keeps working whichever host serves the site.
 
+| Section         | Edits                                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------------------------ |
+| პროდუქცია       | `data/products.json`, photos in `assets/img/products/` (fitted to 720×540 WebP); hide (`"hidden": true`) or delete |
+| ფასები ფაილით   | prices via a CSV download / upload with a review step                                                              |
+| სეზონური ბანერი | `content.json → season`: versions with yearly dates (`MM-DD`), colour theme, texts, link, up to 3 photos           |
+| ფოტოგალერეა     | `content.json → gallery`: tabs and photos (`assets/img/gallery/`)                                                  |
+| ვიდეოები        | `content.json → videos`: YouTube links and titles                                                                  |
+| სიახლეები       | `content.json → news`: the "News" section appears once there is one                                                |
+| საიტის ტექსტები | `content.json → stats, story, contact`                                                                             |
+| ჩატბოტი         | answers and button labels in `data/chatbot.json` (actions stay as they are)                                        |
+| PDF კატალოგი    | replaces `catalog/sandomi-catalog-2026.pdf`                                                                        |
+| ისტორია         | restores `data/*.json` to any earlier change (as a new commit)                                                     |
+
+- **Code:** `admin/core.js` (GitHub, saving, helpers), `products.js`,
+  `sections.js`, `admin.js` (login and navigation).
 - **Login:** a fine-grained GitHub token of the `sandomiweb` account with
-  _Contents: Read and write_ on this repository only. It is stored in the
-  browser on that device; "გასვლა" removes it. Revoke it on GitHub to lock a
-  device out.
-- **Products:** add, edit, hide (`"hidden": true`, kept in the file and
-  restorable), delete, lenten / carousel switches. Photos are fitted to 720×540
-  on white and saved as WebP under `assets/img/products/` with a transliterated
-  name.
-- **Prices from a file:** download a CSV, change the price column in Excel,
-  upload it, review, publish.
-- **History:** every save is one commit; "დაბრუნება" restores `data/*.json` as
-  it was after a chosen change (as a new commit).
-- **Translations:** English and Russian names are suggested by MyMemory (free,
-  no key) and can be edited before saving.
+  _Contents: Read and write_ on this repository only, stored in the browser of
+  that device. Planned: e-mail login through a small Cloudflare Worker that keeps
+  the token server-side.
+- **Translations:** English and Russian are suggested by MyMemory (free, no
+  key). When the Georgian text changes, untouched translations are redone on save.
+- **Rendering:** `src/index.html` marks the editable places with
+  `<template data-content="…">` / `data-text`; `tools/content.mjs` fills them
+  per language during the build. `assets/js/season.js` picks today's banner in
+  the browser, so banners switch on time without a rebuild.
 
-After each save `.github/workflows/build.yml` rebuilds the generated pages,
-commits them and asks GitHub Pages to publish. On another host, replace its
-last step with that host's deploy.
+After each save `.github/workflows/build.yml` rebuilds the pages, writes
+`build-info.json` (a hash of every data file — the panel uses it to say when a
+change is live), commits and asks GitHub Pages to publish. On another host,
+replace its last step with that host's deploy.
 
 ## Order form
 

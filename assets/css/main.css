@@ -1725,6 +1725,94 @@ footer .slogan {
   animation: snow 12s linear infinite;
 }
 
+/* Banner versions chosen in the admin panel (winter is the default above). */
+.season-card[hidden] {
+  display: none;
+}
+.season-card.t-easter {
+  background: linear-gradient(160deg, #f6c64d, #f39fb0);
+}
+.season-card.t-lent {
+  background: linear-gradient(135deg, #1f4d2b, #2f6b3a 55%, #6fae5c);
+}
+.season-card.t-love {
+  background: linear-gradient(135deg, #8a0b24, #c8102e 55%, #f07a8c);
+}
+.season-card.t-gold {
+  background: linear-gradient(135deg, #5c0718, #8a0b24 50%, #c98a1b);
+}
+.season-card.t-custom {
+  background: linear-gradient(135deg, var(--s1), var(--s2));
+}
+.season-card:not(.t-easter) .eyebrow:not(.eyebrow-ice) {
+  color: #ffd98a;
+}
+.season-card.t-easter,
+.season-card.dark {
+  color: var(--wine);
+}
+.season-card.t-easter .season-txt h2,
+.season-card.t-easter .eyebrow,
+.season-card.dark .season-txt h2,
+.season-card.dark .eyebrow {
+  color: var(--wine);
+}
+.season-card.t-easter .btn-gold,
+.season-card.dark .btn-gold {
+  background: var(--wine);
+  color: #fff;
+}
+
+/* News (shown only when the admin panel has news) */
+.news {
+  padding: 70px 0 10px;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+.news-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.news-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+.news-body {
+  padding: 20px 22px 24px;
+}
+.news-body time {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--red);
+}
+.news-body h3 {
+  font-size: 19px;
+  margin: 6px 0 8px;
+  color: var(--wine);
+}
+.news-body p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.news-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--red);
+  text-decoration: none;
+}
+
 .cats {
   padding: 70px 0 10px;
 }

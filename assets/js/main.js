@@ -12,7 +12,9 @@ import { initRouter } from './router.js';
 import { initGallery } from './gallery.js';
 import { initMedia } from './media.js';
 import { initChatbot } from './chatbot.js';
+import { initSeason } from './season.js';
 
+initSeason();
 initNav();
 initLanguage();
 initHero();

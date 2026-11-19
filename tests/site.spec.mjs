@@ -359,3 +359,10 @@ test('products marked hidden in the admin panel stay off the site', async ({ pag
   await expect(page.locator(`#grid .p[data-code="${products[0].code}"]`)).toHaveCount(0);
   await expect(page.locator(`#grid .p[data-code="${products[1].code}"]`)).not.toHaveCount(0);
 });
+
+test('seasonal banner: only the banner for today is shown', async ({ page }) => {
+  await page.clock.setFixedTime(new Date('2026-07-10T12:00:00'));
+  await page.goto('./');
+  // The New Year banner has no dates, so it shows all year.
+  await expect(page.locator('#season .season-card:not([hidden])')).toHaveCount(1);
+});
