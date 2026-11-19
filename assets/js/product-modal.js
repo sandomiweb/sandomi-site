@@ -1,4 +1,8 @@
-/** Product details dialog, opened by clicking a catalog card. */
+/**
+ * Product details dialog, opened by clicking a catalog card. Opening it adds a
+ * history entry, so the phone's back button closes the dialog instead of
+ * leaving the page.
+ */
 import { t, productName, shelfLife } from './i18n.js';
 import { products, orderLabel, imageUrl } from './catalog.js';
 import { $, icon, esc, setOpen } from './util.js';
@@ -48,16 +52,22 @@ function open(index) {
       }
     </div>`;
 
+  if (!isOpen()) history.pushState({ pm: true }, '');
   setOpen(dialog, true);
   document.documentElement.classList.add('pm-lock');
   $('.pm-box', dialog).scrollTop = 0;
   $('.pm-x', dialog).focus({ preventScroll: true });
 }
 
-function close() {
+const isOpen = () => dialog.classList.contains('open');
+
+/** Hide the dialog; `fromHistory` is set when the back button already removed our entry. */
+function close(fromHistory = false) {
+  if (!isOpen()) return;
   setOpen(dialog, false);
   document.documentElement.classList.remove('pm-lock');
   lastFocus?.focus({ preventScroll: true });
+  if (!fromHistory && history.state?.pm) history.back();
 }
 
 export function initProductModal() {
@@ -87,6 +97,7 @@ export function initProductModal() {
     if (e.target.closest('.pm-order')) close(); // the order form takes over
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && dialog.classList.contains('open')) close();
+    if (e.key === 'Escape') close();
   });
+  addEventListener('popstate', () => close(true));
 }
