@@ -1,8 +1,8 @@
 /**
  * Product catalog: renders cards from data/products.json, handles category
  * chips, search and "show more". On the home page phones get an endless
- * swipe carousel of every packaged product (photo of the pack, not sold by
- * weight), in a new random order on each visit; wider screens get one random
+ * swipe carousel of every product in its printed retail pack (not sold by
+ * weight, not marked `carousel: false`), in a new random order on each visit; wider screens get one random
  * product per category, packaged where possible. The full catalog
  * opens at #catalog (see router.js).
  */
@@ -145,7 +145,8 @@ export async function initCatalog() {
   products.sort((a, b) => Boolean(b.image) - Boolean(a.image)); // products with photos first
 
   const withPhoto = products.map((p, i) => (p.image ? i : -1)).filter((i) => i >= 0);
-  const packaged = withPhoto.filter((i) => products[i].unit !== 'kg');
+  // `carousel: false` in products.json keeps plain shipping-box photos out.
+  const packaged = withPhoto.filter((i) => products[i].unit !== 'kg' && products[i].carousel !== false);
   const pick = (list, cat) => shuffle(list.filter((i) => products[i].category === cat))[0];
   featured = new Set(
     FEATURED_ORDER.map((cat) => pick(packaged, cat) ?? pick(withPhoto, cat)).filter((i) => i !== undefined),
