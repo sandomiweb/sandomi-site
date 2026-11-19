@@ -3309,6 +3309,7 @@ html.pm-lock {
   body:not(.catmode) #grid .p {
     flex: 0 0 62%;
     scroll-snap-align: start;
+    order: var(--o, 0);
   }
   body:not(.catmode) #grid .p.hide {
     display: none;

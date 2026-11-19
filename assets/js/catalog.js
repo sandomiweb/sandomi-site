@@ -1,7 +1,10 @@
 /**
  * Product catalog: renders cards from data/products.json, handles category
- * chips, search and "show more". On the home page only a few featured
- * products are shown; the full catalog opens at #catalog (see router.js).
+ * chips, search and "show more". On the home page phones get an endless
+ * swipe carousel of every packaged product (photo of the pack, not sold by
+ * weight), in a new random order on each visit; wider screens get one random
+ * product per category, packaged where possible. The full catalog
+ * opens at #catalog (see router.js).
  */
 import { t, root, productName, shelfLife } from './i18n.js';
 import { $, $$, icon, esc } from './util.js';
@@ -24,9 +27,20 @@ const PLACEHOLDER = {
 const state = { filter: 'all', query: '', limit: PAGE_SIZE };
 export let products = [];
 let featured = new Set();
+/** Card indices in the order the home carousel shows them. */
+let carousel = [];
 
 const grid = $('#grid');
 const moreBtn = () => $('#pmore');
+const phone = matchMedia('(max-width: 700px)');
+
+function shuffle(list) {
+  for (let i = list.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [list[i], list[j]] = [list[j], list[i]];
+  }
+  return list;
+}
 
 /** "Wafer 216 g" — used to pre-fill the order form. */
 export const orderLabel = (p) => `${productName(p)}${p.weight ? ` ${p.weight} ${t.unit[p.unit]}` : ''}`;
@@ -83,6 +97,13 @@ export function update() {
   const isCatalog = document.body.classList.contains('catmode');
   const more = moreBtn();
 
+  if (!isCatalog && phone.matches) {
+    const inCarousel = new Set(carousel);
+    cards.forEach((c, i) => c.classList.toggle('hide', !inCarousel.has(i)));
+    more.style.display = 'none';
+    return;
+  }
+
   if (!isCatalog) {
     const limit = innerWidth > 700 && innerWidth <= 1000 ? 6 : 8; // 3+3 on tablets
     let shown = 0;
@@ -123,9 +144,13 @@ export async function initCatalog() {
   products = await res.json();
   products.sort((a, b) => Boolean(b.image) - Boolean(a.image)); // products with photos first
 
+  const withPhoto = products.map((p, i) => (p.image ? i : -1)).filter((i) => i >= 0);
+  const packaged = withPhoto.filter((i) => products[i].unit !== 'kg');
+  const pick = (list, cat) => shuffle(list.filter((i) => products[i].category === cat))[0];
   featured = new Set(
-    FEATURED_ORDER.map((cat) => products.findIndex((p) => p.category === cat && p.image)).filter((i) => i >= 0),
+    FEATURED_ORDER.map((cat) => pick(packaged, cat) ?? pick(withPhoto, cat)).filter((i) => i !== undefined),
   );
+  carousel = shuffle(packaged);
 
   $('#chips').addEventListener('click', (e) => {
     const chip = e.target.closest('.chip');
@@ -144,4 +169,61 @@ export async function initCatalog() {
   });
 
   render();
+  initCarouselLoop();
+}
+
+/** Position of each card in the carousel, applied through CSS `order`. */
+function applyCarouselOrder() {
+  const cards = $$('.p', grid);
+  carousel.forEach((ix, pos) => cards[ix].style.setProperty('--o', pos));
+}
+
+/**
+ * Endless home carousel on phones. When swiping stops near either end, cards
+ * from the far end are moved over and the scroll position is shifted by the
+ * same width, so the strip never runs out and nothing visibly jumps.
+ */
+function initCarouselLoop() {
+  applyCarouselOrder();
+  const step = () => {
+    const [a, b] = carousel.slice(0, 2).map((ix) => grid.children[ix]);
+    return b.offsetLeft - a.offsetLeft;
+  };
+  const active = () => phone.matches && !document.body.classList.contains('catmode');
+  const MARGIN = 4;
+
+  // Start in the middle so there are cards in both directions; also after
+  // returning from the full catalog, which resets the scroll position.
+  const centre = () => {
+    if (active() && grid.scrollLeft < step()) grid.scrollLeft = Math.floor(carousel.length / 2) * step();
+  };
+  centre();
+  phone.addEventListener('change', centre);
+  addEventListener('hashchange', () => requestAnimationFrame(centre));
+
+  let idle;
+  grid.addEventListener(
+    'scroll',
+    () => {
+      clearTimeout(idle);
+      idle = setTimeout(() => {
+        if (!active()) return;
+        const w = step();
+        const first = Math.round(grid.scrollLeft / w);
+        const visible = Math.ceil(grid.clientWidth / w);
+        let moved = 0;
+        if (first < MARGIN) moved = -Math.floor(carousel.length / 2);
+        else if (first + visible > carousel.length - MARGIN) moved = Math.floor(carousel.length / 2);
+        if (!moved) return;
+        carousel = [...carousel.slice(moved), ...carousel.slice(0, moved)]; // rotate
+        // Snapping is paused so the browser doesn't re-snap on its own while
+        // the cards are reordered; we shift the scroll position ourselves.
+        grid.style.scrollSnapType = 'none';
+        applyCarouselOrder();
+        grid.scrollLeft -= moved * w;
+        requestAnimationFrame(() => (grid.style.scrollSnapType = ''));
+      }, 150);
+    },
+    { passive: true },
+  );
 }
