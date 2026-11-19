@@ -828,6 +828,7 @@ footer .slogan {
   transform: translateY(40px);
   transition: transform 0.3s;
   max-height: 92vh;
+  max-height: 92dvh;
   overflow: auto;
 }
 
@@ -1036,6 +1037,7 @@ footer .slogan {
   width: 360px;
   max-width: calc(100vw - 24px);
   height: min(540px, calc(100vh - 130px));
+  height: min(540px, calc(100dvh - 130px));
   background: var(--cream);
   border-radius: 24px;
   box-shadow: 0 24px 60px rgba(42, 20, 20, 0.3);
@@ -2751,12 +2753,15 @@ html.pm-lock {
   overflow: hidden;
 }
 
+/* Dialog heights use dvh (with a vh fallback) so they fit the visible screen
+   when the browser's toolbars are shown, as in Chrome on iPhone. */
 .pm-box {
   position: relative;
   background: #fff;
   border-radius: 28px;
   width: min(920px, 100%);
   max-height: min(88vh, 720px);
+  max-height: min(88dvh, 720px);
   overflow: auto;
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
   transform: translateY(16px) scale(0.98);
@@ -3310,6 +3315,7 @@ footer .muted {
   .pm-box {
     border-radius: 24px 24px 0 0;
     max-height: 92vh;
+    max-height: 92dvh;
   }
   .pm-in {
     grid-template-columns: 1fr;
@@ -3610,6 +3616,7 @@ footer .muted {
     max-width: none;
     bottom: calc(90px + env(safe-area-inset-bottom));
     height: min(520px, calc(100vh - 120px));
+    height: min(520px, calc(100dvh - 120px));
   }
   .cb-btn {
     right: 14px;
