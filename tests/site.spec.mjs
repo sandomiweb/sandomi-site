@@ -90,6 +90,13 @@ test.describe('home carousel', () => {
       .poll(() => grid.evaluate((g) => g.scrollWidth - g.clientWidth - g.scrollLeft), { message: 'loops at the end' })
       .toBeGreaterThan(500);
 
+    await grid.scrollIntoViewIfNeeded();
+    await expect
+      .poll(() => visibleCards(page).evaluateAll((cards) => cards.every((c) => c.querySelector('img')?.complete)), {
+        message: 'all carousel photos load in advance, not only when swiped to',
+      })
+      .toBe(true);
+
     const first = await carouselOrder(page);
     await page.reload();
     expect(await carouselOrder(page)).not.toBe(first);

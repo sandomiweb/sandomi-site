@@ -173,6 +173,27 @@ export async function initCatalog() {
   initCarouselLoop();
 }
 
+/**
+ * Lazy loading only starts an image once it is scrolled into view, which in a
+ * swipe carousel shows empty cards for a moment. When the products section
+ * gets near, load all carousel photos (about 1 MB in total) in advance.
+ */
+function preloadCarouselImages() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (!entries.some((e) => e.isIntersecting) || !phone.matches) return;
+      observer.disconnect();
+      const cards = $$('.p', grid);
+      carousel.forEach((ix) => {
+        const img = $('img', cards[ix]);
+        if (img) img.loading = 'eager';
+      });
+    },
+    { rootMargin: '800px 0px' },
+  );
+  observer.observe(grid);
+}
+
 /** Position of each card in the carousel, applied through CSS `order`. */
 function applyCarouselOrder() {
   const cards = $$('.p', grid);
@@ -186,6 +207,7 @@ function applyCarouselOrder() {
  */
 function initCarouselLoop() {
   applyCarouselOrder();
+  preloadCarouselImages();
   const step = () => {
     const [a, b] = carousel.slice(0, 2).map((ix) => grid.children[ix]);
     return b.offsetLeft - a.offsetLeft;
