@@ -1649,7 +1649,8 @@
     "shelfLife": "",
     "price": "5.50",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n109.webp",
+    "carousel": false
   },
   {
     "code": "4860103231260",
@@ -1664,7 +1665,8 @@
     "shelfLife": "",
     "price": "6.30",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n110.webp",
+    "carousel": false
   },
   {
     "code": "4860103231215",
@@ -1758,7 +1760,8 @@
     "shelfLife": "",
     "price": "5.30",
     "lenten": true,
-    "image": ""
+    "image": "assets/img/products/n116.webp",
+    "carousel": false
   },
   {
     "code": "4860103234018",
