@@ -34,6 +34,8 @@ export function openOrder(label = '', type = '') {
 
 const closeOrder = () => setOpen(modal, false);
 
+const SEND_TIMEOUT_MS = 12000;
+
 async function submit(e) {
   e.preventDefault();
   const form = e.target;
@@ -60,9 +62,13 @@ async function submit(e) {
   button.textContent = t.sending;
 
   let ok = false;
+  // Never leave the button stuck on "sending…": give up after 12 s and fall back to mailto.
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), SEND_TIMEOUT_MS);
   try {
     const res = await fetch(`https://formsubmit.co/ajax/${to}`, {
       method: 'POST',
+      signal: ctrl.signal,
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
         _subject: subject,
@@ -75,6 +81,8 @@ async function submit(e) {
     ok = String((await res.json()).success) === 'true';
   } catch {
     ok = false;
+  } finally {
+    clearTimeout(timer);
   }
 
   button.disabled = false;
