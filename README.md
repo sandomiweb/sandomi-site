@@ -57,6 +57,7 @@ npm run format    # Prettier
 
 - **Change page text:** edit `src/index.html`, add the English and Russian versions to `data/i18n.json`, run `npm run build`. The build lists any Georgian text that has no translation yet.
 - **Change products or prices:** edit `data/products.json` (no build needed). Product photos go to `assets/img/products/`.
+  Products sold by the piece (`unit` other than `kg`) appear in the home-page carousel on phones, in a new random order on each visit; add `"carousel": false` to keep one out (for example, a photo of a plain shipping box).
 - **Change the chat assistant:** edit `data/chatbot.json`.
 - The site must be opened through a web server (`npm run serve`); ES modules and JSON loading do not work from `file://`.
 

@@ -1476,12 +1476,21 @@ footer .slogan {
 }
 
 .cine h1 {
-  font-size: clamp(42px, 6.6vw, 84px);
-  line-height: 1.02;
+  /* Sized so "ყველაზე ტკბილი" fits on one line in the text column. */
+  font-size: clamp(34px, 3.9vw, 64px);
+  line-height: 1.12;
   margin: 0 0 26px;
   font-weight: 900;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-wrap: balance;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* The slogan is in capitals. Georgian is written in Mtavruli in the markup,
+   because browsers map text-transform on Georgian back to Mkhedruli. */
+.cine h1:not(:lang(ka)) {
+  text-transform: uppercase;
 }
 
 .cine h1 em {
@@ -3042,6 +3051,53 @@ html.pm-lock {
   }
 }
 
+/* ---------- Utilities and small section tweaks ---------- */
+.eyebrow.eyebrow-ice {
+  color: #bfe3ff;
+}
+.eyebrow.eyebrow-gold {
+  color: #ffd98a;
+}
+.center {
+  text-align: center;
+}
+.lead.mx-auto {
+  margin: 0 auto;
+}
+.lead .lead-en {
+  font-size: 15px;
+}
+#game {
+  padding-bottom: 40px;
+}
+#partner {
+  padding: 0 0 10px;
+}
+.ig-head h2.mb0 {
+  margin-bottom: 0;
+}
+footer .foot-logo {
+  height: 44px;
+  width: auto;
+  margin-bottom: 14px;
+}
+footer .muted {
+  opacity: 0.75;
+}
+.sheet .hp {
+  position: absolute;
+  left: -9999px;
+}
+.sheet .btn-block {
+  width: 100%;
+  justify-content: center;
+}
+.q-grid a.video {
+  background:
+    linear-gradient(rgba(58, 6, 16, 0.55), rgba(58, 6, 16, 0.75)),
+    url('../img/photos/05.jpg') center / cover;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none;
@@ -3105,6 +3161,20 @@ html.pm-lock {
   }
   .exp-grid .exp-box:nth-child(3) {
     grid-column: 1/-1;
+  }
+}
+
+/* Game teaser on tablets: picture beside the text. */
+@media (min-width: 701px) and (max-width: 1000px) {
+  #game .game .inner {
+    grid-template-columns: 260px minmax(0, 1fr);
+    text-align: left;
+    padding: 28px;
+    gap: 28px;
+  }
+  #game .game ul {
+    justify-items: start;
+    margin: 12px 0 18px;
   }
 }
 
@@ -3173,10 +3243,16 @@ html.pm-lock {
   .cine {
     min-height: auto;
   }
+  section.cine {
+    padding-top: 0;
+  }
   .cine-in {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 34px 20px 96px;
+    padding: 22px 20px 96px;
+  }
+  .cine-eye {
+    margin-bottom: 10px;
   }
   .cine-btns {
     justify-content: center;
@@ -3185,6 +3261,8 @@ html.pm-lock {
     height: min(52vh, 400px);
   }
   .cine h1 {
+    font-size: clamp(28px, 7.4vw, 76px);
+    white-space: normal;
     margin-bottom: 18px;
   }
   .scroll-cue {
@@ -3383,6 +3461,101 @@ html.pm-lock {
   .plogos {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  /* Full catalog: compact two-column grid. */
+  body.catmode .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  body.catmode .p {
+    border-radius: 16px;
+  }
+  body.catmode .p .img {
+    aspect-ratio: 4 / 3;
+  }
+  body.catmode .p .body {
+    padding: 10px 10px 12px;
+    gap: 4px;
+  }
+  body.catmode .p .pcat {
+    font-size: 10px;
+  }
+  body.catmode .p h3 {
+    font-size: 13.5px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  body.catmode .p .meta {
+    font-size: 11px;
+    gap: 2px 8px;
+  }
+  body.catmode .p .meta .code,
+  body.catmode .p .meta span:nth-child(2) {
+    display: none;
+  }
+  body.catmode .p .row {
+    margin-top: auto;
+    gap: 6px;
+  }
+  body.catmode .p .price {
+    font-size: 16px;
+  }
+  body.catmode .p .add {
+    font-size: 11.5px;
+    padding: 8px 6px;
+    white-space: normal;
+    line-height: 1.2;
+    width: 100%;
+  }
+  body.catmode .p .badges .badge {
+    font-size: 10px;
+    padding: 3px 7px;
+  }
+  body.catmode .p .ph-p span {
+    font-size: 30px;
+  }
+  body.catmode .p .ph-p small {
+    font-size: 10px;
+  }
+  /* Game teaser: picture beside a short heading and the button. */
+  #game {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  #game .game .inner {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    text-align: left;
+    padding: 16px;
+  }
+  #game .game .inner > img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 0;
+  }
+  #game .game .eyebrow {
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+  #game .game h2 {
+    font-size: 22px;
+    margin: 0 0 10px;
+  }
+  #game .game p,
+  #game .game ul {
+    display: none;
+  }
+  #game .game .btn {
+    padding: 9px 16px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 600px) {
@@ -3489,231 +3662,5 @@ html.pm-lock {
   }
   .nav .logo img {
     height: 34px;
-  }
-}
-
-/* ---------- Utilities and one-off adjustments ---------- */
-.eyebrow.eyebrow-ice {
-  color: #bfe3ff;
-}
-.eyebrow.eyebrow-gold {
-  color: #ffd98a;
-}
-.center {
-  text-align: center;
-}
-.lead.mx-auto {
-  margin: 0 auto;
-}
-.lead .lead-en {
-  font-size: 15px;
-}
-#game {
-  padding-bottom: 40px;
-}
-#partner {
-  padding: 0 0 10px;
-}
-.ig-head h2.mb0 {
-  margin-bottom: 0;
-}
-footer .foot-logo {
-  height: 44px;
-  width: auto;
-  margin-bottom: 14px;
-}
-footer .muted {
-  opacity: 0.75;
-}
-.sheet .hp {
-  position: absolute;
-  left: -9999px;
-}
-.sheet .btn-block {
-  width: 100%;
-  justify-content: center;
-}
-.q-grid a.video {
-  background:
-    linear-gradient(rgba(58, 6, 16, 0.55), rgba(58, 6, 16, 0.75)),
-    url('../img/photos/05.jpg') center / cover;
-}
-
-/* ---------- Catalog: compact two-column grid on phones ---------- */
-@media (max-width: 700px) {
-  body.catmode .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-  body.catmode .p {
-    border-radius: 16px;
-  }
-  body.catmode .p .img {
-    aspect-ratio: 4 / 3;
-  }
-  body.catmode .p .body {
-    padding: 10px 10px 12px;
-    gap: 4px;
-  }
-  body.catmode .p .pcat {
-    font-size: 10px;
-  }
-  body.catmode .p h3 {
-    font-size: 13.5px;
-    line-height: 1.3;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  body.catmode .p .meta {
-    font-size: 11px;
-    gap: 2px 8px;
-  }
-  body.catmode .p .meta .code,
-  body.catmode .p .meta span:nth-child(2) {
-    display: none;
-  }
-  body.catmode .p .row {
-    margin-top: auto;
-    gap: 6px;
-  }
-  body.catmode .p .price {
-    font-size: 16px;
-  }
-  body.catmode .p .add {
-    font-size: 11.5px;
-    padding: 8px 6px;
-    white-space: normal;
-    line-height: 1.2;
-    width: 100%;
-  }
-  body.catmode .p .badges .badge {
-    font-size: 10px;
-    padding: 3px 7px;
-  }
-  body.catmode .p .ph-p span {
-    font-size: 30px;
-  }
-  body.catmode .p .ph-p small {
-    font-size: 10px;
-  }
-}
-
-/* ---------- Game teaser: compact on phones ---------- */
-@media (max-width: 700px) {
-  #game .game .inner {
-    display: grid;
-    grid-template-columns: 112px minmax(0, 1fr);
-    gap: 14px;
-    align-items: center;
-    text-align: left;
-    padding: 16px;
-  }
-  #game .game .inner > img {
-    width: 112px;
-    height: 112px;
-    object-fit: cover;
-    border-radius: 18px;
-    margin: 0;
-  }
-  #game .game .eyebrow {
-    font-size: 10px;
-    margin-bottom: 2px;
-  }
-  #game .game h2 {
-    font-size: 22px;
-    margin: 0 0 4px;
-  }
-  #game .game p {
-    font-size: 13px;
-    line-height: 1.4;
-    margin: 0 0 10px;
-  }
-  #game .game ul {
-    display: none;
-  }
-  #game .game .btn {
-    padding: 9px 16px;
-    font-size: 14px;
-  }
-}
-@media (max-width: 700px) {
-  #game {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-  #game .game .inner {
-    grid-template-columns: 96px minmax(0, 1fr);
-    gap: 12px;
-  }
-  #game .game .inner > img {
-    width: 96px;
-    height: 96px;
-  }
-  #game .game p {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  #game .game .btn {
-    white-space: nowrap;
-  }
-}
-@media (max-width: 700px) {
-  #game .game p {
-    display: none;
-  }
-  #game .game h2 {
-    margin-bottom: 10px;
-  }
-}
-@media (min-width: 701px) and (max-width: 1000px) {
-  #game .game .inner {
-    grid-template-columns: 260px minmax(0, 1fr);
-    text-align: left;
-    padding: 28px;
-    gap: 28px;
-  }
-  #game .game ul {
-    justify-items: start;
-    margin: 12px 0 18px;
-  }
-}
-
-/* ---------- Hero: tighter top spacing and roomier headline ---------- */
-.cine h1 {
-  line-height: 1.14;
-}
-@media (max-width: 860px) {
-  section.cine {
-    padding-top: 0;
-  }
-  .cine-in {
-    padding-top: 22px;
-  }
-  .cine-eye {
-    margin-bottom: 10px;
-  }
-}
-
-/* ---------- Hero: slogan in two lines, in capitals ----------
-   Georgian is written in Mtavruli in the markup: browsers map
-   text-transform on Georgian back to Mkhedruli, so it is only used for en/ru. */
-.cine h1:not(:lang(ka)) {
-  text-transform: uppercase;
-}
-.cine h1 {
-  font-size: clamp(28px, 7.4vw, 76px);
-  line-height: 1.12;
-  letter-spacing: 0;
-  text-wrap: balance;
-}
-@media (min-width: 861px) {
-  /* Fit "ყველაზე ტკბილი" on one line in the text column. */
-  .cine h1 {
-    font-size: clamp(34px, 3.9vw, 64px);
-    white-space: nowrap;
   }
 }
