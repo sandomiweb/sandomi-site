@@ -201,9 +201,10 @@ function applyCarouselOrder() {
 }
 
 /**
- * Endless home carousel on phones. When swiping stops near either end, cards
- * from the far end are moved over and the scroll position is shifted by the
- * same width, so the strip never runs out and nothing visibly jumps.
+ * Endless home carousel on phones. Whenever swiping comes to rest, cards are
+ * moved from one end to the other so the current card is in the middle again,
+ * and the scroll position is shifted by the same width: nothing visibly jumps
+ * and the strip never runs out.
  */
 function initCarouselLoop() {
   applyCarouselOrder();
@@ -213,7 +214,7 @@ function initCarouselLoop() {
     return b.offsetLeft - a.offsetLeft;
   };
   const active = () => phone.matches && !document.body.classList.contains('catmode') && step() > 0;
-  const MARGIN = 4;
+  const MIN_SHIFT = 2; // cards; smaller drifts are left alone
 
   // Set the scroll position with snapping paused, and keep re-applying it for
   // a moment: iOS ignores a new position while its bounce or momentum is still
@@ -250,12 +251,10 @@ function initCarouselLoop() {
     const max = grid.scrollWidth - grid.clientWidth;
     if (grid.scrollLeft < 0 || grid.scrollLeft > max) return later(); // still bouncing
     const w = step();
-    const first = Math.round(grid.scrollLeft / w);
-    const visible = Math.ceil(grid.clientWidth / w);
-    let moved = 0;
-    if (first < MARGIN) moved = -Math.floor(carousel.length / 2);
-    else if (first + visible > carousel.length - MARGIN) moved = Math.floor(carousel.length / 2);
-    if (!moved) return;
+    // Bring the current card back to the middle, so there is always about
+    // half the strip ahead in both directions and the end is never reached.
+    const moved = Math.round(grid.scrollLeft / w) - Math.floor(carousel.length / 2);
+    if (Math.abs(moved) < MIN_SHIFT) return;
     carousel = [...carousel.slice(moved), ...carousel.slice(0, moved)]; // rotate
     const left = grid.scrollLeft - moved * w;
     grid.style.scrollSnapType = 'none';
@@ -269,7 +268,7 @@ function initCarouselLoop() {
   let touching = false;
   const later = () => {
     clearTimeout(idle);
-    idle = setTimeout(recycle, 250);
+    idle = setTimeout(recycle, 200);
   };
   grid.addEventListener('scroll', later, { passive: true });
   grid.addEventListener('touchstart', () => (touching = true), { passive: true });
