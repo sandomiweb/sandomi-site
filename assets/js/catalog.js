@@ -6,23 +6,12 @@
  * one random product per category, packaged where possible. The full catalog
  * opens at #catalog (see router.js).
  */
-import { t, root, productName, shelfLife } from './i18n.js';
-import { $, $$, icon, esc } from './util.js';
+import { t, root, lang } from './i18n.js';
+import { $, $$ } from './util.js';
+import { cardHtml, orderLabelIn, sortProducts } from './card.js';
 
-const PAGE_SIZE = 12;
+export const PAGE_SIZE = 12;
 const FEATURED_ORDER = ['wafer', 'choco', 'trad', 'nuts', 'biscuit', 'jam', 'snack', 'lukum'];
-
-/** Placeholder colours and emoji for products without a photo. */
-const PLACEHOLDER = {
-  wafer: ['#f3e3c4', '#e6c99a', '🧇'],
-  choco: ['#e9c3a5', '#b97a52', '🍫'],
-  biscuit: ['#f6e6c9', '#e5c08a', '🍪'],
-  jam: ['#f8d2cf', '#e9918b', '🍓'],
-  trad: ['#f5ddc0', '#d99a5a', '🍎'],
-  lukum: ['#f6d9e6', '#e3a1bf', '🍬'],
-  snack: ['#dbe6f6', '#9db8e3', '🥨'],
-  nuts: ['#c9d9f3', '#7fa2de', '🥜'],
-};
 
 const state = { filter: 'all', query: '', limit: PAGE_SIZE };
 export let products = [];
@@ -50,47 +39,13 @@ function shuffle(list) {
 }
 
 /** "Wafer 216 g" — used to pre-fill the order form. */
-export const orderLabel = (p) => `${productName(p)}${p.weight ? ` ${p.weight} ${t.unit[p.unit]}` : ''}`;
+export const orderLabel = (p) => orderLabelIn(p, lang);
 export const imageUrl = (p) => root + p.image;
 
-function card(p, index) {
-  const name = productName(p);
-  const bulk = p.unit === 'kg';
-  const tags = [p.lenten && 'lent', bulk && 'bulk', p.category].filter(Boolean).join(' ');
-  const search = `${p.name.ka} ${p.name.en} ${p.name.ru} ${p.code}`.toLowerCase();
-  const [c1, c2, emoji] = PLACEHOLDER[p.category] || PLACEHOLDER.biscuit;
-
-  const image = p.image
-    ? `<img src="${imageUrl(p)}" alt="${esc(name)}" loading="lazy">`
-    : `<div class="ph-p"><span>${emoji}</span><small>${t.photoSoon}</small></div>`;
-
-  return `
-    <article class="p in" data-ix="${index}" data-code="${esc(p.code || '')}" tabindex="0" data-cat="${tags}" data-n="${esc(search)}">
-      <div class="img ${p.image ? 'pimg' : 'noimg'}" style="--g1:${c1};--g2:${c2}">
-        ${image}
-        <div class="badges">
-          ${p.lenten ? `<span class="badge">${t.lent}</span>` : ''}
-          ${bulk ? `<span class="badge bulkb">${t.bulk}</span>` : ''}
-        </div>
-      </div>
-      <div class="body">
-        <span class="pcat">${t.categories[p.category] || ''}</span>
-        <h3>${esc(name)}</h3>
-        <div class="meta">
-          ${p.weight ? `<span>${icon('weight')}${p.weight} ${t.unit[p.unit]}</span>` : ''}
-          ${p.shelfLife ? `<span>${icon('clock')}${shelfLife(p.shelfLife)}</span>` : ''}
-          ${p.code ? `<span class="code">${t.code}: ${p.code}</span>` : ''}
-        </div>
-        <div class="row">
-          ${p.price ? `<span class="price">${p.price} ₾</span>` : '<span></span>'}
-          <button class="add" data-order="${esc(orderLabel(p))}">${t.order}</button>
-        </div>
-      </div>
-    </article>`;
-}
-
 function render() {
-  grid.innerHTML = products.map(card).join('') + '<button class="btn btn-red pmore" id="pmore"></button>';
+  grid.innerHTML =
+    products.map((p, i) => cardHtml(p, i, { lang, root })).join('') +
+    '<button class="btn btn-red pmore" id="pmore"></button>';
   moreBtn().addEventListener('click', () => {
     state.limit += PAGE_SIZE;
     update();
@@ -156,7 +111,7 @@ export function setFilter(filter) {
 export async function initCatalog() {
   const res = await fetch(root + 'data/products.json', { cache: 'no-cache' });
   products = await res.json();
-  products.sort((a, b) => Boolean(b.image) - Boolean(a.image)); // products with photos first
+  sortProducts(products); // products with photos first
 
   const withPhoto = products.map((p, i) => (p.image ? i : -1)).filter((i) => i >= 0);
   // `carousel: false` in products.json keeps plain shipping-box photos out.

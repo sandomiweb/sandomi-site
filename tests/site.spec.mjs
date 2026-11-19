@@ -286,6 +286,23 @@ test.describe('topic pages for search engines', () => {
     await expect(page.locator('.chip.on')).toHaveAttribute('data-f', 'wafer');
   });
 
+  test('products are in the HTML itself, for crawlers that do not run JavaScript', async ({ request }) => {
+    const home = await (await request.get('en/')).text();
+    for (const p of products) expect(home, p.name.en).toContain(`${p.name.en.replace(/&/g, '&amp;')}</h3>`);
+    const topic = await (await request.get('tklapi/')).text();
+    expect(topic).toContain('ვაშლის ტყლაპი</h3>');
+    expect(topic).toContain('4 პროდუქტი');
+  });
+
+  test('a topic page shows its products without JavaScript', async ({ browser, baseURL }) => {
+    const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+    const page = await context.newPage();
+    await page.goto(new URL('en/vafli/', baseURL).href);
+    await expect(page.locator('.seo-intro h1')).toHaveText('Wafers');
+    await expect(page.locator('#grid .p:not(.hide)')).toHaveCount(12);
+    await context.close();
+  });
+
   test('sitemap lists every topic page in every language', async ({ request }) => {
     const xml = await (await request.get('sitemap.xml')).text();
     for (const topic of topics)

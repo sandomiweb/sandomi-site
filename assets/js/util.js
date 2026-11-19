@@ -1,15 +1,13 @@
 /** Small DOM helpers shared by the modules. */
+import { esc, iconHtml } from './card.js';
+
+export { esc };
 
 export const $ = (selector, scope = document) => scope.querySelector(selector);
 export const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
 /** Inline SVG icon from the sprite in the page (<symbol id="i-...">). */
-export const icon = (name) =>
-  `<svg class="ic" aria-hidden="true"><use href="${document.documentElement.dataset.root || ''}assets/img/icons.svg#i-${name}"/></svg>`;
-
-/** Escape text for use inside HTML templates. */
-export const esc = (s) =>
-  String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+export const icon = (name) => iconHtml(name, document.documentElement.dataset.root || '');
 
 /** Short notification at the bottom of the screen. */
 export function toast(text) {

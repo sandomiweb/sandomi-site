@@ -15,6 +15,8 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseHTML } from 'linkedom';
+import { cardHtml, cardTags, sortProducts } from '../assets/js/card.js';
+import { STRINGS } from '../assets/js/strings.js';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), 'utf8'));
@@ -223,6 +225,32 @@ function applySeo(document, lang, page) {
   document.querySelector('#products .prod-head').before(intro);
 }
 
+const PAGE_SIZE = 12; // same as the "show more" step in assets/js/catalog.js
+const catalog = sortProducts([...products]);
+
+/**
+ * Writes the product cards into the page, so search engines and AI crawlers
+ * (which do not run JavaScript) see the products. The page script renders the
+ * same markup again. On the home page the cards start hidden (the script picks
+ * which to show); on a topic page its first products are shown, as the script would.
+ */
+function prerenderCatalog(document, lang, page, prefix) {
+  let shown = 0;
+  let matches = 0;
+  const codes = page && !page.filter ? new Set(topicProducts(page).map((p) => p.code)) : null;
+  const cards = catalog.map((p, i) => {
+    const match = page && (page.filter ? cardTags(p).includes(page.filter) : codes.has(p.code));
+    if (match) matches++;
+    const visible = match && ++shown <= PAGE_SIZE;
+    return cardHtml(p, i, { lang, root: prefix, hidden: !visible });
+  });
+  const t = STRINGS[lang];
+  const rest = Math.max(0, matches - PAGE_SIZE);
+  const more = `<button class="btn btn-red pmore" id="pmore"${rest ? '' : ' style="display: none"'}>${t.showMore} (${rest})</button>`;
+  document.getElementById('grid').innerHTML = cards.join('') + more;
+  if (page) document.getElementById('pcount').textContent = `${matches} ${t.products}`;
+}
+
 function build(lang, page) {
   const { document } = parseHTML(source);
   const { code, region } = LANGS[lang];
@@ -241,6 +269,7 @@ function build(lang, page) {
   addHeadTags(document, lang, page?.slug);
   rebase(document, prefix);
   applySeo(document, lang, page);
+  prerenderCatalog(document, lang, page, prefix);
   addStructuredData(document, lang, page);
   versionAssets(document, prefix);
 

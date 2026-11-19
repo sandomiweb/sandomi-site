@@ -1,8 +1,11 @@
 /**
  * Minimal static file server for local preview and tests (no dependencies).
+ * Text files are gzip-compressed, as on the real hosting, so speed measurements
+ * (e.g. Lighthouse) are comparable.
  * Usage: node tools/serve.mjs [port]   (default 3000)
  */
 import { createServer } from 'node:http';
+import { gzipSync } from 'node:zlib';
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -35,8 +38,14 @@ createServer(async (req, res) => {
     let file = path.join(ROOT, decodeURIComponent(new URL(req.url, 'http://x').pathname));
     if (!file.startsWith(ROOT)) throw new Error('outside root');
     if ((await stat(file)).isDirectory()) file = path.join(file, 'index.html');
-    const body = await readFile(file);
-    res.writeHead(200, { 'Content-Type': TYPES[path.extname(file)] || 'application/octet-stream' });
+    const type = TYPES[path.extname(file)] || 'application/octet-stream';
+    let body = await readFile(file);
+    const headers = { 'Content-Type': type };
+    if (/text|json|xml|svg|javascript/.test(type) && /\bgzip\b/.test(req.headers['accept-encoding'] || '')) {
+      body = gzipSync(body);
+      headers['Content-Encoding'] = 'gzip';
+    }
+    res.writeHead(200, headers);
     res.end(body);
   } catch {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
