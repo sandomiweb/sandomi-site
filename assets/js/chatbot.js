@@ -2,7 +2,7 @@
  * "Teddy" — a simple scripted chat assistant (no AI).
  * Conversation texts live in data/chatbot.json. An option's action is either the
  * key of the next node or a command:
- *   @catalog  @pdf  @order  @order-export  @game  @go:<section id>
+ *   @catalog[:<filter>]  @pdf  @order  @order-export  @game  @go:<section id>
  */
 import { lang, root } from './i18n.js';
 import { openOrder } from './order-form.js';
@@ -68,9 +68,9 @@ function run(action) {
   if (!action.startsWith('@')) return show(action);
   const [command, arg] = action.slice(1).split(':');
   switch (command) {
-    case 'catalog':
+    case 'catalog': // "@catalog" or "@catalog:<filter>", e.g. "@catalog:lent"
       close();
-      location.hash = 'catalog';
+      location.hash = arg ? `catalog-${arg}` : 'catalog';
       break;
     case 'pdf':
       openCatalogPdf();

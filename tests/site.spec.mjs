@@ -211,6 +211,17 @@ test.describe('page features', () => {
   });
 });
 
+test('chat assistant: Lenten answer opens all Lenten products', async ({ page }) => {
+  await page.goto('en/');
+  await page.click('#cbBtn');
+  await page.locator('.opt', { hasText: 'Products' }).last().click();
+  await page.locator('.opt', { hasText: 'Lenten' }).last().click();
+  await expect(page.locator('#cb')).toContainText('More than half');
+  await page.locator('.opt.main', { hasText: 'Lenten' }).last().click();
+  await expect(page).toHaveURL(/#catalog-lent$/);
+  await expect(page.locator('#pcount')).toHaveText(`${products.filter((p) => p.lenten).length} products`);
+});
+
 test.describe('game', () => {
   test('loads, starts, and links back to the site', async ({ page }) => {
     await page.goto('game/');

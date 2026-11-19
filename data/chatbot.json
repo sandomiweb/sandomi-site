@@ -66,13 +66,14 @@
       },
       "lent": {
         "text": [
-          "სამარხვოა ჩვენი შოკოლადის ვაფლები Premium და Classic. 🌿",
-          "ასევე გვაქვს ტყლაპის ნუგბარი შაქრის დამატების გარეშე."
+          "ჩვენი პროდუქციის ნახევარზე მეტი სამარხვოა! 🌿",
+          "სამარხვო გვაქვს თითქმის ყველა კატეგორიაში: ვაფლები, ფხვიერი ორცხობილა, ჯემიანი და შოკოლადიანი ნამცხვრები, თხილეული, ტყლაპი და სნექები.",
+          "კატალოგში ყველა სამარხვო პროდუქტს ერთად ნახავ."
         ],
         "options": [
           {
-            "label": "📖 კატალოგი",
-            "action": "@catalog",
+            "label": "🌿 სამარხვო პროდუქცია",
+            "action": "@catalog:lent",
             "main": true
           },
           {
@@ -254,13 +255,14 @@
       },
       "lent": {
         "text": [
-          "Our Premium and Classic chocolate wafers are Lenten (vegan-friendly). 🌿",
-          "We also have tklapi fruit leather with no added sugar."
+          "More than half of our products are Lenten (no animal products)! 🌿",
+          "You'll find Lenten items in almost every category: wafers, shortbread, jam and chocolate cookies, nuts, tklapi fruit leather and snacks.",
+          "The catalog shows all Lenten products together."
         ],
         "options": [
           {
-            "label": "📖 Catalog",
-            "action": "@catalog",
+            "label": "🌿 Lenten products",
+            "action": "@catalog:lent",
             "main": true
           },
           {
@@ -442,13 +444,14 @@
       },
       "lent": {
         "text": [
-          "Наши шоколадные вафли Premium и Classic постные. 🌿",
-          "Также есть пастила тклапи без добавленного сахара."
+          "Больше половины нашей продукции — постная! 🌿",
+          "Постное есть почти в каждой категории: вафли, песочное печенье, печенье с джемом и в шоколаде, орехи, пастила тклапи и снеки.",
+          "В каталоге все постные продукты собраны вместе."
         ],
         "options": [
           {
-            "label": "📖 Каталог",
-            "action": "@catalog",
+            "label": "🌿 Постная продукция",
+            "action": "@catalog:lent",
             "main": true
           },
           {
