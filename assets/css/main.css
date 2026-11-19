@@ -3693,3 +3693,23 @@ footer .muted {
     margin-bottom: 10px;
   }
 }
+
+/* ---------- Hero: slogan in two lines, in capitals ----------
+   Georgian is written in Mtavruli in the markup: browsers map
+   text-transform on Georgian back to Mkhedruli, so it is only used for en/ru. */
+.cine h1:not(:lang(ka)) {
+  text-transform: uppercase;
+}
+.cine h1 {
+  font-size: clamp(28px, 7.4vw, 76px);
+  line-height: 1.12;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+@media (min-width: 861px) {
+  /* Fit "ყველაზე ტკბილი" on one line in the text column. */
+  .cine h1 {
+    font-size: clamp(34px, 3.9vw, 64px);
+    white-space: nowrap;
+  }
+}

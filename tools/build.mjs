@@ -24,7 +24,8 @@ const LANGS = {
   ru: { dir: 'ru/', code: 'RU', region: 'cis', locale: 'ru_RU' },
 };
 const ATTRS = ['alt', 'placeholder', 'aria-label', 'title'];
-const GEORGIAN = /[Ⴀ-ჿ]/;
+// Mkhedruli/Asomtavruli plus Mtavruli (Georgian capitals).
+const GEORGIAN = /[Ⴀ-ჿᲐ-Ჿ]/;
 // Text in these elements is language-neutral or set by JavaScript.
 const SKIP = 'script, style, #regModal, #cb, #cbTip';
 const normalize = (s) => s.trim().replace(/\s+/g, ' ');
