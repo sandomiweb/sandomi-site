@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>სანდომი · ადმინ პანელი</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icons/favicon-32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;700;900&amp;display=swap"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <!-- Login -->
+    <section id="login" class="login" hidden>
+      <form class="login-card" id="loginForm">
+        <img class="login-logo" src="../assets/img/brand/logo.svg" alt="სანდომი" />
+        <h1>ადმინ პანელი</h1>
+        <p class="sub">ჩასვი შესვლის გასაღები. ამ მოწყობილობაზე ერთხელ არის საჭირო.</p>
+        <input
+          id="tokenInput"
+          type="password"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="github_pat_…"
+          required
+        />
+        <button class="btn red" type="submit">შესვლა</button>
+        <p class="err" id="loginErr" hidden></p>
+        <details class="howto">
+          <summary>როგორ მივიღო გასაღები?</summary>
+          <ol>
+            <li>შედი GitHub-ზე სანდომის ანგარიშით (sandomiweb).</li>
+            <li>
+              გახსენი
+              <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener"
+                >ახალი გასაღების გვერდი</a
+              >.
+            </li>
+            <li>Token name: <b>admin</b>. Expiration: <b>1 წელი</b>.</li>
+            <li>Repository access: <b>Only select repositories</b> → <b>sandomi-site</b>.</li>
+            <li>Permissions → Repository permissions → <b>Contents: Read and write</b>.</li>
+            <li>დააჭირე <b>Generate token</b>, დააკოპირე და ჩასვი აქ.</li>
+          </ol>
+          <p>გასაღები არავის გაუგზავნო ჩატით ან მეილით.</p>
+        </details>
+      </form>
+    </section>
+
+    <!-- App -->
+    <div class="app" id="app" hidden>
+      <aside>
+        <img class="logo" src="../assets/img/brand/logo-white.svg" alt="სანდომი" />
+        <nav id="nav">
+          <button class="nav on" data-view="products"><span class="i">🍫</span>პროდუქცია<span class="n" id="navCount"></span></button>
+          <button class="nav" data-view="prices"><span class="i">₾</span>ფასები ფაილით</button>
+          <button class="nav soon" disabled><span class="i">🎄</span>სეზონური ბანერი</button>
+          <button class="nav soon" disabled><span class="i">🖼️</span>გალერეა და ვიდეო</button>
+          <button class="nav soon" disabled><span class="i">📰</span>სიახლეები</button>
+          <button class="nav soon" disabled><span class="i">✏️</span>საიტის ტექსტები</button>
+          <button class="nav soon" disabled><span class="i">📄</span>PDF კატალოგი</button>
+          <button class="nav" data-view="history"><span class="i">↩️</span>ცვლილებების ისტორია</button>
+        </nav>
+        <div class="who">
+          <a class="site" href="../" target="_blank" rel="noopener">↗ საიტის ნახვა</a>
+          <button class="out" id="logout">გასვლა</button>
+        </div>
+      </aside>
+      <main id="main"></main>
+    </div>
+
+    <div class="status" id="status" hidden></div>
+    <div class="toast" id="toast" hidden></div>
+
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>

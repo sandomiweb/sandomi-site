@@ -71,6 +71,32 @@ The tests open the site on a phone-sized screen and check the main flows: langua
 - **Search engines (SEO):** `data/seo.json` holds the home page title and description and the topic pages. Each topic page is the site opened in the catalog view with its own address, title, description, heading, short introduction and product list (a category via `filter`, a word in the product name via `match`, or packed products of some categories), in three languages, with canonical/hreflang tags and schema.org data. Add a page there and run `npm run build`; the category links on the home page point to their topic page and still open in place.
 - The site must be opened through a web server (`npm run serve`); ES modules and JSON loading do not work from `file://`.
 
+## Admin panel
+
+`admin/` is a small panel for the marketing team (`/admin/` on the site). It has
+no server of its own: it reads and writes `data/*.json` and product photos in
+this repository through the GitHub API, so it keeps working whichever host
+serves the site.
+
+- **Login:** a fine-grained GitHub token of the `sandomiweb` account with
+  _Contents: Read and write_ on this repository only. It is stored in the
+  browser on that device; "გასვლა" removes it. Revoke it on GitHub to lock a
+  device out.
+- **Products:** add, edit, hide (`"hidden": true`, kept in the file and
+  restorable), delete, lenten / carousel switches. Photos are fitted to 720×540
+  on white and saved as WebP under `assets/img/products/` with a transliterated
+  name.
+- **Prices from a file:** download a CSV, change the price column in Excel,
+  upload it, review, publish.
+- **History:** every save is one commit; "დაბრუნება" restores `data/*.json` as
+  it was after a chosen change (as a new commit).
+- **Translations:** English and Russian names are suggested by MyMemory (free,
+  no key) and can be edited before saving.
+
+After each save `.github/workflows/build.yml` rebuilds the generated pages,
+commits them and asks GitHub Pages to publish. On another host, replace its
+last step with that host's deploy.
+
 ## Order form
 
 Order requests are sent through [FormSubmit](https://formsubmit.co) to `sandomi.tbilisi@gmail.com` (export: `sandomiproducts@gmail.com`) — see `RECIPIENTS` in `assets/js/order-form.js`.

@@ -1,0 +1,41 @@
+# Rebuilds the generated pages whenever content changes (for example a save in
+# the admin panel), commits them, and asks GitHub Pages to publish.
+name: Build site
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/**', 'src/**', 'assets/**', 'tools/**', 'site.config.json']
+  workflow_dispatch:
+
+concurrency:
+  group: build
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund linkedom@0.18
+      - run: node tools/build.mjs
+      - name: Commit generated pages
+        run: |
+          git config user.name "sandomi-build"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- '*.html' sitemap.xml robots.txt
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "Build site"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
+      - name: Publish on GitHub Pages
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST repos/${{ github.repository }}/pages/builds || true

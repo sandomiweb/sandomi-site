@@ -110,7 +110,7 @@ export function setFilter(filter) {
 
 export async function initCatalog() {
   const res = await fetch(root + 'data/products.json', { cache: 'no-cache' });
-  products = await res.json();
+  products = (await res.json()).filter((p) => !p.hidden); // hidden in the admin panel
   sortProducts(products); // products with photos first
 
   const withPhoto = products.map((p, i) => (p.image ? i : -1)).filter((i) => i >= 0);

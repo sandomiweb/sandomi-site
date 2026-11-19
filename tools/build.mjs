@@ -23,7 +23,8 @@ const config = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), '
 const dict = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/i18n.json'), 'utf8'));
 const source = fs.readFileSync(path.join(ROOT, 'src/index.html'), 'utf8');
 const seo = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/seo.json'), 'utf8'));
-const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/products.json'), 'utf8'));
+// `hidden: true` (set in the admin panel) keeps a product off the site without deleting it.
+const products = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/products.json'), 'utf8')).filter((p) => !p.hidden);
 
 const LANGS = {
   ka: { dir: '', code: 'ქა', region: 'ge', locale: 'ka_GE' },
@@ -302,7 +303,7 @@ fs.writeFileSync(
 fs.writeFileSync(
   path.join(ROOT, 'robots.txt'),
   config.indexable
-    ? `User-agent: *\nAllow: /\n\nSitemap: ${config.baseUrl}sitemap.xml\n`
+    ? `User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: ${config.baseUrl}sitemap.xml\n`
     : 'User-agent: *\nDisallow: /\n',
 );
 console.log('✓ sitemap.xml, robots.txt');

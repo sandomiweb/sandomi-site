@@ -340,3 +340,22 @@ test('no JavaScript errors on the three language pages', async ({ page }) => {
   }
   expect(errors).toEqual([]);
 });
+
+test('admin panel: login screen opens without errors and is not indexed', async ({ page }) => {
+  const errors = [];
+  page.on('pageerror', (e) => errors.push(e.message));
+  await page.goto('admin/');
+  await expect(page.locator('#login')).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+  expect(errors).toEqual([]);
+});
+
+test('products marked hidden in the admin panel stay off the site', async ({ page }) => {
+  await page.route('**/data/products.json*', async (route) => {
+    const list = products.map((p, i) => (i === 0 ? { ...p, hidden: true } : p));
+    await route.fulfill({ json: list });
+  });
+  await page.goto('./#catalog-all');
+  await expect(page.locator(`#grid .p[data-code="${products[0].code}"]`)).toHaveCount(0);
+  await expect(page.locator(`#grid .p[data-code="${products[1].code}"]`)).not.toHaveCount(0);
+});
