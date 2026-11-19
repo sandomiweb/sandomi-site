@@ -212,41 +212,60 @@ function initCarouselLoop() {
     const [a, b] = carousel.slice(0, 2).map((ix) => grid.children[ix]);
     return b.offsetLeft - a.offsetLeft;
   };
-  const active = () => phone.matches && !document.body.classList.contains('catmode');
+  const active = () => phone.matches && !document.body.classList.contains('catmode') && step() > 0;
   const MARGIN = 4;
 
-  // Start in the middle so there are cards in both directions; also after
-  // returning from the full catalog, which resets the scroll position.
+  // Set the scroll position with snapping paused, so the browser (Safari in
+  // particular) doesn't snap back to the previous card on its own.
+  const jumpTo = (left) => {
+    grid.style.scrollSnapType = 'none';
+    grid.scrollLeft = left;
+    requestAnimationFrame(() => requestAnimationFrame(() => (grid.style.scrollSnapType = '')));
+  };
+
+  // Start in the middle so there are cards in both directions: once the strip
+  // is laid out and visible, and again after returning from the full catalog.
   const centre = () => {
-    if (active() && grid.scrollLeft < step()) grid.scrollLeft = Math.floor(carousel.length / 2) * step();
+    if (active() && grid.scrollLeft < step()) jumpTo(Math.floor(carousel.length / 2) * step());
   };
   centre();
+  new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && centre()).observe(grid);
   phone.addEventListener('change', centre);
   addEventListener('hashchange', () => requestAnimationFrame(centre));
 
+  const recycle = () => {
+    if (!active() || touching) return;
+    const w = step();
+    const first = Math.round(grid.scrollLeft / w);
+    const visible = Math.ceil(grid.clientWidth / w);
+    let moved = 0;
+    if (first < MARGIN) moved = -Math.floor(carousel.length / 2);
+    else if (first + visible > carousel.length - MARGIN) moved = Math.floor(carousel.length / 2);
+    if (!moved) return;
+    carousel = [...carousel.slice(moved), ...carousel.slice(0, moved)]; // rotate
+    const left = grid.scrollLeft - moved * w;
+    grid.style.scrollSnapType = 'none';
+    applyCarouselOrder();
+    jumpTo(left);
+  };
+
+  // Recycle only when the strip is at rest: not under a finger and no longer
+  // scrolling (iOS keeps firing scroll events during momentum).
   let idle;
-  grid.addEventListener(
-    'scroll',
-    () => {
-      clearTimeout(idle);
-      idle = setTimeout(() => {
-        if (!active()) return;
-        const w = step();
-        const first = Math.round(grid.scrollLeft / w);
-        const visible = Math.ceil(grid.clientWidth / w);
-        let moved = 0;
-        if (first < MARGIN) moved = -Math.floor(carousel.length / 2);
-        else if (first + visible > carousel.length - MARGIN) moved = Math.floor(carousel.length / 2);
-        if (!moved) return;
-        carousel = [...carousel.slice(moved), ...carousel.slice(0, moved)]; // rotate
-        // Snapping is paused so the browser doesn't re-snap on its own while
-        // the cards are reordered; we shift the scroll position ourselves.
-        grid.style.scrollSnapType = 'none';
-        applyCarouselOrder();
-        grid.scrollLeft -= moved * w;
-        requestAnimationFrame(() => (grid.style.scrollSnapType = ''));
-      }, 150);
-    },
-    { passive: true },
-  );
+  let touching = false;
+  const later = () => {
+    clearTimeout(idle);
+    idle = setTimeout(recycle, 180);
+  };
+  grid.addEventListener('scroll', later, { passive: true });
+  grid.addEventListener('touchstart', () => (touching = true), { passive: true });
+  for (const type of ['touchend', 'touchcancel'])
+    grid.addEventListener(
+      type,
+      () => {
+        touching = false;
+        later();
+      },
+      { passive: true },
+    );
 }
