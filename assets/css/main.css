@@ -3109,7 +3109,7 @@ footer .muted {
 .q-grid a.video {
   background:
     linear-gradient(rgba(58, 6, 16, 0.55), rgba(58, 6, 16, 0.75)),
-    url('../img/photos/05.jpg') center / cover;
+    url('../img/photos/05.webp') center / cover;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -28,7 +28,11 @@ function route() {
     update();
     if (wasCatalog) {
       const target = hash && hash !== 'home' && document.getElementById(hash);
-      setTimeout(() => (target ? target.scrollIntoView() : scrollTo(0, homeScroll)), 30);
+      const restore = () => (target ? target.scrollIntoView() : scrollTo(0, homeScroll));
+      // Once the home sections are shown again, and once more after late layout
+      // changes (images, the browser's own scroll restoration) have settled.
+      setTimeout(restore, 30);
+      setTimeout(restore, 250);
     }
   }
   $$('#menu, .burger').forEach((el) => el.classList.remove('open'));

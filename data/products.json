@@ -12,7 +12,7 @@
     "shelfLife": "210 Days",
     "price": "3.20",
     "lenten": true,
-    "image": "assets/img/products/000.webp"
+    "image": "assets/img/products/vafli-kakaos-kremit-premium-216g.webp"
   },
   {
     "code": "4860103233530",
@@ -27,7 +27,7 @@
     "shelfLife": "210 Days",
     "price": "2.20",
     "lenten": true,
-    "image": "assets/img/products/001.webp"
+    "image": "assets/img/products/vafli-tkhilis-kremit-classic-200g.webp"
   },
   {
     "code": "4860103232434",
@@ -42,7 +42,7 @@
     "shelfLife": "210 Days",
     "price": "2.30",
     "lenten": true,
-    "image": "assets/img/products/002.webp"
+    "image": "assets/img/products/shokoladis-vafli-classic-200g.webp"
   },
   {
     "code": "4860103232359",
@@ -57,7 +57,7 @@
     "shelfLife": "210 Days",
     "price": "3.30",
     "lenten": true,
-    "image": "assets/img/products/003.webp"
+    "image": "assets/img/products/shokoladis-vafli-premium-216g.webp"
   },
   {
     "code": "4860103232441",
@@ -72,7 +72,7 @@
     "shelfLife": "210 Days",
     "price": "2.00",
     "lenten": true,
-    "image": "assets/img/products/004.webp"
+    "image": "assets/img/products/vafli-kakaos-kremit-classic-200g.webp"
   },
   {
     "code": "4860103233547",
@@ -87,7 +87,7 @@
     "shelfLife": "210 Days",
     "price": "2.20",
     "lenten": false,
-    "image": "assets/img/products/005.webp"
+    "image": "assets/img/products/vafli-irisit-classic-200g.webp"
   },
   {
     "code": "4860103232380",
@@ -102,7 +102,7 @@
     "shelfLife": "210 Days",
     "price": "3.30",
     "lenten": true,
-    "image": "assets/img/products/006.webp"
+    "image": "assets/img/products/shavi-vafli-topi-rdziani-kremit-180g.webp"
   },
   {
     "code": "4860103232540",
@@ -117,7 +117,7 @@
     "shelfLife": "210 Days",
     "price": "2.75",
     "lenten": true,
-    "image": "assets/img/products/007.webp"
+    "image": "assets/img/products/vafli-limonis-aromatit-200g.webp"
   },
   {
     "code": "4860103230492",
@@ -132,7 +132,7 @@
     "shelfLife": "210 Days",
     "price": "0.80",
     "lenten": true,
-    "image": "assets/img/products/008.webp"
+    "image": "assets/img/products/mini-vafli-tedi-shokoladshi-30g.webp"
   },
   {
     "code": "4860103232397",
@@ -147,7 +147,7 @@
     "shelfLife": "210 Days",
     "price": "3.10",
     "lenten": false,
-    "image": "assets/img/products/009.webp"
+    "image": "assets/img/products/vafli-topi-rdziani-kremit-180g.webp"
   },
   {
     "code": "4860103232533",
@@ -162,7 +162,7 @@
     "shelfLife": "210 Days",
     "price": "3.30",
     "lenten": false,
-    "image": "assets/img/products/010.webp"
+    "image": "assets/img/products/vafli-naghebis-aromatit-200g.webp"
   },
   {
     "code": "4860103230485",
@@ -177,7 +177,7 @@
     "shelfLife": "210 Days",
     "price": "0.80",
     "lenten": true,
-    "image": "assets/img/products/011.webp"
+    "image": "assets/img/products/mini-vafli-vaflini-shokoladshi-30g.webp"
   },
   {
     "code": "4860103232076",
@@ -192,7 +192,7 @@
     "shelfLife": "180 Days",
     "price": "4.30",
     "lenten": true,
-    "image": "assets/img/products/012.webp"
+    "image": "assets/img/products/griliazhi-shokoladis-minankrit-210g.webp"
   },
   {
     "code": "4860103233868",
@@ -207,7 +207,7 @@
     "shelfLife": "180 Days",
     "price": "4.00",
     "lenten": true,
-    "image": "assets/img/products/013.webp"
+    "image": "assets/img/products/taflakveri-alublis-jemit-300g.webp"
   },
   {
     "code": "4860103230782",
@@ -222,7 +222,7 @@
     "shelfLife": "180 Days",
     "price": "4.80",
     "lenten": true,
-    "image": "assets/img/products/014.webp"
+    "image": "assets/img/products/taflakveri-darichinit-500g.webp"
   },
   {
     "code": "4860103232427",
@@ -237,7 +237,7 @@
     "shelfLife": "180 Days",
     "price": "5.00",
     "lenten": true,
-    "image": "assets/img/products/n015.webp"
+    "image": "assets/img/products/vaflis-rolebi-shokoladis-minankrit-konteineri-165g.webp"
   },
   {
     "code": "4860103233875",
@@ -252,7 +252,7 @@
     "shelfLife": "120 Days",
     "price": "5.30",
     "lenten": false,
-    "image": "assets/img/products/016.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-kakali-160g.webp"
   },
   {
     "code": "4860103233851",
@@ -267,7 +267,7 @@
     "shelfLife": "180 Days",
     "price": "3.90",
     "lenten": true,
-    "image": "assets/img/products/017.webp"
+    "image": "assets/img/products/taflakveri-darichinit-klasikuri-300g.webp"
   },
   {
     "code": "4860103230348",
@@ -282,7 +282,7 @@
     "shelfLife": "180 Days",
     "price": "5.00",
     "lenten": true,
-    "image": "assets/img/products/018.webp"
+    "image": "assets/img/products/taflakveri-alublis-jemit-500g.webp"
   },
   {
     "code": "4860103232571",
@@ -297,7 +297,7 @@
     "shelfLife": "1 Year",
     "price": "1.20",
     "lenten": false,
-    "image": "assets/img/products/019.webp"
+    "image": "assets/img/products/sneki-miksi-krekeri-da-bretseli-100g.webp"
   },
   {
     "code": "4860103232564",
@@ -312,7 +312,7 @@
     "shelfLife": "1 Year",
     "price": "1.20",
     "lenten": false,
-    "image": "assets/img/products/020.webp"
+    "image": "assets/img/products/mariliani-bretseli-sneki-100g.webp"
   },
   {
     "code": "4860103232588",
@@ -327,7 +327,7 @@
     "shelfLife": "1 Year",
     "price": "1.20",
     "lenten": false,
-    "image": "assets/img/products/021.webp"
+    "image": "assets/img/products/mariliani-krekeri-sneki-100g.webp"
   },
   {
     "code": "4860103232557",
@@ -342,7 +342,7 @@
     "shelfLife": "1 Year",
     "price": "1.30",
     "lenten": false,
-    "image": "assets/img/products/022.webp"
+    "image": "assets/img/products/mariliani-chkhiri-popsi-80g.webp"
   },
   {
     "code": "4860103233721",
@@ -357,7 +357,7 @@
     "shelfLife": "180 Days",
     "price": "2.90",
     "lenten": false,
-    "image": "assets/img/products/023.webp"
+    "image": "assets/img/products/mitsistkhili-mokhaluli-taflit-120g.webp"
   },
   {
     "code": "4860103230966",
@@ -372,7 +372,7 @@
     "shelfLife": "180 Days",
     "price": "2.70",
     "lenten": true,
-    "image": "assets/img/products/024.webp"
+    "image": "assets/img/products/bliti-shefutuli-250g.webp"
   },
   {
     "code": "4860103233738",
@@ -387,7 +387,7 @@
     "shelfLife": "180 Days",
     "price": "3.05",
     "lenten": false,
-    "image": "assets/img/products/025.webp"
+    "image": "assets/img/products/mitsistkhili-taflit-da-sezamit-120g.webp"
   },
   {
     "code": "4860103233981",
@@ -402,7 +402,7 @@
     "shelfLife": "180 Days",
     "price": "11.10",
     "lenten": false,
-    "image": "assets/img/products/026.webp"
+    "image": "assets/img/products/mokhaluli-tkhileulis-miksi-120g.webp"
   },
   {
     "code": "4860103232625",
@@ -417,7 +417,7 @@
     "shelfLife": "1 Year",
     "price": "1.00",
     "lenten": false,
-    "image": "assets/img/products/027.webp"
+    "image": "assets/img/products/mariliani-krekeri-sharki-100g.webp"
   },
   {
     "code": "4860103233332",
@@ -432,7 +432,7 @@
     "shelfLife": "6 month",
     "price": "3.10",
     "lenten": true,
-    "image": "assets/img/products/028.webp"
+    "image": "assets/img/products/fkhvieri-ortskhobila-shvriis-250g.webp"
   },
   {
     "code": "4860103231987",
@@ -447,7 +447,7 @@
     "shelfLife": "1 Year",
     "price": "2.30",
     "lenten": false,
-    "image": "assets/img/products/029.webp"
+    "image": "assets/img/products/saiubileo-ortskhobila-sandomi-260g.webp"
   },
   {
     "code": "4860103232595",
@@ -462,7 +462,7 @@
     "shelfLife": "1 Year",
     "price": "3.00",
     "lenten": false,
-    "image": "assets/img/products/030.webp"
+    "image": "assets/img/products/krekeri-anbani-200g.webp"
   },
   {
     "code": "4860103233325",
@@ -477,7 +477,7 @@
     "shelfLife": "6 month",
     "price": "3.30",
     "lenten": true,
-    "image": "assets/img/products/031.webp"
+    "image": "assets/img/products/balisha-alublis-jemit-250g.webp"
   },
   {
     "code": "",
@@ -492,7 +492,7 @@
     "shelfLife": "180 Days",
     "price": "25.00",
     "lenten": true,
-    "image": "assets/img/products/032.webp"
+    "image": "assets/img/products/kanfeti-datunia-shokoladis-minankrit-2-5kg.webp"
   },
   {
     "code": "4860103233813",
@@ -507,7 +507,7 @@
     "shelfLife": "6 month",
     "price": "6.00",
     "lenten": false,
-    "image": "assets/img/products/033.webp"
+    "image": "assets/img/products/lukumis-ruleti-asorti-300g.webp"
   },
   {
     "code": "4860103233790",
@@ -522,7 +522,7 @@
     "shelfLife": "6 month",
     "price": "6.00",
     "lenten": false,
-    "image": "assets/img/products/034.webp"
+    "image": "assets/img/products/lukumi-mitsistkhilit-da-kokosit-300g.webp"
   },
   {
     "code": "4860103233820",
@@ -537,7 +537,7 @@
     "shelfLife": "6 month",
     "price": "5.80",
     "lenten": false,
-    "image": "assets/img/products/035.webp"
+    "image": "assets/img/products/lukumis-asorti-300g.webp"
   },
   {
     "code": "4860103233783",
@@ -552,7 +552,7 @@
     "shelfLife": "6 month",
     "price": "5.50",
     "lenten": false,
-    "image": "assets/img/products/036.webp"
+    "image": "assets/img/products/lukumi-klasikuri-300g.webp"
   },
   {
     "code": "4860103233844",
@@ -567,7 +567,7 @@
     "shelfLife": "180 Days",
     "price": "9.00",
     "lenten": false,
-    "image": "assets/img/products/037.webp"
+    "image": "assets/img/products/charozi-gargris-chiri-nigvzit-shokoladshi-130g.webp"
   },
   {
     "code": "4860103233585",
@@ -582,7 +582,7 @@
     "shelfLife": "",
     "price": "6.50",
     "lenten": false,
-    "image": "assets/img/products/038.webp"
+    "image": "assets/img/products/tqlapis-asorti-100g.webp"
   },
   {
     "code": "4860103233578",
@@ -597,7 +597,7 @@
     "shelfLife": "",
     "price": "7.00",
     "lenten": false,
-    "image": "assets/img/products/039.webp"
+    "image": "assets/img/products/kliavis-tqlapi-100g.webp"
   },
   {
     "code": "4860103233837",
@@ -612,7 +612,7 @@
     "shelfLife": "180 Days",
     "price": "8.00",
     "lenten": false,
-    "image": "assets/img/products/040.webp"
+    "image": "assets/img/products/finiki-tkhilit-shokoladis-minankarshi-130g.webp"
   },
   {
     "code": "4860103233578",
@@ -627,7 +627,7 @@
     "shelfLife": "",
     "price": "9.80",
     "lenten": false,
-    "image": "assets/img/products/041.webp"
+    "image": "assets/img/products/tqemlis-tqlapi-100g.webp"
   },
   {
     "code": "4860103233561",
@@ -642,7 +642,7 @@
     "shelfLife": "",
     "price": "5.70",
     "lenten": false,
-    "image": "assets/img/products/042.webp"
+    "image": "assets/img/products/vashlis-tqlapi-100g.webp"
   },
   {
     "code": "4860103231567",
@@ -657,7 +657,7 @@
     "shelfLife": "180 Days",
     "price": "5.30",
     "lenten": true,
-    "image": "assets/img/products/043.webp",
+    "image": "assets/img/products/khrashuna-qurebi-300g.webp",
     "carousel": false
   },
   {
@@ -673,7 +673,7 @@
     "shelfLife": "120 Days",
     "price": "5.20",
     "lenten": false,
-    "image": "assets/img/products/044.webp",
+    "image": "assets/img/products/shvriis-namtskhvari-tbilisi-360g.webp",
     "carousel": false
   },
   {
@@ -689,7 +689,7 @@
     "shelfLife": "120 Days",
     "price": "8.80",
     "lenten": true,
-    "image": "assets/img/products/045.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-guli-2-2kg.webp"
   },
   {
     "code": "1115019",
@@ -704,7 +704,7 @@
     "shelfLife": "180 Days",
     "price": "8.80",
     "lenten": true,
-    "image": "assets/img/products/046.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-zigzagi-2-5kg.webp"
   },
   {
     "code": "6018",
@@ -719,7 +719,7 @@
     "shelfLife": "90 Days",
     "price": "10.00",
     "lenten": true,
-    "image": "assets/img/products/047.webp"
+    "image": "assets/img/products/sendvichi-marmeladit-3kg.webp"
   },
   {
     "code": "1115076",
@@ -734,7 +734,7 @@
     "shelfLife": "180 Days",
     "price": "11.00",
     "lenten": true,
-    "image": "assets/img/products/048.webp"
+    "image": "assets/img/products/shvriis-namtskhvari-tbilisi-2-0kg.webp"
   },
   {
     "code": "4066",
@@ -749,7 +749,7 @@
     "shelfLife": "120 Days",
     "price": "8.80",
     "lenten": true,
-    "image": "assets/img/products/049.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-nakhevarmtvare-2kg.webp"
   },
   {
     "code": "6038",
@@ -764,7 +764,7 @@
     "shelfLife": "90 Days",
     "price": "10.00",
     "lenten": true,
-    "image": "assets/img/products/050.webp"
+    "image": "assets/img/products/triufeli-kokosit-3kg.webp"
   },
   {
     "code": "1115453",
@@ -779,7 +779,7 @@
     "shelfLife": "120 Days",
     "price": "12.50",
     "lenten": true,
-    "image": "assets/img/products/051.webp"
+    "image": "assets/img/products/kakaos-vaflis-rolebi-1-5kg.webp"
   },
   {
     "code": "4047",
@@ -794,7 +794,7 @@
     "shelfLife": "180 Days",
     "price": "6.00",
     "lenten": true,
-    "image": "assets/img/products/052.webp"
+    "image": "assets/img/products/ortskhobila-sandomi-didi-3-3kg.webp"
   },
   {
     "code": "1115338",
@@ -809,7 +809,7 @@
     "shelfLife": "180 Days",
     "price": "5.50",
     "lenten": false,
-    "image": "assets/img/products/053.webp"
+    "image": "assets/img/products/ortskhobila-sakartvelos-kalakebi-1-5kg.webp"
   },
   {
     "code": "6011",
@@ -824,7 +824,7 @@
     "shelfLife": "120 Days",
     "price": "11.00",
     "lenten": true,
-    "image": "assets/img/products/054.webp"
+    "image": "assets/img/products/vaflis-rolebi-mishutka-shokoladis-shigtavsit-2-1kg.webp"
   },
   {
     "code": "4125",
@@ -839,7 +839,7 @@
     "shelfLife": "180 Days",
     "price": "7.00",
     "lenten": false,
-    "image": "assets/img/products/055.webp"
+    "image": "assets/img/products/saiubileo-ortskhobila-sandomi-4-8kg.webp"
   },
   {
     "code": "4096",
@@ -854,7 +854,7 @@
     "shelfLife": "180 Days",
     "price": "5.50",
     "lenten": true,
-    "image": "assets/img/products/056.webp"
+    "image": "assets/img/products/ortskhobila-sandomi-mrgvali-4kg.webp"
   },
   {
     "code": "4017",
@@ -869,7 +869,7 @@
     "shelfLife": "90 Days",
     "price": "11.00",
     "lenten": true,
-    "image": "assets/img/products/057.webp"
+    "image": "assets/img/products/khrashuna-qurebi-2-5kg.webp"
   },
   {
     "code": "4050",
@@ -884,7 +884,7 @@
     "shelfLife": "120 Days",
     "price": "8.80",
     "lenten": true,
-    "image": "assets/img/products/058.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-mario-2-2kg.webp"
   },
   {
     "code": "4063",
@@ -899,7 +899,7 @@
     "shelfLife": "90 Days",
     "price": "11.00",
     "lenten": true,
-    "image": "assets/img/products/059.webp"
+    "image": "assets/img/products/shvriis-namtskhvari-kishmishit-2kg.webp"
   },
   {
     "code": "1115411",
@@ -914,7 +914,7 @@
     "shelfLife": "90 Days",
     "price": "11.00",
     "lenten": true,
-    "image": "assets/img/products/060.webp"
+    "image": "assets/img/products/khrashuna-gulebi-darichinit-da-mitsistkhilit-2-5kg.webp"
   },
   {
     "code": "4066",
@@ -929,7 +929,7 @@
     "shelfLife": "90 Days",
     "price": "14.00",
     "lenten": false,
-    "image": "assets/img/products/061.webp"
+    "image": "assets/img/products/khachos-namtskhvari-1-5kg.webp"
   },
   {
     "code": "7017",
@@ -944,7 +944,7 @@
     "shelfLife": "90 Days",
     "price": "10.00",
     "lenten": true,
-    "image": "assets/img/products/062.webp"
+    "image": "assets/img/products/balisha-dekorit-3kg.webp"
   },
   {
     "code": "1115239",
@@ -959,7 +959,7 @@
     "shelfLife": "90 Days",
     "price": "10.50",
     "lenten": true,
-    "image": "assets/img/products/063.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-banani-fortokhlis-jemit-3kg.webp"
   },
   {
     "code": "6004",
@@ -974,7 +974,7 @@
     "shelfLife": "120 Days",
     "price": "10.00",
     "lenten": false,
-    "image": "assets/img/products/064.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-rafaelo-2-5kg.webp"
   },
   {
     "code": "1115081",
@@ -989,7 +989,7 @@
     "shelfLife": "90 Days",
     "price": "9.40",
     "lenten": true,
-    "image": "assets/img/products/066.webp"
+    "image": "assets/img/products/tvisti-martsqvis-jemit-3kg.webp"
   },
   {
     "code": "4002",
@@ -1004,7 +1004,7 @@
     "shelfLife": "120 Days",
     "price": "8.80",
     "lenten": false,
-    "image": "assets/img/products/067.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-rgoli-2kg.webp"
   },
   {
     "code": "4082",
@@ -1019,7 +1019,7 @@
     "shelfLife": "90 Days",
     "price": "10.80",
     "lenten": true,
-    "image": "assets/img/products/068.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-navi-kokosit-2-5kg.webp"
   },
   {
     "code": "4001",
@@ -1034,7 +1034,7 @@
     "shelfLife": "120 Days",
     "price": "8.80",
     "lenten": false,
-    "image": "assets/img/products/069.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-mrgvali-3kg.webp"
   },
   {
     "code": "1115428",
@@ -1049,7 +1049,7 @@
     "shelfLife": "90 Days",
     "price": "14.00",
     "lenten": false,
-    "image": "assets/img/products/070.webp"
+    "image": "assets/img/products/tqupebi-alublis-da-fortokhlis-jemit-2-5kg.webp"
   },
   {
     "code": "1115234",
@@ -1064,7 +1064,7 @@
     "shelfLife": "120 Days",
     "price": "12.50",
     "lenten": true,
-    "image": "assets/img/products/071.webp"
+    "image": "assets/img/products/ortskhobila-la-luna-motsvis-jemit-2-5kg.webp"
   },
   {
     "code": "4053",
@@ -1079,7 +1079,7 @@
     "shelfLife": "120 Days",
     "price": "10.80",
     "lenten": false,
-    "image": "assets/img/products/072.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-navi-2kg.webp"
   },
   {
     "code": "1115427",
@@ -1094,7 +1094,7 @@
     "shelfLife": "",
     "price": "13.00",
     "lenten": false,
-    "image": "assets/img/products/073.webp"
+    "image": "assets/img/products/fkhvieri-ortskhobila-dueti-alublis-da-fortokhlis-jemit-2-5kg.webp"
   },
   {
     "code": "4121",
@@ -1109,7 +1109,7 @@
     "shelfLife": "180 Days",
     "price": "6.50",
     "lenten": true,
-    "image": "assets/img/products/074.webp"
+    "image": "assets/img/products/mariliani-bretseli-sneki-2kg.webp"
   },
   {
     "code": "4124",
@@ -1124,7 +1124,7 @@
     "shelfLife": "180 Days",
     "price": "6.50",
     "lenten": false,
-    "image": "assets/img/products/075.webp"
+    "image": "assets/img/products/mariliani-krekeri-sharki-2-5kg.webp"
   },
   {
     "code": "1115422",
@@ -1139,7 +1139,7 @@
     "shelfLife": "",
     "price": "18.00",
     "lenten": false,
-    "image": "assets/img/products/076.webp"
+    "image": "assets/img/products/fenovani-chkhiri-loris-aromatit-2-5kg.webp"
   },
   {
     "code": "1115074",
@@ -1154,7 +1154,7 @@
     "shelfLife": "180 Days",
     "price": "6.50",
     "lenten": true,
-    "image": "assets/img/products/077.webp"
+    "image": "assets/img/products/mariliani-chkhiri-popsi-2-3kg.webp"
   },
   {
     "code": "4044",
@@ -1169,7 +1169,7 @@
     "shelfLife": "180 Days",
     "price": "6.50",
     "lenten": false,
-    "image": "assets/img/products/078.webp"
+    "image": "assets/img/products/krekeri-anbani-2-5kg.webp"
   },
   {
     "code": "1115424",
@@ -1184,7 +1184,7 @@
     "shelfLife": "",
     "price": "18.00",
     "lenten": true,
-    "image": "assets/img/products/079.webp"
+    "image": "assets/img/products/fenovani-chkhiri-paprikit-2-5kg.webp"
   },
   {
     "code": "1115131",
@@ -1199,7 +1199,7 @@
     "shelfLife": "180 Days",
     "price": "10.50",
     "lenten": false,
-    "image": "assets/img/products/080.webp"
+    "image": "assets/img/products/lukumis-asorti-3kg.webp"
   },
   {
     "code": "1115325",
@@ -1214,7 +1214,7 @@
     "shelfLife": "180 Days",
     "price": "15.00",
     "lenten": false,
-    "image": "assets/img/products/081.webp"
+    "image": "assets/img/products/lukumi-nigvzit-2-5kg.webp"
   },
   {
     "code": "1115323",
@@ -1229,7 +1229,7 @@
     "shelfLife": "180 Days",
     "price": "12.00",
     "lenten": false,
-    "image": "assets/img/products/082.webp"
+    "image": "assets/img/products/lukumi-samefo-2-5kg.webp"
   },
   {
     "code": "1119105",
@@ -1244,7 +1244,7 @@
     "shelfLife": "180 Days",
     "price": "11.00",
     "lenten": false,
-    "image": "assets/img/products/083.webp"
+    "image": "assets/img/products/lukumi-mitsistkhilit-da-kokosit-3kg.webp"
   },
   {
     "code": "1115032",
@@ -1259,7 +1259,7 @@
     "shelfLife": "180 Days",
     "price": "10.00",
     "lenten": false,
-    "image": "assets/img/products/084.webp"
+    "image": "assets/img/products/lukumi-klasikuri-3kg.webp"
   },
   {
     "code": "1115462",
@@ -1274,7 +1274,7 @@
     "shelfLife": "180 Days",
     "price": "10.50",
     "lenten": false,
-    "image": "assets/img/products/085.webp"
+    "image": "assets/img/products/lukumi-martsqvis-aromatit-2-5kg.webp"
   },
   {
     "code": "1115132",
@@ -1289,7 +1289,7 @@
     "shelfLife": "180 Days",
     "price": "10.50",
     "lenten": false,
-    "image": "assets/img/products/086.webp"
+    "image": "assets/img/products/lukumis-ruleti-asorti-3kg.webp"
   },
   {
     "code": "1115455",
@@ -1304,7 +1304,7 @@
     "shelfLife": "180 Days",
     "price": "11.00",
     "lenten": false,
-    "image": "assets/img/products/087.webp"
+    "image": "assets/img/products/lukumi-brotseulis-aromatit-da-mitsistkhilit-3kg.webp"
   },
   {
     "code": "1115454",
@@ -1319,7 +1319,7 @@
     "shelfLife": "180 Days",
     "price": "14.00",
     "lenten": false,
-    "image": "assets/img/products/088.webp"
+    "image": "assets/img/products/lukumi-fortokhlit-da-nigvzit-3kg.webp"
   },
   {
     "code": "1115005",
@@ -1334,7 +1334,7 @@
     "shelfLife": "180 Days",
     "price": "12.10",
     "lenten": true,
-    "image": "assets/img/products/089.webp"
+    "image": "assets/img/products/shavi-vafli-2-5kg.webp"
   },
   {
     "code": "111500",
@@ -1349,7 +1349,7 @@
     "shelfLife": "180 Days",
     "price": "11.00",
     "lenten": false,
-    "image": "assets/img/products/090.webp"
+    "image": "assets/img/products/vafli-tbilisuri-2-5kg.webp"
   },
   {
     "code": "1115040",
@@ -1364,7 +1364,7 @@
     "shelfLife": "180 Days",
     "price": "20.00",
     "lenten": true,
-    "image": "assets/img/products/091.webp"
+    "image": "assets/img/products/vafli-shokoladis-minankrit-1-5kg.webp"
   },
   {
     "code": "1115002",
@@ -1379,7 +1379,7 @@
     "shelfLife": "180 Days",
     "price": "11.60",
     "lenten": false,
-    "image": "assets/img/products/092.webp"
+    "image": "assets/img/products/vafli-tbilisuri-kakaos-kremit-2-5kg.webp"
   },
   {
     "code": "1115276",
@@ -1394,7 +1394,7 @@
     "shelfLife": "180 Days",
     "price": "12.10",
     "lenten": false,
-    "image": "assets/img/products/093.webp"
+    "image": "assets/img/products/vafli-karamelit-2-5kg.webp"
   },
   {
     "code": "1115315",
@@ -1409,7 +1409,7 @@
     "shelfLife": "180 Days",
     "price": "12.10",
     "lenten": false,
-    "image": "assets/img/products/094.webp"
+    "image": "assets/img/products/vafli-kokosis-kremit-2-5kg.webp"
   },
   {
     "code": "1115013",
@@ -1424,7 +1424,7 @@
     "shelfLife": "120 Days",
     "price": "15.00",
     "lenten": true,
-    "image": "assets/img/products/095.webp"
+    "image": "assets/img/products/biskviti-shokoladshi-2kg.webp"
   },
   {
     "code": "1115065",
@@ -1439,7 +1439,7 @@
     "shelfLife": "120 Days",
     "price": "20.00",
     "lenten": true,
-    "image": "assets/img/products/096.webp"
+    "image": "assets/img/products/shokoladis-minankris-ghilebi-2-5kg.webp"
   },
   {
     "code": "1115258",
@@ -1454,7 +1454,7 @@
     "shelfLife": "120 Days",
     "price": "24.00",
     "lenten": true,
-    "image": "assets/img/products/097.webp"
+    "image": "assets/img/products/mitsistkhili-shokoladis-minankrit-1-7kg.webp"
   },
   {
     "code": "1115016",
@@ -1469,7 +1469,7 @@
     "shelfLife": "120 Days",
     "price": "15.00",
     "lenten": true,
-    "image": "assets/img/products/098.webp"
+    "image": "assets/img/products/chkhiri-shokoladis-minankrit-3-5kg.webp"
   },
   {
     "code": "1115011",
@@ -1484,7 +1484,7 @@
     "shelfLife": "120 Days",
     "price": "17.00",
     "lenten": true,
-    "image": "assets/img/products/099.webp"
+    "image": "assets/img/products/griliazhi-2kg.webp"
   },
   {
     "code": "1115398",
@@ -1499,7 +1499,7 @@
     "shelfLife": "120 Days",
     "price": "17.00",
     "lenten": false,
-    "image": "assets/img/products/100.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-tkhilit-shokoladshi-2kg.webp"
   },
   {
     "code": "7045",
@@ -1514,7 +1514,7 @@
     "shelfLife": "120 Days",
     "price": "16.00",
     "lenten": false,
-    "image": "assets/img/products/101.webp"
+    "image": "assets/img/products/ortskhobila-sandomi-mrgvali-shokoladshi-3-3kg.webp"
   },
   {
     "code": "1115060",
@@ -1529,7 +1529,7 @@
     "shelfLife": "120 Days",
     "price": "18.00",
     "lenten": false,
-    "image": "assets/img/products/102.webp"
+    "image": "assets/img/products/fkhvieri-namtskhvari-irisit-shokoladshi-3-3kg.webp"
   },
   {
     "code": "4026",
@@ -1544,7 +1544,7 @@
     "shelfLife": "90 Days",
     "price": "20.00",
     "lenten": false,
-    "image": "assets/img/products/103.webp"
+    "image": "assets/img/products/zefiri-shokoladshi-1-8kg.webp"
   },
   {
     "code": "1115062",
@@ -1559,7 +1559,7 @@
     "shelfLife": "180 Days",
     "price": "13.00",
     "lenten": true,
-    "image": "assets/img/products/104.webp"
+    "image": "assets/img/products/mokhaluli-arakisi-taflit-da-sezamit-1-8kg.webp"
   },
   {
     "code": "1115066",
@@ -1574,7 +1574,7 @@
     "shelfLife": "180 Days",
     "price": "15.00",
     "lenten": true,
-    "image": "assets/img/products/105.webp"
+    "image": "assets/img/products/mariliani-arakisi-2kg.webp"
   },
   {
     "code": "1115470",
@@ -1589,7 +1589,7 @@
     "shelfLife": "180 Days",
     "price": "14.00",
     "lenten": true,
-    "image": "assets/img/products/106.webp"
+    "image": "assets/img/products/mariliani-mitsistkhili-kaniani-2kg.webp"
   },
   {
     "code": "1115061",
@@ -1604,7 +1604,7 @@
     "shelfLife": "180 Days",
     "price": "12.00",
     "lenten": true,
-    "image": "assets/img/products/107.webp"
+    "image": "assets/img/products/mokhaluli-arakisi-taflit-2kg.webp"
   },
   {
     "code": "1115474",
@@ -1619,7 +1619,7 @@
     "shelfLife": "180 Days",
     "price": "18.00",
     "lenten": false,
-    "image": "assets/img/products/108.webp"
+    "image": "assets/img/products/mokhaluli-arakisi-loris-aromatit-2kg.webp"
   },
   {
     "code": "1115475",
@@ -1634,7 +1634,7 @@
     "shelfLife": "180 Days",
     "price": "17.00",
     "lenten": true,
-    "image": "assets/img/products/109.webp"
+    "image": "assets/img/products/mokhaluli-arakisi-paprikit-2kg.webp"
   },
   {
     "code": "4860103232274",
@@ -1649,7 +1649,7 @@
     "shelfLife": "",
     "price": "5.50",
     "lenten": true,
-    "image": "assets/img/products/n109.webp",
+    "image": "assets/img/products/balisha-alublis-jemit-350g.webp",
     "carousel": false
   },
   {
@@ -1665,7 +1665,7 @@
     "shelfLife": "",
     "price": "6.30",
     "lenten": true,
-    "image": "assets/img/products/n110.webp",
+    "image": "assets/img/products/fkhvieri-namtskhvari-banani-fortokhlis-jemit-480g.webp",
     "carousel": false
   },
   {
@@ -1681,7 +1681,7 @@
     "shelfLife": "",
     "price": "12.00",
     "lenten": true,
-    "image": "assets/img/products/n111.webp",
+    "image": "assets/img/products/biskviti-shokoladis-minankrit-650g.webp",
     "carousel": false
   },
   {
@@ -1697,7 +1697,7 @@
     "shelfLife": "",
     "price": "5.20",
     "lenten": true,
-    "image": "assets/img/products/n112.webp",
+    "image": "assets/img/products/fkhvieri-namtskhvari-navi-kokosit-350g.webp",
     "carousel": false
   },
   {
@@ -1713,7 +1713,7 @@
     "shelfLife": "",
     "price": "6.30",
     "lenten": true,
-    "image": "assets/img/products/n113.webp",
+    "image": "assets/img/products/vaflis-rolebi-mishutka-350g.webp",
     "carousel": false
   },
   {
@@ -1744,7 +1744,7 @@
     "shelfLife": "",
     "price": "6.00",
     "lenten": true,
-    "image": "assets/img/products/n115.webp",
+    "image": "assets/img/products/sendvichi-marmeladit-mrgvali-430g.webp",
     "carousel": false
   },
   {
@@ -1760,7 +1760,7 @@
     "shelfLife": "",
     "price": "5.30",
     "lenten": true,
-    "image": "assets/img/products/n116.webp",
+    "image": "assets/img/products/tvisti-martsqvis-jemit-360g.webp",
     "carousel": false
   },
   {
@@ -1776,7 +1776,7 @@
     "shelfLife": "",
     "price": "6.00",
     "lenten": true,
-    "image": "assets/img/products/n117.webp",
+    "image": "assets/img/products/mokhaluli-arakisi-taflit.webp",
     "carousel": false
   },
   {
@@ -1792,7 +1792,7 @@
     "shelfLife": "",
     "price": "6.30",
     "lenten": true,
-    "image": "assets/img/products/n118.webp",
+    "image": "assets/img/products/mokhaluli-arakisi-taflit-da-sezamit.webp",
     "carousel": false
   },
   {
@@ -1808,7 +1808,7 @@
     "shelfLife": "",
     "price": "11.00",
     "lenten": false,
-    "image": "assets/img/products/n119.webp",
+    "image": "assets/img/products/fkhvieri-namtskhvari-irisit-da-shokoladis-minankrit-530g.webp",
     "carousel": false
   },
   {
@@ -1824,7 +1824,7 @@
     "shelfLife": "",
     "price": "4.50",
     "lenten": true,
-    "image": "assets/img/products/n120.webp",
+    "image": "assets/img/products/khrashuna-khveula-200g.webp",
     "carousel": false
   },
   {
@@ -1840,7 +1840,7 @@
     "shelfLife": "",
     "price": "6.50",
     "lenten": true,
-    "image": "assets/img/products/n121.webp",
+    "image": "assets/img/products/kakaos-vaflis-rolebi-350g.webp",
     "carousel": false
   }
 ]

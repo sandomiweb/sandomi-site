@@ -199,6 +199,8 @@ function applySeo(document, lang, page) {
   if (!page) return;
 
   const html = document.documentElement;
+  // Start in the catalog view, so the page does not jump when the script loads.
+  document.body.classList.add('catmode');
   if (page.filter) html.dataset.filter = page.filter;
   else
     html.dataset.codes = topicProducts(page)
