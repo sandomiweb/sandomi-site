@@ -120,6 +120,20 @@ test.describe('catalog', () => {
   });
 });
 
+test('desktop: every catalog category chip is reachable with a mouse', async ({ browser, baseURL }) => {
+  const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+  await page.route(/^https?:\/\/(?!localhost)/, (route) => route.abort());
+  await page.addInitScript(() => localStorage.setItem('sandomi_lang', 'ka'));
+  await page.goto(new URL('#catalog', baseURL).href);
+  await expect(page.locator('body')).toHaveClass(/catmode/);
+  const hidden = await page.$$eval('#chips .chip', (chips) => {
+    const box = document.getElementById('chips').getBoundingClientRect();
+    return chips.filter((c) => c.getBoundingClientRect().right > box.right + 1).map((c) => c.textContent.trim());
+  });
+  expect(hidden).toEqual([]);
+  await page.close();
+});
+
 test.describe('product dialog', () => {
   test('opens, orders, and the order list keeps products unique', async ({ page }) => {
     await page.goto('en/#catalog');

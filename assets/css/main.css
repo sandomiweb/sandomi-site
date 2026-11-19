@@ -2366,6 +2366,15 @@ body.catmode .cbar #chips .chip {
   flex: none;
 }
 
+/* With a mouse a sideways-scrolling row can't be scrolled (the scrollbar is
+   hidden and the wheel scrolls the page), so the chips wrap instead. */
+@media (hover: hover) and (pointer: fine) {
+  body.catmode .cbar #chips {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+
 body.catmode .prod-head {
   position: sticky;
   top: var(--hh, 64px);
