@@ -215,12 +215,24 @@ function initCarouselLoop() {
   const active = () => phone.matches && !document.body.classList.contains('catmode') && step() > 0;
   const MARGIN = 4;
 
-  // Set the scroll position with snapping paused, so the browser (Safari in
-  // particular) doesn't snap back to the previous card on its own.
+  // Set the scroll position with snapping paused, and keep re-applying it for
+  // a moment: iOS ignores a new position while its bounce or momentum is still
+  // settling, which would otherwise leave the strip stuck at the end.
+  let jumpFrame;
   const jumpTo = (left) => {
+    cancelAnimationFrame(jumpFrame);
     grid.style.scrollSnapType = 'none';
-    grid.scrollLeft = left;
-    requestAnimationFrame(() => requestAnimationFrame(() => (grid.style.scrollSnapType = '')));
+    let tries = 0;
+    let settled = 0;
+    const apply = () => {
+      if (Math.abs(grid.scrollLeft - left) > 1) {
+        grid.scrollLeft = left;
+        settled = 0;
+      } else settled++;
+      if (settled < 3 && ++tries < 90) jumpFrame = requestAnimationFrame(apply);
+      else grid.style.scrollSnapType = '';
+    };
+    apply();
   };
 
   // Start in the middle so there are cards in both directions: once the strip
@@ -235,6 +247,8 @@ function initCarouselLoop() {
 
   const recycle = () => {
     if (!active() || touching) return;
+    const max = grid.scrollWidth - grid.clientWidth;
+    if (grid.scrollLeft < 0 || grid.scrollLeft > max) return later(); // still bouncing
     const w = step();
     const first = Math.round(grid.scrollLeft / w);
     const visible = Math.ceil(grid.clientWidth / w);
@@ -255,7 +269,7 @@ function initCarouselLoop() {
   let touching = false;
   const later = () => {
     clearTimeout(idle);
-    idle = setTimeout(recycle, 180);
+    idle = setTimeout(recycle, 250);
   };
   grid.addEventListener('scroll', later, { passive: true });
   grid.addEventListener('touchstart', () => (touching = true), { passive: true });
