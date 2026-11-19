@@ -1,9 +1,9 @@
 /**
  * Product catalog: renders cards from data/products.json, handles category
- * chips, search and "show more". On the home page phones get an endless
- * swipe carousel of every product in its printed retail pack (not sold by
- * weight, not marked `carousel: false`), in a new random order on each visit; wider screens get one random
- * product per category, packaged where possible. The full catalog
+ * chips, search and "show more". On the home page phones get a swipe carousel
+ * of every product in its printed retail pack (not sold by weight, not marked
+ * `carousel: false`) in a new random order on each visit; wider screens get
+ * one random product per category, packaged where possible. The full catalog
  * opens at #catalog (see router.js).
  */
 import { t, root, productName, shelfLife } from './i18n.js';
@@ -27,7 +27,7 @@ const PLACEHOLDER = {
 const state = { filter: 'all', query: '', limit: PAGE_SIZE };
 export let products = [];
 let featured = new Set();
-/** Card indices in the order the home carousel shows them. */
+/** Card indices in the order the home carousel shows them (random per visit). */
 let carousel = [];
 
 const grid = $('#grid');
@@ -170,7 +170,8 @@ export async function initCatalog() {
   });
 
   render();
-  initCarouselLoop();
+  applyCarouselOrder();
+  preloadCarouselImages();
 }
 
 /**
@@ -198,87 +199,4 @@ function preloadCarouselImages() {
 function applyCarouselOrder() {
   const cards = $$('.p', grid);
   carousel.forEach((ix, pos) => cards[ix].style.setProperty('--o', pos));
-}
-
-/**
- * Endless home carousel on phones. Whenever swiping comes to rest, cards are
- * moved from one end to the other so the current card is in the middle again,
- * and the scroll position is shifted by the same width: nothing visibly jumps
- * and the strip never runs out.
- */
-function initCarouselLoop() {
-  applyCarouselOrder();
-  preloadCarouselImages();
-  const step = () => {
-    const [a, b] = carousel.slice(0, 2).map((ix) => grid.children[ix]);
-    return b.offsetLeft - a.offsetLeft;
-  };
-  const active = () => phone.matches && !document.body.classList.contains('catmode') && step() > 0;
-  const MIN_SHIFT = 2; // cards; smaller drifts are left alone
-
-  // Set the scroll position with snapping paused, and keep re-applying it for
-  // a moment: iOS ignores a new position while its bounce or momentum is still
-  // settling, which would otherwise leave the strip stuck at the end.
-  let jumpFrame;
-  const jumpTo = (left) => {
-    cancelAnimationFrame(jumpFrame);
-    grid.style.scrollSnapType = 'none';
-    let tries = 0;
-    let settled = 0;
-    const apply = () => {
-      if (Math.abs(grid.scrollLeft - left) > 1) {
-        grid.scrollLeft = left;
-        settled = 0;
-      } else settled++;
-      if (settled < 3 && ++tries < 90) jumpFrame = requestAnimationFrame(apply);
-      else grid.style.scrollSnapType = '';
-    };
-    apply();
-  };
-
-  // Start in the middle so there are cards in both directions: once the strip
-  // is laid out and visible, and again after returning from the full catalog.
-  const centre = () => {
-    if (active() && grid.scrollLeft < step()) jumpTo(Math.floor(carousel.length / 2) * step());
-  };
-  centre();
-  new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && centre()).observe(grid);
-  phone.addEventListener('change', centre);
-  addEventListener('hashchange', () => requestAnimationFrame(centre));
-
-  const recycle = () => {
-    if (!active() || touching) return;
-    const max = grid.scrollWidth - grid.clientWidth;
-    if (grid.scrollLeft < 0 || grid.scrollLeft > max) return later(); // still bouncing
-    const w = step();
-    // Bring the current card back to the middle, so there is always about
-    // half the strip ahead in both directions and the end is never reached.
-    const moved = Math.round(grid.scrollLeft / w) - Math.floor(carousel.length / 2);
-    if (Math.abs(moved) < MIN_SHIFT) return;
-    carousel = [...carousel.slice(moved), ...carousel.slice(0, moved)]; // rotate
-    const left = grid.scrollLeft - moved * w;
-    grid.style.scrollSnapType = 'none';
-    applyCarouselOrder();
-    jumpTo(left);
-  };
-
-  // Recycle only when the strip is at rest: not under a finger and no longer
-  // scrolling (iOS keeps firing scroll events during momentum).
-  let idle;
-  let touching = false;
-  const later = () => {
-    clearTimeout(idle);
-    idle = setTimeout(recycle, 200);
-  };
-  grid.addEventListener('scroll', later, { passive: true });
-  grid.addEventListener('touchstart', () => (touching = true), { passive: true });
-  for (const type of ['touchend', 'touchcancel'])
-    grid.addEventListener(
-      type,
-      () => {
-        touching = false;
-        later();
-      },
-      { passive: true },
-    );
 }

@@ -75,21 +75,13 @@ test.describe('language', () => {
 });
 
 test.describe('home carousel', () => {
-  test('shows every packaged product, endless, random order per visit', async ({ page }) => {
+  test('shows every packaged product, photos preloaded, random order per visit', async ({ page }) => {
     await page.goto('en/');
     await expect(page.locator('#grid .p')).toHaveCount(products.length);
     const packaged = products.filter((p) => p.image && p.unit !== 'kg' && p.carousel !== false).length;
     await expect(visibleCards(page)).toHaveCount(packaged);
 
     const grid = page.locator('#grid');
-    const [left, width] = await grid.evaluate((g) => [g.scrollLeft, g.clientWidth]);
-    expect(left, 'starts mid-strip, with cards in both directions').toBeGreaterThan(width);
-
-    await grid.evaluate((g) => (g.scrollLeft = 1e6));
-    await expect
-      .poll(() => grid.evaluate((g) => g.scrollWidth - g.clientWidth - g.scrollLeft), { message: 'loops at the end' })
-      .toBeGreaterThan(500);
-
     await grid.scrollIntoViewIfNeeded();
     await expect
       .poll(() => visibleCards(page).evaluateAll((cards) => cards.every((c) => c.querySelector('img')?.complete)), {
