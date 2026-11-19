@@ -201,7 +201,7 @@
       "en": "Honey cake with cherry jam",
       "ru": "Пряник с вишнёвым джемом"
     },
-    "category": "trad",
+    "category": "biscuit",
     "weight": "300",
     "unit": "g",
     "shelfLife": "180 Days",
@@ -216,7 +216,7 @@
       "en": "Honey cake with cinnamon",
       "ru": "Пряник с корицей"
     },
-    "category": "trad",
+    "category": "biscuit",
     "weight": "500",
     "unit": "g",
     "shelfLife": "180 Days",
@@ -261,7 +261,7 @@
       "en": "Honey cake with cinnamon Classic",
       "ru": "Пряник с корицей классический"
     },
-    "category": "trad",
+    "category": "biscuit",
     "weight": "300",
     "unit": "g",
     "shelfLife": "180 Days",
@@ -276,7 +276,7 @@
       "en": "Honey cake with cherry jam",
       "ru": "Пряник с вишнёвым джемом"
     },
-    "category": "trad",
+    "category": "biscuit",
     "weight": "500",
     "unit": "g",
     "shelfLife": "180 Days",
@@ -366,7 +366,7 @@
       "en": "Bagels (packed)",
       "ru": "Бублики (в упаковке)"
     },
-    "category": "trad",
+    "category": "biscuit",
     "weight": "250",
     "unit": "g",
     "shelfLife": "180 Days",
