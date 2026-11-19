@@ -3680,3 +3680,25 @@ footer .muted {
     height: 34px;
   }
 }
+
+/* ---------- Topic pages (/vafli/, /tklapi/, ...): heading and short introduction ---------- */
+.seo-intro {
+  max-width: 780px;
+  margin: 0 0 22px;
+}
+.seo-intro h1 {
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.15;
+  font-weight: 900;
+  color: var(--wine);
+  margin: 0 0 10px;
+}
+.seo-intro p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+body:not(.catmode) .seo-intro {
+  display: none;
+}

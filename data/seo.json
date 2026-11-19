@@ -1,0 +1,150 @@
+{
+  "home": {
+    "ka": {
+      "title": "სანდომი — ქართული ტკბილეული | ყველაზე ტკბილი ზღაპარი",
+      "description": "სანდომი — ქართული საკონდიტრო წარმოება 2001 წლიდან: ვაფლი, ფხვიერი ნამცხვარი და ორცხობილა, შოკოლადიანი და ჯემიანი დესერტი, ტყლაპის ნუგბარი, ჩაროზი და თხილეული. საბითუმო შეკვეთა და ექსპორტი."
+    },
+    "en": {
+      "title": "Sandomi — Georgian sweets | The sweetest fairy tale",
+      "description": "Sandomi — Georgian confectionery since 2001: wafers, shortbread and biscuits, chocolate and jam cookies, tklapi fruit leather, charozi and nuts. Wholesale orders and export."
+    },
+    "ru": {
+      "title": "Сандоми — грузинские сладости | Самая сладкая сказка",
+      "description": "Сандоми — грузинское кондитерское производство с 2001 года: вафли, песочное печенье, шоколадные и джемовые сладости, пастила тклапи, чарози и орехи. Оптовые заказы и экспорт."
+    }
+  },
+  "pages": [
+    {
+      "slug": "vafli",
+      "filter": "wafer",
+      "ka": {
+        "title": "ვაფლი — ქართული ვაფლები | სანდომი",
+        "description": "სანდომის ვაფლები: Classic და Premium კაკაოს, თხილის, ირისის და რძიანი კრემით, მინი ვაფლები და ვაფლის როლები. ბევრი მათგანი სამარხვოა. დამზადებულია საქართველოში.",
+        "h1": "ვაფლები",
+        "intro": "სანდომის ვაფლები — Classic და Premium, კაკაოს, თხილის, ირისისა და რძიანი კრემით, ასევე მინი ვაფლები „თედი“ და „ვაფლინი“ და ვაფლის როლები. ვაფლების უმეტესობა სამარხვოა. ყველაფერი მზადდება ჩვენს საწარმოებში, თბილისსა და ოზურგეთში."
+      },
+      "en": {
+        "title": "Wafers — Georgian wafers | Sandomi",
+        "description": "Sandomi wafers: Classic and Premium with cocoa, hazelnut, toffee and milk cream, mini wafers and wafer rolls. Many are Lenten. Made in Georgia.",
+        "h1": "Wafers",
+        "intro": "Sandomi wafers — Classic and Premium, with cocoa, hazelnut, toffee and milk cream, plus the mini wafers “Teddy” and “Wafflin” and wafer rolls. Most of our wafers are Lenten. Everything is made at our own plants in Tbilisi and Ozurgeti."
+      },
+      "ru": {
+        "title": "Вафли — грузинские вафли | Сандоми",
+        "description": "Вафли Сандоми: Classic и Premium с какао, ореховым, ирисовым и молочным кремом, мини-вафли и вафельные трубочки. Многие — постные. Сделано в Грузии.",
+        "h1": "Вафли",
+        "intro": "Вафли Сандоми — Classic и Premium, с какао, ореховым, ирисовым и молочным кремом, а также мини-вафли «Тедди» и «Вафлин» и вафельные трубочки. Большинство наших вафель — постные. Всё производится на наших предприятиях в Тбилиси и Озургети."
+      }
+    },
+    {
+      "slug": "shokoladiani",
+      "filter": "choco",
+      "ka": {
+        "title": "შოკოლადიანი ტკბილეული და დესერტი | სანდომი",
+        "description": "გრილიაჟი, კანფეტი „დათუნია“, ბისკვიტი, ზეფირი და ფხვიერი ნამცხვრები შოკოლადში — შოკოლადიანი დესერტი სანდომისგან. ბევრი მათგანი სამარხვოა.",
+        "h1": "შოკოლადიანი ტკბილეული",
+        "intro": "გრილიაჟი, კანფეტი „დათუნია“, ბისკვიტი, ზეფირი და ფხვიერი ნამცხვრები შოკოლადში ან შოკოლადის მინანქრით — შოკოლადიანი დესერტი ყოველდღიური ჩაისთვის და სადღესასწაულო სუფრისთვის. ბევრი მათგანი სამარხვოა."
+      },
+      "en": {
+        "title": "Chocolate sweets and desserts | Sandomi",
+        "description": "Grillage, “Datunia” chocolate sweets, sponge cake, zephyr and shortbread in chocolate — chocolate desserts by Sandomi. Many are Lenten.",
+        "h1": "Chocolate sweets",
+        "intro": "Grillage, “Datunia” sweets, sponge cake, zephyr and shortbread in chocolate or chocolate glaze — chocolate treats for everyday tea and the festive table. Many of them are Lenten."
+      },
+      "ru": {
+        "title": "Шоколадные сладости и десерты | Сандоми",
+        "description": "Грильяж, конфеты «Медвежонок», бисквит, зефир и песочное печенье в шоколаде — шоколадные десерты Сандоми. Многие — постные.",
+        "h1": "Шоколадные сладости",
+        "intro": "Грильяж, конфеты «Медвежонок», бисквит, зефир и песочное печенье в шоколаде или шоколадной глазури — шоколадные сладости к чаю и к праздничному столу. Многие из них — постные."
+      }
+    },
+    {
+      "slug": "pkhvieri-namtskhvari",
+      "filter": "biscuit",
+      "ka": {
+        "title": "ფხვიერი ნამცხვარი და ორცხობილა | სანდომი",
+        "description": "ფხვიერი ნამცხვარი და ორცხობილა სანდომისგან: „ნავი“, „კაკალი“, შვრიის ნამცხვარი, საიუბილეო ორცხობილა, თაფლაკვერი და ბლითი. შეფუთული და წონის. ბევრი სამარხვოა.",
+        "h1": "ფხვიერი ნამცხვარი და ორცხობილა",
+        "intro": "ფხვიერი ნამცხვრები და ორცხობილა ყოველდღიური ჩაისთვის: „ნავი“, „კაკალი“, „მარიო“, შვრიის ნამცხვარი, საიუბილეო ორცხობილა „სანდომი“, თაფლაკვერი, ბლითი და ხრაშუნა ნამცხვრები. იყიდება შეფუთული და წონით; ბევრი მათგანი სამარხვოა."
+      },
+      "en": {
+        "title": "Shortbread and biscuits | Sandomi",
+        "description": "Shortbread and biscuits by Sandomi: “Boat”, “Walnut”, oat cookies, the anniversary biscuit, honey cakes and bagels. Packed and by weight. Many are Lenten.",
+        "h1": "Shortbread and biscuits",
+        "intro": "Shortbread and biscuits for everyday tea: “Boat”, “Walnut”, “Mario”, oat cookies, the “Sandomi” anniversary biscuit, honey cakes, bagels and crispy pastries. Sold packed and by weight; many of them are Lenten."
+      },
+      "ru": {
+        "title": "Песочное печенье | Сандоми",
+        "description": "Песочное печенье Сандоми: «Лодочка», «Орешек», овсяное печенье, юбилейное печенье, пряники и бублики. В упаковке и на вес. Многие — постные.",
+        "h1": "Песочное печенье",
+        "intro": "Песочное печенье к чаю: «Лодочка», «Орешек», «Марио», овсяное печенье, юбилейное печенье «Сандоми», пряники, бублики и хрустящая выпечка. В упаковке и на вес; многие из них — постные."
+      }
+    },
+    {
+      "slug": "jemiani",
+      "filter": "jam",
+      "ka": {
+        "title": "ჯემიანი ნამცხვარი და ორცხობილა | სანდომი",
+        "description": "ფხვიერი ნამცხვრები ალუბლის, მარწყვის, ფორთოხლისა და მოცვის ჯემით: ბალიშა, ტვისტი, „ბანანი“, „ლა ლუნა“. თითქმის ყველა სამარხვოა.",
+        "h1": "ჯემიანი ნამცხვრები",
+        "intro": "ფხვიერი ნამცხვრები ალუბლის, მარწყვის, ფორთოხლისა და მოცვის ჯემით: ბალიშა, ტვისტი, „ბანანი“, „ტყუპები“, „ლა ლუნა“, სენდვიჩი მარმელადით და სხვა. თითქმის ყველა მათგანი სამარხვოა."
+      },
+      "en": {
+        "title": "Cookies with jam | Sandomi",
+        "description": "Shortbread with cherry, strawberry, orange and blueberry jam: Balisha, Twist, “Banana”, “La Luna”. Almost all are Lenten.",
+        "h1": "Cookies with jam",
+        "intro": "Shortbread with cherry, strawberry, orange and blueberry jam: Balisha, Twist, “Banana”, “Twins”, “La Luna”, marmalade sandwich cookies and more. Almost all of them are Lenten."
+      },
+      "ru": {
+        "title": "Печенье с джемом | Сандоми",
+        "description": "Песочное печенье с вишнёвым, клубничным, апельсиновым и черничным джемом: «Балиша», «Твист», «Банан», «Ла Луна». Почти всё — постное.",
+        "h1": "Печенье с джемом",
+        "intro": "Песочное печенье с вишнёвым, клубничным, апельсиновым и черничным джемом: «Балиша», «Твист», «Банан», «Близнецы», «Ла Луна», печенье-сэндвич с мармеладом и другое. Почти всё — постное."
+      }
+    },
+    {
+      "slug": "tklapi",
+      "match": "ტყლაპ",
+      "ka": {
+        "title": "ტყლაპი — ტყლაპის ნუგბარი | სანდომი",
+        "description": "ქართული ტყლაპი სანდომისგან: ვაშლის, ქლიავისა და ტყემლის ტყლაპი და ტყლაპის ასორტი, 100-გრამიან შეფუთვაში. დამზადებულია საქართველოში.",
+        "h1": "ტყლაპის ნუგბარი",
+        "intro": "ქართული ტყლაპი — ვაშლის, ქლიავისა და ტყემლის, ასევე ტყლაპის ასორტი, მოსახერხებელ 100-გრამიან შეფუთვაში. ტრადიციული ქართული ნუგბარი, დამზადებული საქართველოში."
+      },
+      "en": {
+        "title": "Tklapi — Georgian fruit leather | Sandomi",
+        "description": "Georgian tklapi fruit leather by Sandomi: apple, plum and tkemali, plus an assorted pack, in 100 g packs. Made in Georgia.",
+        "h1": "Tklapi fruit leather",
+        "intro": "Georgian tklapi — apple, plum and tkemali, plus an assorted pack, in handy 100 g packs. A traditional Georgian treat, made in Georgia."
+      },
+      "ru": {
+        "title": "Тклапи — грузинская фруктовая пастила | Сандоми",
+        "description": "Грузинская пастила тклапи от Сандоми: яблочная, сливовая и из ткемали, а также ассорти, в упаковках по 100 г. Сделано в Грузии.",
+        "h1": "Пастила тклапи",
+        "intro": "Грузинская тклапи — яблочная, сливовая и из ткемали, а также ассорти, в удобных упаковках по 100 г. Традиционное грузинское лакомство, сделанное в Грузии."
+      }
+    },
+    {
+      "slug": "saakhaltslo",
+      "match": { "categories": ["trad", "nuts", "choco", "wafer"], "packed": true },
+      "ka": {
+        "title": "საახალწლო ტკბილეული — გოზინაყი, ჩაროზი, ვაფლი | სანდომი",
+        "description": "საახალწლო ტკბილეული სანდომისგან: ჩაროზი, ფინიკი შოკოლადში, ვაფლები, გრილიაჟი და თხილეული სუფრისა და საჩუქრებისთვის. სეზონურად — გოზინაყიც.",
+        "h1": "საახალწლო ტკბილეული",
+        "intro": "ჩაროზი, ფინიკი შოკოლადში, ვაფლები, გრილიაჟი და თხილეული საახალწლო სუფრისა და საჩუქრებისთვის. სეზონურად — სანდომის გოზინაყიც. დამზადებულია საქართველოში."
+      },
+      "en": {
+        "title": "New Year sweets — gozinaki, charozi, wafers | Sandomi",
+        "description": "New Year sweets by Sandomi: charozi, dates in chocolate, wafers, grillage and nuts for the festive table and gifts. Gozinaki in season.",
+        "h1": "New Year sweets",
+        "intro": "Charozi, dates in chocolate, wafers, grillage and nuts for the New Year table and for gifts. In season, Sandomi gozinaki too. Made in Georgia."
+      },
+      "ru": {
+        "title": "Новогодние сладости — гозинаки, чарози, вафли | Сандоми",
+        "description": "Новогодние сладости Сандоми: чарози, финики в шоколаде, вафли, грильяж и орехи к праздничному столу и в подарок. В сезон — гозинаки.",
+        "h1": "Новогодние сладости",
+        "intro": "Чарози, финики в шоколаде, вафли, грильяж и орехи к новогоднему столу и в подарок. В сезон — и гозинаки Сандоми. Сделано в Грузии."
+      }
+    }
+  ]
+}

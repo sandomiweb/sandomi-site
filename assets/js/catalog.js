@@ -30,6 +30,13 @@ let featured = new Set();
 /** Card indices in the order the home carousel shows them (random per visit). */
 let carousel = [];
 
+/**
+ * Topic pages (/vafli/, /tklapi/, ... built by tools/build.mjs) open the catalog
+ * with a category (data-filter) or with a fixed list of product codes (data-codes).
+ */
+export const PAGE_FILTER = 'page';
+const pageCodes = new Set((document.documentElement.dataset.codes || '').split(',').filter(Boolean));
+
 const grid = $('#grid');
 const moreBtn = () => $('#pmore');
 const phone = matchMedia('(max-width: 700px)');
@@ -58,7 +65,7 @@ function card(p, index) {
     : `<div class="ph-p"><span>${emoji}</span><small>${t.photoSoon}</small></div>`;
 
   return `
-    <article class="p in" data-ix="${index}" tabindex="0" data-cat="${tags}" data-n="${esc(search)}">
+    <article class="p in" data-ix="${index}" data-code="${esc(p.code || '')}" tabindex="0" data-cat="${tags}" data-n="${esc(search)}">
       <div class="img ${p.image ? 'pimg' : 'noimg'}" style="--g1:${c1};--g2:${c2}">
         ${image}
         <div class="badges">
@@ -118,7 +125,10 @@ export function update() {
   let matches = 0;
   cards.forEach((c) => {
     const ok =
-      (state.filter === 'all' || c.dataset.cat.split(' ').includes(state.filter)) &&
+      (state.filter === 'all' ||
+        (state.filter === PAGE_FILTER
+          ? pageCodes.has(c.dataset.code)
+          : c.dataset.cat.split(' ').includes(state.filter))) &&
       (!state.query || c.dataset.n.includes(state.query));
     if (ok) matches++;
     c.classList.toggle('hide', !(ok && matches <= state.limit));
@@ -130,11 +140,15 @@ export function update() {
   $('#pcount').textContent = `${matches} ${t.products}`;
 }
 
-/** Select a category chip ("all", "wafer", "lent", ...). */
+/**
+ * Select a category chip ("all", "wafer", "lent", ...). PAGE_FILTER selects the
+ * products listed for a topic page such as /tklapi/ (no chip is highlighted).
+ */
 export function setFilter(filter) {
-  const chip = $(`.chip[data-f="${filter}"]`) || $('.chip[data-f="all"]');
+  const page = filter === PAGE_FILTER && pageCodes.size > 0;
+  const chip = page ? null : $(`.chip[data-f="${filter}"]`) || $('.chip[data-f="all"]');
   $$('.chip').forEach((c) => c.classList.toggle('on', c === chip));
-  state.filter = chip.dataset.f;
+  state.filter = page ? PAGE_FILTER : chip.dataset.f;
   state.limit = PAGE_SIZE;
   update();
 }

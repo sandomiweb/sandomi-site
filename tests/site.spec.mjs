@@ -51,21 +51,23 @@ test.describe('language', () => {
     });
   }
 
-  test('English page has no Georgian text left', async ({ page }) => {
-    await page.goto('en/');
-    await page.waitForLoadState('networkidle'); // chat texts arrive with data/chatbot.json
-    const leftovers = await page.evaluate(() => {
-      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-      const found = [];
-      for (let n; (n = walker.nextNode());) {
-        const el = n.parentElement;
-        if (!el || el.closest('script, style, #regModal, #mProducts') || !el.checkVisibility()) continue;
-        if (/[ა-ჿᲐ-Ჿ]/.test(n.nodeValue)) found.push(n.nodeValue.trim().slice(0, 50));
-      }
-      return found;
+  for (const path of ['en/', 'en/tklapi/']) {
+    test(`English page ${path} has no Georgian text left`, async ({ page }) => {
+      await page.goto(path);
+      await page.waitForLoadState('networkidle'); // chat texts arrive with data/chatbot.json
+      const leftovers = await page.evaluate(() => {
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        const found = [];
+        for (let n; (n = walker.nextNode());) {
+          const el = n.parentElement;
+          if (!el || el.closest('script, style, #regModal, #mProducts') || !el.checkVisibility()) continue;
+          if (/[ა-ჿᲐ-Ჿ]/.test(n.nodeValue)) found.push(n.nodeValue.trim().slice(0, 50));
+        }
+        return found;
+      });
+      expect(leftovers).toEqual([]);
     });
-    expect(leftovers).toEqual([]);
-  });
+  }
 
   test('Russian page', async ({ page }) => {
     await page.goto('ru/');
@@ -161,7 +163,7 @@ test.describe('product dialog', () => {
 
   test('close button stays in reach; back closes the dialog, then returns home', async ({ page }) => {
     await page.goto('en/');
-    const link = page.locator('a[href="#catalog-choco"].btn-gold');
+    const link = page.locator('a[data-filter="choco"].btn-gold');
     await link.scrollIntoViewIfNeeded();
     const y = await page.evaluate(() => scrollY);
     await link.click();
@@ -236,6 +238,61 @@ test('chat assistant: Lenten answer opens all Lenten products', async ({ page })
   await expect(page.locator('#pcount')).toHaveText(`${products.filter((p) => p.lenten).length} products`);
 });
 
+test.describe('topic pages for search engines', () => {
+  const topics = JSON.parse(readFileSync(new URL('../data/seo.json', import.meta.url))).pages;
+
+  test('each topic page opens its selection with a heading and introduction', async ({ page }) => {
+    for (const lang of ['', 'en/', 'ru/']) {
+      for (const topic of topics) {
+        await page.goto(`${lang}${topic.slug}/`);
+        await expect(page.locator('body')).toHaveClass(/catmode/);
+        const text = topic[lang ? lang.slice(0, 2) : 'ka'];
+        await expect(page.locator('.seo-intro h1')).toHaveText(text.h1);
+        await expect(page).toHaveTitle(text.title);
+        const shown = await visibleCards(page).count();
+        expect(shown, `${lang}${topic.slug}: products shown`).toBeGreaterThan(0);
+        if (topic.filter) {
+          const cats = await visibleCards(page).evaluateAll((cards) => cards.map((c) => c.dataset.cat));
+          expect(cats.every((c) => c.split(' ').includes(topic.filter))).toBe(true);
+        }
+      }
+    }
+  });
+
+  test('canonical and language versions point to the same topic', async ({ page }) => {
+    await page.goto('en/tklapi/');
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', /\/en\/tklapi\/$/);
+    await expect(page.locator('link[hreflang="ru"]')).toHaveAttribute('href', /\/ru\/tklapi\/$/);
+    await page.click('#regBtn');
+    await page.click('.reg-o[data-lang="ru"]');
+    await expect(page).toHaveURL(/\/ru\/tklapi\/$/);
+    await expect(page.locator('.seo-intro h1')).toHaveText('Пастила тклапи');
+  });
+
+  test('logo leads home; the home page itself is unchanged', async ({ page }) => {
+    await page.goto('vafli/');
+    await page.click('header .logo');
+    await expect(page).toHaveURL(/\/$/);
+    await expect(page.locator('body')).not.toHaveClass(/catmode/);
+    await expect(page.locator('.seo-intro')).toHaveCount(0);
+  });
+
+  test('category links on the home page still open in place', async ({ page }) => {
+    await page.goto('en/');
+    await page.evaluate(() => (window.__samePage = true));
+    await page.locator('a.cat[data-filter="wafer"]').click();
+    await expect(page).toHaveURL(/\/en\/#catalog-wafer$/);
+    expect(await page.evaluate(() => window.__samePage)).toBe(true);
+    await expect(page.locator('.chip.on')).toHaveAttribute('data-f', 'wafer');
+  });
+
+  test('sitemap lists every topic page in every language', async ({ request }) => {
+    const xml = await (await request.get('sitemap.xml')).text();
+    for (const topic of topics)
+      for (const lang of ['', 'en/', 'ru/']) expect(xml).toContain(`/${lang}${topic.slug}/</loc>`);
+  });
+});
+
 test.describe('game', () => {
   test('loads, starts, and links back to the site', async ({ page }) => {
     await page.goto('game/');
@@ -260,7 +317,7 @@ test('no JavaScript errors on the three language pages', async ({ page }) => {
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
   page.on('console', (m) => m.type() === 'error' && !m.text().includes('ERR_') && errors.push(m.text()));
-  for (const path of ['./', 'en/', 'ru/']) {
+  for (const path of ['./', 'en/', 'ru/', 'tklapi/', 'en/vafli/', 'ru/saakhaltslo/']) {
     await page.goto(path);
     await page.waitForLoadState('networkidle');
   }

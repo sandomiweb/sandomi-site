@@ -1,8 +1,10 @@
 /**
  * Catalog view. "#catalog" (or "#catalog-wafer", "#catalog-lent", ...) shows the
  * full catalog instead of the home page; "#home" returns to where the visitor was.
+ * Topic pages (/vafli/, /tklapi/, ...) open in the catalog view with their own
+ * selection when the address has no "#".
  */
-import { setFilter, update } from './catalog.js';
+import { PAGE_FILTER, setFilter, update } from './catalog.js';
 import { $, $$ } from './util.js';
 
 let homeScroll = 0;
@@ -10,7 +12,9 @@ let homeScroll = 0;
 function route() {
   const hash = location.hash.slice(1);
   const body = document.body;
-  const toCatalog = hash === 'catalog' || hash.startsWith('catalog-');
+  const { filter: pageFilter, codes } = document.documentElement.dataset;
+  const topic = pageFilter || (codes ? PAGE_FILTER : '');
+  const toCatalog = hash === 'catalog' || hash.startsWith('catalog-') || (!hash && Boolean(topic));
   const wasCatalog = body.classList.contains('catmode');
 
   if (toCatalog && !wasCatalog) homeScroll = scrollY;
@@ -18,7 +22,7 @@ function route() {
   document.documentElement.style.setProperty('--hh', `${$('header')?.offsetHeight || 64}px`);
 
   if (toCatalog) {
-    setFilter(hash.startsWith('catalog-') ? hash.slice(8) : 'all');
+    setFilter(hash.startsWith('catalog-') ? hash.slice(8) : hash === 'catalog' ? 'all' : topic);
     scrollTo(0, 0);
   } else {
     update();
@@ -32,5 +36,15 @@ function route() {
 
 export function initRouter() {
   addEventListener('hashchange', route);
+
+  // Category links point to their topic page (/vafli/, ...) so search engines can
+  // follow them; on this page they open the same selection without reloading.
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[data-filter]');
+    if (!link || e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    location.hash = `catalog-${link.dataset.filter}`;
+  });
+
   route();
 }
